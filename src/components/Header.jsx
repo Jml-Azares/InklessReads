@@ -3,16 +3,14 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 
+import inkless from "../assets/images/inkless-logo.png";
+
 
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <img
-          src="src/assets/images/inkless-logo.png"
-          alt="Company Logo"
-          className="logo"
-        />
+        <img src={inkless} alt="Company Logo" className="logo" />
         <button
           className="navbar-toggler bg-body-tertiary"
           type="button"
@@ -75,6 +73,7 @@ export default function Header() {
                 //search icon
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
+
                 id="button-addon1">
                 </button>
               <input
@@ -89,6 +88,7 @@ export default function Header() {
           <div className="nav-icons">
             {/* cart icon */}
             <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+
             {/* user icon */}
             <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
           </div>
