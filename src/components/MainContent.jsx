@@ -22,21 +22,18 @@ export default function MainContent() {
 
   useEffect(() => {}, []);
 
+  apiGet();
+
   return (
     <div>
-      API OBJECT <br />
-      <button onClick={apiGet}>Fetch API</button>
-      <br />
-      <div>
-        <ul>
-          {data.map((item, index) => (
-            <div key={index}>
-              <li>{item.title}</li>
-              <img src={item.formats["image/jpeg"]} alt="" />
-            </div>
-          ))}
-        </ul>
-      </div>
+      {data.map((item, index) => (
+        <div className="cardiB" key={index}>
+          <img src={item.formats["image/jpeg"]} />
+          <div className="cardiBody">
+            <p>{item.title}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
