@@ -22,9 +22,11 @@
 }
 
 .nav-icons{
-  font-size: 30px;
+  font-size: 25px;
 }
-
-.nav-icons a{
-  text-decoration: none;
+.cart-icon:hover, .user-icon:hover, .search-icon:hover{
+  color: #b8621b;
+}
+.cart-icon, .user-icon, .search-icon{
+  color: white;
 }
