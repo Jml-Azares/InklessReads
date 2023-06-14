@@ -1,0 +1,26 @@
+.IL-footer {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.subs-btn {
+  background-color: #b8621b;
+  color: #ffffff;
+}
+
+.subs-btn:hover {
+  background-color: #262a56;
+}
+
+.fa-solid {
+  color: #ffffff;
+}
+
+.fa-brands {
+  color: #ffffff;
+}
+
+.terms-privacy {
+  text-decoration: none;
+  font-size: 13px;
+}
