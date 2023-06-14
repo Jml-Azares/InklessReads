@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heroContainer {
+  background-image: url(src/assets/images/hero-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  color: white;
+}
+
+.heroContent {
+  padding: 150px;
+}
+
+.heroContent button {
+  background-color: #b8621b;
+}
+
+.heroContent button:hover {
+  background-color: #e3ccae;
+}
