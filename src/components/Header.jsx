@@ -1,8 +1,6 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-
-
 import inkless from "../assets/images/inkless-logo.png";
 
 
@@ -62,9 +60,14 @@ export default function Header() {
               </ul>
             </li>
             <li className="nav-item">
+
+
               <Link className="nav-link text-white" aria-current="page" to="/about-us">
                 About-Us
               </Link>
+
+       
+
             </li>
           </ul>
           <form className="d-flex" role="search">
