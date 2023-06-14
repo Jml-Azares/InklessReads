@@ -1,12 +1,11 @@
-// gutendex.com/books
+// https://gutendex.com/books
 // https://gutendex.com/
 // https://gutendex.com/books/?ids=1,2,3,4,5,6
 
 import React, { useState, useEffect } from "react";
 
 export default function MainContent() {
-  const [titles, setTitles] = useState([]);
-  const [cover, setCover] = useState([]);
+  const [data, setData] = useState([]);
 
   const apiGet = async () => {
     try {
@@ -14,13 +13,8 @@ export default function MainContent() {
       const booksObject = await response.json();
       const books = booksObject.results;
 
-      const fetchedTitles = books.map((book) => book.title);
-      const fetchedCovers = books.map(
-        (book) => book.format && book.format["image/jpeg"]
-      );
-
-      setTitles(fetchedTitles);
-      setCover(fetchedCovers);
+      console.log(books);
+      setData(books);
     } catch (error) {
       console.error("Error fetching API:", error);
     }
@@ -35,13 +29,11 @@ export default function MainContent() {
       <br />
       <div>
         <ul>
-          {titles.map((title, index) => (
+          {data.map((item, index) => (
             <div key={index}>
-              <li>{title}</li>
+              <li>{item.title}</li>
+              <img src={item.formats["image/jpeg"]} alt="" />
             </div>
-          ))}
-          {cover.map((cover, index) => (
-            <img key={index} src={cover} alt="Book cover" />
           ))}
         </ul>
       </div>
