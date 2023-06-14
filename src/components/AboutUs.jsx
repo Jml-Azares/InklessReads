@@ -1,18 +1,8 @@
-// import React from 'react'
-// import Header from "../components/Header"
-// import "./AboutUs.css";
+import React from "react";
 
+const AboutUs = () => {
+  return <div>AboutUs</div>;
+};
 
-
-// function AboutUs(){
-//   return (
-
-//       <div className='container-fluid heroContainer'>
-//         <p>about us page</p>
-        
-//       </div>
-
-//   );
-// }
-
-// export default AboutUs
+export default AboutUs;
+  

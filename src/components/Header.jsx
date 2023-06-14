@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -63,9 +64,9 @@ export default function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" aria-current="page" href="#">
-              {/* <Link to="/AboutUs">About Us</Link> */}
-              </a>
+              <Link className="nav-link text-white" aria-current="page" to="/about-us">
+                About-Us
+              </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
