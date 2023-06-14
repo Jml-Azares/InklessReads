@@ -1,10 +1,16 @@
 import React from "react";
 import "./Header.css";
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 
 
 
+=======
+import { Link } from "react-router-dom";
+
+
+>>>>>>> 16d4a92d27d2316c79fccefb1e40cda8a96de86e
 import inkless from "../assets/images/inkless-logo.png";
 
 
@@ -64,11 +70,17 @@ export default function Header() {
               </ul>
             </li>
             <li className="nav-item">
+<<<<<<< HEAD
 
               <Link className="nav-link text-white" aria-current="page" to="/about-us">
                 About-Us
               </Link>
 
+=======
+              <Link className="nav-link text-white" aria-current="page" to="/about-us">
+                About-Us
+              </Link>
+>>>>>>> 16d4a92d27d2316c79fccefb1e40cda8a96de86e
             </li>
           </ul>
           <form className="d-flex" role="search">
@@ -77,8 +89,9 @@ export default function Header() {
                 //search icon
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
-                id="button-addon1"
-              ></button>
+
+                id="button-addon1">
+                </button>
               <input
                 type="text"
                 className="form-control"
@@ -90,10 +103,8 @@ export default function Header() {
           </form>
           <div className="nav-icons">
             {/* cart icon */}
-            <a
-              href="#"
-              className="cart-icon px-3 fa-solid fa-cart-shopping"
-            ></a>
+            <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+
             {/* user icon */}
             <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
           </div>

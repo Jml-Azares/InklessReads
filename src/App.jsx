@@ -6,10 +6,6 @@ import AboutUs from "./components/AboutUs";
 import NoPage from "./components/NoPage";
 import Layout from "./components/Layout";
 
-
-
-
-
         const App = () => {
             return (
                 <>
@@ -28,3 +24,4 @@ import Layout from "./components/Layout";
             ); 
         };
         export default App;
+
