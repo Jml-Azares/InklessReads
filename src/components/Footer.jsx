@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="container-fluid IL-footer">
       <footer className="py-5 p-4">
         <div className="row">
-          <div className="col-6 col-md-2 mb-3">
+          <div className="col-md-3 mb-3">
             <h5>Contact Details</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -15,7 +15,7 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <i className="fa-solid fa-envelope-circle-check"></i>
-                <span> il.reads@yandex.com</span>
+                <span> ireads@aol.com</span>
               </li>
               <li className="nav-item mb-2">
                 <i className="fa-solid fa-location-dot"></i>
@@ -24,7 +24,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-6 col-md-2 mb-3 links">
+          <div className="col-md-2 mb-3 links">
             <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -45,7 +45,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-6 col-md-2 mb-3">
+          <div className="col-md-3 mb-3">
             <h5>Contact Us</h5>
             <div className="d-flex flex-column flex-sm-column w-100 gap-2">
               <input
@@ -63,7 +63,7 @@ export default function Footer() {
               <textarea
                 id="Message"
                 type="text"
-                className="form-control msg"
+                className="form-control"
                 placeholder="Message"
               />
               <button className="btn subs-btn" type="button">
@@ -72,7 +72,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-md-5 offset-md-1 mb-3">
+          <div className="col-md-3 offset-md-1 mb-3">
             <form>
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>

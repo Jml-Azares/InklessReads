@@ -25,14 +25,11 @@
   font-size: 13px;
 }
 
-.msg {
-  height: 100px;
-}
-
 .links a {
   color: #ffffff;
 }
 
 textarea {
+  height: 100px;
   resize: none;
 }
