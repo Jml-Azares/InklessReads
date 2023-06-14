@@ -6,30 +6,30 @@ import { useFetch } from "../API/fetchAPI";
 // https://gutendex.com/books/?ids=1,2,3,4,5,6
 
 export default function MainContent() {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-    const apiGet = async () => {
-        const response = await fetch("https://gutendex.com/books");
-        const booksObject = await response.json();
-        const books = booksObject.results;
+  const apiGet = async () => {
+    const response = await fetch("https://gutendex.com/books");
+    const booksObject = await response.json();
+    const books = booksObject.results;
 
-        setData(books);
-    };
+    setData(books);
+  };
 
-    useEffect(() => {}, []);
+  useEffect(() => {}, []);
 
-    return (
-        <div>
-            API OBJECT <br />
-            <button onClick={apiGet}>Fetch API</button>
-            <br />
-            <div>
-                <ul>
-                    {data.map((item) => (
-                        <li>{item.title}</li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      API OBJECT <br />
+      <button onClick={apiGet}>Fetch API</button>
+      <br />
+      <div>
+        <ul>
+          {data.map((item) => (
+            <li>{item.title}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
