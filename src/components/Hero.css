@@ -4,11 +4,7 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 16d4a92d27d2316c79fccefb1e40cda8a96de86e
 .carousel-item{
   width: auto;
   height: 60vh;
@@ -16,9 +12,7 @@
   
 }
 
-<<<<<<< HEAD
 
-=======
 .carousel-item img{
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +20,6 @@
   height: 500px;
   
 }
->>>>>>> 16d4a92d27d2316c79fccefb1e40cda8a96de86e
 
 .carousel-item button{
   background-color: #b8621b;
