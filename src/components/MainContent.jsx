@@ -12,7 +12,6 @@ export default function MainContent() {
         const response = await fetch("https://gutendex.com/books");
         const booksObject = await response.json();
         const books = booksObject.results;
-        console.log(books);
 
         setData(books);
     };
