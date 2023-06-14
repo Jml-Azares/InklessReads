@@ -5,6 +5,7 @@
 }
 
 
+
 .carousel-item{
   width: auto;
   height: 60vh;
@@ -12,13 +13,7 @@
   
 }
 
-.carousel-item img{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  
-}
+
 
 .carousel-item button{
   background-color: #b8621b;

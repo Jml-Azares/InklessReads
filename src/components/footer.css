@@ -24,3 +24,12 @@
   text-decoration: none;
   font-size: 13px;
 }
+
+.links a {
+  color: #ffffff;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
