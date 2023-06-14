@@ -1,14 +1,12 @@
 import React from "react";
 import "./Header.css";
 
-
-
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <img
-          src="src/assets/images/inkless-logo.png"
+          src="./src/assets/images/inkless-logo.png"
           alt="Company Logo"
           className="logo"
         />
@@ -64,7 +62,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" aria-current="page" href="#">
-              {/* <Link to="/AboutUs">About Us</Link> */}
+                {/* <Link to="/AboutUs">About Us</Link> */}
               </a>
             </li>
           </ul>
@@ -74,8 +72,8 @@ export default function Header() {
                 //search icon
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
-                id="button-addon1">
-                </button>
+                id="button-addon1"
+              ></button>
               <input
                 type="text"
                 className="form-control"
@@ -87,7 +85,10 @@ export default function Header() {
           </form>
           <div className="nav-icons">
             {/* cart icon */}
-            <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+            <a
+              href="#"
+              className="cart-icon px-3 fa-solid fa-cart-shopping"
+            ></a>
             {/* user icon */}
             <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
           </div>
