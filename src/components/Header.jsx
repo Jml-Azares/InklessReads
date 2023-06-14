@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
 
+
+
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg">
@@ -62,19 +64,18 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" aria-current="page" href="#">
-                About Us
+              {/* <Link to="/AboutUs">About Us</Link> */}
               </a>
             </li>
           </ul>
           <form className="d-flex" role="search">
             <div className="input-group">
               <button
-                className="btn btn-outline-secondary"
+                //search icon
+                className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
-                id="button-addon1"
-              >
-                &#128269;
-              </button>
+                id="button-addon1">
+                </button>
               <input
                 type="text"
                 className="form-control"
@@ -85,10 +86,10 @@ export default function Header() {
             </div>
           </form>
           <div className="nav-icons">
-            <a href="#" className="px-3">
-              &#128722;
-            </a>
-            <a href="#">&#9760;</a>
+            {/* cart icon */}
+            <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+            {/* user icon */}
+            <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
           </div>
         </div>
       </div>
