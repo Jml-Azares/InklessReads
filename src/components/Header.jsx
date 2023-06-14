@@ -1,15 +1,12 @@
 import React from "react";
 import "./Header.css";
+import inkless from "../assets/images/inkless-logo.png";
 
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <img
-          src="./src/assets/images/inkless-logo.png"
-          alt="Company Logo"
-          className="logo"
-        />
+        <img src={inkless} alt="Company Logo" className="logo" />
         <button
           className="navbar-toggler bg-body-tertiary"
           type="button"
