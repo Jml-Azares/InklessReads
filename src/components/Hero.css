@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+
 .carousel-item{
   width: auto;
   height: 60vh;
   width: 100%;
   
 }
+
 
 .carousel-item img{
   background-position: center;
