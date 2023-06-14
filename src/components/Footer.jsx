@@ -4,7 +4,7 @@ import "./footer.css";
 export default function Footer() {
   return (
     <div className="container-fluid IL-footer">
-      <footer className="py-5">
+      <footer className="py-5 p-4">
         <div className="row">
           <div className="col-6 col-md-2 mb-3">
             <h5>Contact Details</h5>
@@ -24,31 +24,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* <div className="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+          <div className="col-6 col-md-2 mb-3 links">
+            <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Home
+                <a href="#" className="nav-link p-0">
+                  Catalog
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="#" className="nav-link p-0">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="#" className="nav-link p-0">
                   About
                 </a>
               </li>
@@ -56,35 +46,31 @@ export default function Footer() {
           </div>
 
           <div className="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul className="nav flex-column">
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div> */}
+            <h5>Contact Us</h5>
+            <div className="d-flex flex-column flex-sm-column w-100 gap-2">
+              <input
+                id="Name"
+                type="text"
+                className="form-control"
+                placeholder="Name"
+              />
+              <input
+                id="Email"
+                type="text"
+                className="form-control"
+                placeholder="Email address"
+              />
+              <textarea
+                id="Message"
+                type="text"
+                className="form-control msg"
+                placeholder="Message"
+              />
+              <button className="btn subs-btn" type="button">
+                Submit
+              </button>
+            </div>
+          </div>
 
           <div className="col-md-5 offset-md-1 mb-3">
             <form>
