@@ -4,23 +4,26 @@
   box-sizing: border-box;
 }
 
-.heroContainer {
-  background-image: url(./src/assets/images/hero-image.jpg);
+.carousel-item{
+  width: auto;
+  height: 60vh;
+  width: 100%;
+  
+}
+
+.carousel-item img{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: auto;
-  color: white;
+  height: 500px;
+  
 }
 
-.heroContent {
-  padding: 150px;
-}
-
-.heroContent button {
+.carousel-item button{
   background-color: #b8621b;
 }
 
-.heroContent button:hover {
-  background-color: #e3ccae;
+.carousel-item button:hover{
+  background-color: #262A56;
+  color: white;
 }

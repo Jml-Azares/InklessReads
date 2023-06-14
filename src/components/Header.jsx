@@ -1,6 +1,10 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
+
+
 import inkless from "../assets/images/inkless-logo.png";
+
 
 export default function Header() {
   return (
@@ -58,9 +62,9 @@ export default function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" aria-current="page" href="#">
-                {/* <Link to="/AboutUs">About Us</Link> */}
-              </a>
+              <Link className="nav-link text-white" aria-current="page" to="/about-us">
+                About-Us
+              </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
@@ -69,8 +73,9 @@ export default function Header() {
                 //search icon
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
-                id="button-addon1"
-              ></button>
+
+                id="button-addon1">
+                </button>
               <input
                 type="text"
                 className="form-control"
@@ -82,10 +87,8 @@ export default function Header() {
           </form>
           <div className="nav-icons">
             {/* cart icon */}
-            <a
-              href="#"
-              className="cart-icon px-3 fa-solid fa-cart-shopping"
-            ></a>
+            <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+
             {/* user icon */}
             <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
           </div>
