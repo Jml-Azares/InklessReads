@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import inkless from "../assets/images/inkless-logo.png";
+import inkless from "../assets/images/IK.png";
 
 export default function Header() {
   return (
