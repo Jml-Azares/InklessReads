@@ -9,11 +9,12 @@ export default function MainContent() {
 
   const apiGet = async () => {
     try {
-      const response = await fetch("https://gutendex.com/books");
+      const response = await fetch(
+        "https://gutendex.com/books/?ids=1513,37106,2701,145,2641,67979"
+      );
       const booksObject = await response.json();
       const books = booksObject.results;
-
-      console.log(books);
+      console.log(books[0]);
       setData(books);
     } catch (error) {
       console.error("Error fetching API:", error);
@@ -25,15 +26,35 @@ export default function MainContent() {
   apiGet();
 
   return (
-    <div>
-      {data.map((item, index) => (
-        <div className="cardiB" key={index}>
-          <img src={item.formats["image/jpeg"]} />
-          <div className="cardiBody">
-            <p>{item.title}</p>
+    <div className="container-fluid">
+      <div className="row p-5">
+        <h2 className="col-12 ">Featured Books</h2>
+      </div>
+      <div className="row p-5">
+        {data.map((item) => (
+          <div className="cardiB col-12 col-md-2" key={item.id}>
+            <img src={item.formats["image/jpeg"]} />
+            <div className="cardiBody">
+              <h5>{item.title}</h5>
+              <p>{item.authors["0"].name}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="row p-5">
+        <h2 className="col-12">Celebrate Pride Month</h2>
+      </div>
+      <div className="row p-5">
+        {data.map((item) => (
+          <div className="cardiB col-12 col-md-2" key={item.id}>
+            <img src={item.formats["image/jpeg"]} />
+            <div className="cardiBody">
+              <h5>{item.title}</h5>
+              <p>{item.authors["0"].name}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
