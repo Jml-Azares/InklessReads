@@ -23,57 +23,52 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link active text-white"
                 aria-current="page"
-                href="#"
+                to="/"
               >
                 INKLESS-READS
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle text-white"
-                href="#"
+                to="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Catalogs
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/literature">
                     Literature
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/scienceFiction">
                     Science Fiction
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/history">
                     History
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-
-
               <Link className="nav-link text-white" aria-current="page" to="/about-us">
                 About-Us
               </Link>
-
-       
-
             </li>
           </ul>
           <form className="d-flex" role="search">
             <div className="input-group">
               <button
-                //search icon
+                //search icon-----------------
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
 
@@ -89,11 +84,11 @@ export default function Header() {
             </div>
           </form>
           <div className="nav-icons">
-            {/* cart icon */}
-            <a href="#" className="cart-icon px-3 fa-solid fa-cart-shopping"></a>
+            {/* -------------cart icon---------- */}
+            <Link to="/Checkout" className="cart-icon px-3 fa-solid fa-cart-shopping"></Link>
 
-            {/* user icon */}
-            <a href="#" className="user-icon px-3 fa-solid fa-user-large"></a>
+            {/* ------------user icon -----------*/}
+            <Link to="/LoginReg" className="user-icon px-3 fa-solid fa-user-large"></Link>
           </div>
         </div>
       </div>

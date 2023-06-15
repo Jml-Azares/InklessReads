@@ -9,15 +9,22 @@
   width: auto;
   height: 60vh;
   width: 100%;
-  
+}
+
+.carousel-caption{
+  color: black;
+  font-weight: 700;
+  font-size: x-large;
 }
 
 
 .carousel-item img{
+  /* background-image: linear-gradient(rgba(255,0,0,0), rgb(255, 255, 255)); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
+  
   
 }
 
