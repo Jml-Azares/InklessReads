@@ -29,8 +29,18 @@ export default function Footer() {
             <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <Link to="#" className="nav-link p-0">
-                  Catalog
+                <Link to="/literature" className="nav-link p-0">
+                  Literature
+                </Link>
+              </li>
+              <li className="nav-item mb-2">
+                <Link to="/scienceFiction" className="nav-link p-0">
+                  Science Fiction
+                </Link>
+              </li>
+              <li className="nav-item mb-2">
+                <Link to="/history" className="nav-link p-0">
+                  History
                 </Link>
               </li>
               <li className="nav-item mb-2">
@@ -123,7 +133,10 @@ export default function Footer() {
         <div>
           <ul className="list-unstyled d-flex">
             <li>
-              <Link className="text-secondary terms-privacy" to="/privacyPolicy">
+              <Link
+                className="text-secondary terms-privacy"
+                to="/privacyPolicy"
+              >
                 Privacy Policy
               </Link>
             </li>

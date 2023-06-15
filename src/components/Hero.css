@@ -1,38 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-.carousel-item{
-  width: auto;
-  height: 60vh;
-  width: 100%;
-}
-
-.carousel-caption{
-  color: black;
-  font-weight: 700;
-  font-size: x-large;
-}
-
-
-.carousel-item img{
-  /* background-image: linear-gradient(rgba(255,0,0,0), rgb(255, 255, 255)); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  
-  
-}
-
-.carousel-item button{
-  background-color: #b8621b;
-}
-
-.carousel-item button:hover{
-  background-color: #262A56;
-  color: white;
+.hero {
+  background: linear-gradient(#b8621b, #ffffff);
+  border-radius: 10px;
 }
