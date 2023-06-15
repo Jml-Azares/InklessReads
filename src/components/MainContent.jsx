@@ -4,14 +4,14 @@
 
 import React, { useState, useEffect } from "react";
 
-export default function MainContent({ picks, api }) {
+export default function MainContent({ picks, api, start, end }) {
   const [data, setData] = useState([]);
   const apiGet = async () => {
     try {
       const response = await fetch(api);
       const booksObject = await response.json();
       const books = booksObject.results;
-      const booksFiltered = books.slice(0, 6);
+      const booksFiltered = books.slice(start, end);
 
       setData(booksFiltered);
     } catch (error) {
@@ -58,7 +58,7 @@ export default function MainContent({ picks, api }) {
                     overflow: "hidden",
                   }}
                 >
-                  <h5>{item.title}</h5>
+                  <p>{item.title}</p>
                   <p>{item.authors["0"].name}</p>
                 </div>
               </div>
