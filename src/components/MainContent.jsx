@@ -4,8 +4,10 @@
 
 import React, { useState, useEffect } from "react";
 
-export default function MainContent() {
+export default function MainContent({ picks }) {
   const [data, setData] = useState([]);
+  const [topPicks, setTopPicks] = useState([]);
+  const [featPicks, setFeatPicks] = useState([]);
 
   const apiGet = async () => {
     try {
@@ -14,7 +16,6 @@ export default function MainContent() {
       );
       const booksObject = await response.json();
       const books = booksObject.results;
-      console.log(books[0]);
       setData(books);
     } catch (error) {
       console.error("Error fetching API:", error);
@@ -28,29 +29,39 @@ export default function MainContent() {
   return (
     <div className="container-fluid">
       <div className="row p-5">
-        <h2 className="col-12 ">Featured Books</h2>
+        <h2 className="col-12 ">{picks}</h2>
       </div>
       <div className="row p-5">
         {data.map((item) => (
-          <div className="cardiB col-12 col-md-2" key={item.id}>
-            <img src={item.formats["image/jpeg"]} />
-            <div className="cardiBody">
-              <h5>{item.title}</h5>
-              <p>{item.authors["0"].name}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="row p-5">
-        <h2 className="col-12">Top Picks</h2>
-      </div>
-      <div className="row p-5">
-        {data.map((item) => (
-          <div className="cardiB col-12 col-md-2" key={item.id}>
-            <img src={item.formats["image/jpeg"]} />
-            <div className="cardiBody">
-              <h5>{item.title}</h5>
-              <p>{item.authors["0"].name}</p>
+          <div
+            className="card-parent-div col-12 col-md-4 col-lg-2 p-3"
+            key={item.id}
+          >
+            <div
+              className="card"
+              style={{ height: "400px", background: "#B8621B" }}
+            >
+              <div className="card-img p-3" style={{ height: "70%" }}>
+                <img
+                  src={item.formats["image/jpeg"]}
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+              <div
+                className="card-body"
+                style={{
+                  height: "30%",
+                  borderTop: "1px solid black",
+                  color: "white",
+                }}
+              >
+                <h5>{item.title}</h5>
+                <p>{item.authors["0"].name}</p>
+              </div>
             </div>
           </div>
         ))}
