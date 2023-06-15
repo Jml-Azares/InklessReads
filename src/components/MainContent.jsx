@@ -63,7 +63,7 @@ export default function MainContent() {
         ))}
       </div>
       <div className="row p-5">
-        <h2 className="col-12">Celebrate Pride Month</h2>
+        <h2 className="col-12">Top Picks</h2>
       </div>
       <div className="row p-5">
         {data.map((item) => (

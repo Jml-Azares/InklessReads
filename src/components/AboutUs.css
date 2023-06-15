@@ -1,54 +1,51 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
-
-.left-column{
+.left-column {
   padding-top: 100px;
   height: 200px;
 }
 
-.right-column{
+.right-column {
   padding: 50px;
-  
 }
 
-.right-column img{
+.right-column img {
   height: 300px;
   width: 100%;
 }
 
-.teamLeft img{
+.teamLeft img {
   height: 200px;
   width: 200px;
 }
 
-.teamMid img{
+.teamMid img {
   height: 200px;
   width: 200px;
 }
 
-.teamRight img{
+.teamRight img {
   height: 200px;
   width: 200px;
 }
 
-.missionVision{
+.missionVision {
   padding: 50px;
   text-align: center;
   height: 520px;
   margin-bottom: 30px;
 }
 
-.mission{
-  height: 300px;
+.mission {
+  height: 200px;
   width: 400px;
 }
 
-.vision{
-  height: 300px;
+.vision {
+  height: 200px;
   width: 400px;
 }
