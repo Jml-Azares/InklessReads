@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 
 export default function MainContent({ picks, api, start, end }) {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const apiGet = async () => {
     try {
       const response = await fetch(api);
@@ -14,14 +16,15 @@ export default function MainContent({ picks, api, start, end }) {
       const booksFiltered = books.slice(start, end);
 
       setData(booksFiltered);
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching API:", error);
     }
   };
 
-  useEffect(() => {});
-
-  apiGet();
+  useEffect(() => {
+    apiGet();
+  }, []);
 
   return (
     <div className="container-fluid">
