@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import MainContent from "./MainContent";
 
 function History() {
   return (
-    <div>
-      <h1>History</h1>
-    </div>
-  )
+    <>
+      <MainContent
+        picks="History"
+        api="https://gutendex.com/books?sort=popular"
+        start={0}
+        end={24}
+      />
+    </>
+  );
 }
 
-export default History
+export default History;

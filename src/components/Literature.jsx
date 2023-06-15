@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import MainContent from "./MainContent";
 
 function Literature() {
   return (
-      <div>
-        <h1> Literature</h1>
-      </div>
-  )
+    <>
+      <MainContent
+        picks="Literature"
+        api="https://gutendex.com/books?sort=popular"
+        start={0}
+        end={24}
+      />
+    </>
+  );
 }
 
-export default Literature
+export default Literature;
