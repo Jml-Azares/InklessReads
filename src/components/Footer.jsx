@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -28,19 +29,19 @@ export default function Footer() {
             <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0">
+                <Link to="#" className="nav-link p-0">
                   Catalog
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0">
+                <Link to="/Faq" className="nav-link p-0">
                   FAQs
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0">
+                <Link to="/about-us" className="nav-link p-0">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -98,39 +99,39 @@ export default function Footer() {
           <p>&copy; 2023 Inkless Reads All rights reserved.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
-              <a className="link-body-emphasis" href="#">
+              <Link className="link-body-emphasis" to="#">
                 <i className="fa-brands fa-facebook"></i>
-              </a>
+              </Link>
             </li>
             <li className="ms-3">
-              <a className="link-body-emphasis" href="#">
+              <Link className="link-body-emphasis" to="#">
                 <i className="fa-brands fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li className="ms-3">
-              <a className="link-body-emphasis" href="#">
+              <Link className="link-body-emphasis" to="#">
                 <i className="fa-brands fa-tiktok"></i>
-              </a>
+              </Link>
             </li>
             <li className="ms-3">
-              <a className="link-body-emphasis" href="#">
+              <Link className="link-body-emphasis" to="#">
                 <i className="fa-brands fa-twitter"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div>
           <ul className="list-unstyled d-flex">
             <li>
-              <a className="text-secondary terms-privacy" href="#">
+              <Link className="text-secondary terms-privacy" to="/privacyPolicy">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li className="ms-3">.</li>
             <li className="ms-3">
-              <a className="text-secondary terms-privacy" href="#">
+              <Link className="text-secondary terms-privacy" to="/terms">
                 Terms of Use
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

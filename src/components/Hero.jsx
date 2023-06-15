@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
-        <button className='btn btn-outline-light'>BUY NOW</button>
+        
       </div>
     </div>
     <div className="carousel-item">
@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
-        <button className='btn btn-outline-light'>BUY NOW</button>
+        
       </div>
     </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
-        <button className='btn btn-outline-light'>BUY NOW</button>
+        
       </div>
     </div>
   </div>
