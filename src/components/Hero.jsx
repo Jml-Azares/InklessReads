@@ -4,8 +4,8 @@ import HeroImage from "../assets/images/IKhero.png";
 
 export default function Hero() {
   return (
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="container col-xxl-8 px-4">
+      <div class="row flex-lg-row-reverse align-items-center g-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img
             src={HeroImage}
@@ -27,6 +27,14 @@ export default function Hero() {
             worlds, gain knowledge, and embark on unforgettable reading
             experiences with just a few clicks. Welcome to a world of endless
             possibilities at our ebook website.
+            <br />
+            <br />
+            At our ebook website, we celebrate the marriage of convenience and
+            literature, offering you a seamless and immersive reading experience
+            like no other. Whether you're an avid reader, a casual explorer, or
+            a student seeking scholarly resources, our digital library houses an
+            extensive collection of ebooks across diverse genres and
+            disciplines.
           </p>
         </div>
       </div>

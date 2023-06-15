@@ -49,3 +49,12 @@
   height: 200px;
   width: 400px;
 }
+
+.card-group {
+  width: 80vw;
+  margin: auto;
+}
+
+.mis-vis {
+  background-color: #e3ccae;
+}
