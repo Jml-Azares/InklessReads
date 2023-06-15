@@ -2,15 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #262A56;
+  background-color: #262a56;
   padding: 10px 20px;
 }
 
 .logo {
-  height: 80px;
-  width: auto;
+  height: 50px;
+  width: 50px;
 }
-
 
 .nav-item li a {
   text-decoration: none;
@@ -18,15 +17,19 @@
 }
 
 .nav-item li a:hover {
-  color: #B8621B;
-}
-
-.nav-icons{
-  font-size: 25px;
-}
-.cart-icon:hover, .user-icon:hover, .search-icon:hover{
   color: #b8621b;
 }
-.cart-icon, .user-icon, .search-icon{
+
+.nav-icons {
+  font-size: 25px;
+}
+.cart-icon:hover,
+.user-icon:hover,
+.search-icon:hover {
+  color: #b8621b;
+}
+.cart-icon,
+.user-icon,
+.search-icon {
   color: white;
 }

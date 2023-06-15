@@ -1,26 +1,33 @@
 import React from "react";
 import "./Hero.css";
-import HeroImage from "../assets/images/heroimg.jpg";
+import HeroImage from "../assets/images/IKhero.png";
 
 export default function Hero() {
   return (
-    <div class="container my-5 hero">
-      <div class="row p-4 align-items-center rounded-3 border shadow-lg">
-        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src={HeroImage}
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
             Inkless Reads
           </h1>
           <p class="lead">
-            Welcome to Inkless Reads, where the wonders of literature come alive
-            in the digital realm. Immerse yourself in a diverse collection of
-            ebooks across genres, accessible anytime, anywhere. Discover new
+            Welcome to our ebook website, where the wonders of literature come
+            alive in the digital realm. Immerse yourself in a diverse collection
+            of ebooks across genres, accessible anytime, anywhere. Discover new
             worlds, gain knowledge, and embark on unforgettable reading
             experiences with just a few clicks. Welcome to a world of endless
             possibilities at our ebook website.
           </p>
-        </div>
-        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-lg-3" src={HeroImage} alt="" width="720" />
         </div>
       </div>
     </div>
