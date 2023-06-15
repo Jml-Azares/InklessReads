@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "./Hero";
 import "./AboutUs.css";
+import logo from "../assets/images/IK.png";
 import AboutImage1 from "../assets/images/about-image1.jpg";
 import AboutImage2 from "../assets/images/about-image2.jpg";
 import avatar from "../assets/images/avatar.jpg";
@@ -12,17 +12,52 @@ import vision from "../assets/images/visionImage.png";
 const AboutUs = () => {
   return (
     <>
-      <Hero />
       {/* -----------------About Us Starts Here---------------------- */}
       <div className="aboutUs-head text-center py-3">
         <h1>About Us</h1>
-        <h5>Know more about Inkless Reads</h5>
       </div>
 
-      <div className="container">
-        <div className="row topRow">
-          <div className="col left-column">
-            <p>
+      <div class="px-4 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src={logo}
+          alt=""
+          width="300"
+          height="300"
+        />
+        <h1 class="display-5 fw-bold text-body-emphasis">Inkless Reads</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            With our user-friendly interface, navigating through our extensive
+            library is a breeze. Our advanced search and recommendation features
+            make it effortless to find your next favorite book. You can also
+            personalize your reading experience by creating customized reading
+            lists and tracking your reading progress.
+            <br />
+            <br />
+            We understand the importance of affordability, which is why we offer
+            competitive pricing for our ebooks. We believe that great literature
+            should be accessible to all, and our commitment to fair pricing
+            ensures that readers of all backgrounds can indulge in their love
+            for books without breaking the bank.
+          </p>
+        </div>
+      </div>
+
+      <div className="container col-xxl-8">
+        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div className="col-10 col-sm-8 col-lg-6">
+            <img
+              src={AboutImage1}
+              className="d-block mx-lg-auto img-fluid"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div className="col-lg-6">
+            <p className="lead">
               Welcome to Inkless Reads, your go-to destination for a delightful
               reading experience! We are an innovative ebook website that aims
               to bring the joy of literature to readers all around the world.
@@ -38,8 +73,15 @@ const AboutUs = () => {
               Our curated collection features a diverse range of genres and
               styles, ensuring that there's always something to suit every taste
               and interest.
-              <br />
-              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container col-xxl-8">
+        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div className="col-lg-6">
+            <p className="lead">
               What sets us apart is our commitment to quality. We take great
               care in selecting the best works from talented authors and
               publishers to offer our readers a premium reading experience. Each
@@ -56,49 +98,57 @@ const AboutUs = () => {
               fellow readers.
             </p>
           </div>
-          <div className="col right-column">
-            <img src={AboutImage1} className="aboutImage1" />
+          <div className="col-10 col-sm-8 col-lg-6">
+            <img
+              src={AboutImage2}
+              className="d-block mx-lg-auto img-fluid"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row bottomRow">
-          <div className="col right-column">
-            <img src={AboutImage2} className="aboutImage2" />
+
+      {/* -------------------Mission Vision------------------------ */}
+
+      <div className="card-group mb-5">
+        <div className="card mis-vis">
+          <img src={mission} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Mission</h5>
+            <p className="card-text">
+              Our mission at Inkless Reads is to ignite a love for reading,
+              connect readers with exceptional literature, and foster a vibrant
+              community of book enthusiasts. We strive to provide a diverse
+              collection of high-quality ebooks that entertain, inspire, and
+              enlighten readers from all walks of life. Through our platform, we
+              aim to promote the joy of reading, support talented authors, and
+              make literature accessible to everyone.
+            </p>
           </div>
-          <div className="col left-column">
-            <p>
-              With our user-friendly interface, navigating through our extensive
-              library is a breeze. Our advanced search and recommendation
-              features make it effortless to find your next favorite book. You
-              can also personalize your reading experience by creating
-              customized reading lists and tracking your reading progress.
-              <br />
-              <br />
-              We understand the importance of affordability, which is why we
-              offer competitive pricing for our ebooks. We believe that great
-              literature should be accessible to all, and our commitment to fair
-              pricing ensures that readers of all backgrounds can indulge in
-              their love for books without breaking the bank.
-              <br />
-              <br />
-              Whether you're a dedicated bookworm or a casual reader looking for
-              your next escape, Inkless Reads invites you to embark on a
-              literary journey like no other. Immerse yourself in captivating
-              stories, broaden your horizons with insightful non-fiction, and
-              lose yourself in the beauty of poetry. Let the power of words
-              ignite your imagination and leave an indelible mark on your soul.
-              <br />
-              <br />
-              Thank you for choosing Inkless Reads as your trusted source for
-              ebooks. We look forward to being your companion in the world of
-              literature, inspiring you one page at a time. Happy reading!
+        </div>
+        <div className="card mis-vis">
+          <img src={vision} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Vision</h5>
+            <p className="card-text">
+              At Inkless Reads, our vision is to create a world where books are
+              cherished and celebrated. We envision a future where reading is a
+              cherished pastime, where stories have the power to bridge gaps,
+              ignite imaginations, and create meaningful connections. We aim to
+              be the go-to destination for readers seeking exceptional
+              literature, innovative digital reading experiences, and a
+              welcoming community of book lovers. Through our commitment to
+              excellence and passion for literature, we aspire to leave a
+              lasting impact on the way people read, learn, and experience the
+              power of words.
             </p>
           </div>
         </div>
       </div>
 
-      <hr />
       {/* ---------------Meet the Team------------------------------ */}
       <div className="team m-5 text-center">
         <div className="teamHeader p-5">
@@ -126,42 +176,6 @@ const AboutUs = () => {
             <blockquote>
               "I'm not anti-social; I'm just not user friendly"
             </blockquote>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-
-      {/* -------------------Mission Vision------------------------ */}
-      <div className="container missionVision py-5">
-        <h1 className="missionVisionHeader mb-5">Our Company Goals</h1>
-        <div className="row">
-          <div className="col mission my-5">
-            <img src={mission} alt="mission" className="mission" />
-            <p>
-              Our mission at Inkless Reads is to ignite a love for reading,
-              connect readers with exceptional literature, and foster a vibrant
-              community of book enthusiasts. We strive to provide a diverse
-              collection of high-quality ebooks that entertain, inspire, and
-              enlighten readers from all walks of life. Through our platform, we
-              aim to promote the joy of reading, support talented authors, and
-              make literature accessible to everyone.
-            </p>
-          </div>
-          <div className="col vision my-5">
-            <img src={vision} alt="vision" className="vision" />
-            <p>
-              At Inkless Reads, our vision is to create a world where books are
-              cherished and celebrated. We envision a future where reading is a
-              cherished pastime, where stories have the power to bridge gaps,
-              ignite imaginations, and create meaningful connections. We aim to
-              be the go-to destination for readers seeking exceptional
-              literature, innovative digital reading experiences, and a
-              welcoming community of book lovers. Through our commitment to
-              excellence and passion for literature, we aspire to leave a
-              lasting impact on the way people read, learn, and experience the
-              power of words.
-            </p>
           </div>
         </div>
       </div>

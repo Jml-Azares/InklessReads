@@ -109,22 +109,38 @@ export default function Footer() {
           <p>&copy; 2023 Inkless Reads All rights reserved.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
-              <Link className="link-body-emphasis" to="#">
+              <Link
+                className="link-body-emphasis"
+                to="https://www.facebook.com/"
+                target="blank"
+              >
                 <i className="fa-brands fa-facebook"></i>
               </Link>
             </li>
             <li className="ms-3">
-              <Link className="link-body-emphasis" to="#">
+              <Link
+                className="link-body-emphasis"
+                to="https://www.instagram.com/"
+                target="blank"
+              >
                 <i className="fa-brands fa-instagram"></i>
               </Link>
             </li>
             <li className="ms-3">
-              <Link className="link-body-emphasis" to="#">
+              <Link
+                className="link-body-emphasis"
+                to="https://www.tiktok.com/en/"
+                target="blank"
+              >
                 <i className="fa-brands fa-tiktok"></i>
               </Link>
             </li>
             <li className="ms-3">
-              <Link className="link-body-emphasis" to="#">
+              <Link
+                className="link-body-emphasis"
+                to="https://twitter.com/"
+                target="blank"
+              >
                 <i className="fa-brands fa-twitter"></i>
               </Link>
             </li>
