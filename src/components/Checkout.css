@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.left-container{
+
+
+}
+
+.top-container{
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  padding: 10px;
+
+  
+}
+
+.top-container input{
+
+ 
+}
+
+.promocode-input{
+ 
+}
+.promocode-input button{
+  background-color: gray;
+}
+
+.form-label{
+  line-height: 5px;
+}
+
+.form-control{
+  line-height: 5px;
+}
+
+.checkoutbtn{
+  width: 100%;
+}
