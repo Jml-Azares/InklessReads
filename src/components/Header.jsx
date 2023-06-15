@@ -3,7 +3,6 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import inkless from "../assets/images/inkless-logo.png";
 
-
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg">
@@ -28,7 +27,7 @@ export default function Header() {
                 aria-current="page"
                 to="/"
               >
-                INKLESS-READS
+                Inkless Reads
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -60,7 +59,11 @@ export default function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" aria-current="page" to="/about-us">
+              <Link
+                className="nav-link text-white"
+                aria-current="page"
+                to="/about-us"
+              >
                 About-Us
               </Link>
             </li>
@@ -71,9 +74,8 @@ export default function Header() {
                 //search icon-----------------
                 className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
                 type="button"
-
-                id="button-addon1">
-                </button>
+                id="button-addon1"
+              ></button>
               <input
                 type="text"
                 className="form-control"
@@ -85,10 +87,16 @@ export default function Header() {
           </form>
           <div className="nav-icons">
             {/* -------------cart icon---------- */}
-            <Link to="/Checkout" className="cart-icon px-3 fa-solid fa-cart-shopping"></Link>
+            <Link
+              to="/Checkout"
+              className="cart-icon px-3 fa-solid fa-cart-shopping"
+            ></Link>
 
             {/* ------------user icon -----------*/}
-            <Link to="/LoginReg" className="user-icon px-3 fa-solid fa-user-large"></Link>
+            <Link
+              to="/LoginReg"
+              className="user-icon px-3 fa-solid fa-user-large"
+            ></Link>
           </div>
         </div>
       </div>

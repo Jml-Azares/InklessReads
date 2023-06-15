@@ -1,50 +1,28 @@
-import React from 'react'
-import './Hero.css';
-import HeroImage1 from "../assets/images/carousel1.jpg"
-import HeroImage2 from "../assets/images/carousel2.jpg"
-import HeroImage3 from "../assets/images/carousel3.jpg"
+import React from "react";
+import "./Hero.css";
+import HeroImage from "../assets/images/heroimg.jpg";
 
 export default function Hero() {
   return (
-
-<div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-
-    <div className="carousel-item active">
-      <img src={HeroImage1} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-        
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+            Inkless Reads
+          </h1>
+          <p class="lead">
+            Welcome to Inkless Reads, where the wonders of literature come alive
+            in the digital realm. Immerse yourself in a diverse collection of
+            ebooks across genres, accessible anytime, anywhere. Discover new
+            worlds, gain knowledge, and embark on unforgettable reading
+            experiences with just a few clicks. Welcome to a world of endless
+            possibilities at our ebook website.
+          </p>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src={HeroImage} alt="" width="720" />
+        </div>
       </div>
     </div>
-    <div className="carousel-item">
-      <img src={HeroImage2} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-        
-      </div>
-    </div>
-
-    <div className="carousel-item">
-      <img src={HeroImage3} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-        
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-
   );
 }
