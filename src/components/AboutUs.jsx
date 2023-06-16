@@ -28,11 +28,11 @@ const AboutUs = () => {
         <h1 class="display-5 fw-bold text-body-emphasis">Inkless Reads</h1>
         <div class="col-lg-6 mx-auto">
           <p class="lead mb-4">
-            With our user-friendly interface, navigating through our extensive
-            library is a breeze. Our advanced search and recommendation features
-            make it effortless to find your next favorite book. You can also
-            personalize your reading experience by creating customized reading
-            lists and tracking your reading progress.
+            Welcome to Inkless Reads, your go-to destination for a delightful
+            reading experience! We are an innovative ebook website that aims to
+            bring the joy of literature to readers all around the world. Whether
+            you're a fan of captivating novels, thought-provoking non-fiction,
+            or enchanting poetry, Inkless Reads has something for everyone.
             <br />
             <br />
             We understand the importance of affordability, which is why we offer
@@ -58,12 +58,11 @@ const AboutUs = () => {
           </div>
           <div className="col-lg-6">
             <p className="lead">
-              Welcome to Inkless Reads, your go-to destination for a delightful
-              reading experience! We are an innovative ebook website that aims
-              to bring the joy of literature to readers all around the world.
-              Whether you're a fan of captivating novels, thought-provoking
-              non-fiction, or enchanting poetry, Inkless Reads has something for
-              everyone.
+              With our user-friendly interface, navigating through our extensive
+              library is a breeze. Our advanced search and recommendation
+              features make it effortless to find your next favorite book. You
+              can also personalize your reading experience by creating
+              customized reading lists and tracking your reading progress.
               <br />
               <br />
               At Inkless Reads, we believe in the power of words to inspire,
