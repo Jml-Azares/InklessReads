@@ -18,7 +18,7 @@
 }
 
 .top-container input{
-
+  border: none;
  
 }
 
@@ -39,4 +39,10 @@
 
 .checkoutbtn{
   width: 100%;
+  background-color: #b8621b;
 }
+
+.checkoutbtn:hover{
+  background-color: #262a56;
+}
+

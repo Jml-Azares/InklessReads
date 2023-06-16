@@ -4,13 +4,14 @@ import "./Checkout.css";
 function Checkout() {
   return (
     <>
-      <h1 className="text-center">Checkout Page</h1>
+      <h1 className="text-center pt-5">Checkout Page</h1>
 
       <div className="row container px-5 py-5 mx-auto">
         <div className="col-8 left-container">
           <h3>Billing address</h3>
           <form>
             <div className="row mb-3">
+              {/* Input First name */}
               <div className="col">
                 <input
                   type="text"
@@ -20,6 +21,7 @@ function Checkout() {
                   placeholder="Firstname"
                 />
               </div>
+                {/* Input Last name */}
               <div className="col">
                 <input
                   type="text"
@@ -30,7 +32,7 @@ function Checkout() {
                 />
               </div>
             </div>
-
+              {/* Input Username */}
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
                 @
@@ -43,7 +45,30 @@ function Checkout() {
                 aria-describedby="basic-addon1"
               />
             </div>
-
+            <div className="row mb-3">
+              {/* Input Password */}
+              <div className="col">
+                <input
+                  type="password"
+                  className="form-control"
+                  
+                  id="InputPassword"
+                  aria-describedby="Password"
+                  placeholder="Password"
+                />
+              </div>
+                {/* Input Confirm Password */}
+              <div className="col">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="InputconfirmPassword"
+                  aria-describedby="InputconfirmPassword"
+                  placeholder="Confirm Password"
+                />
+              </div>
+            </div>
+              {/* Input Email Address */}
             <div className="mb-3">
               <input
                 type="email"
@@ -57,6 +82,7 @@ function Checkout() {
               </div>
             </div>
 
+              {/* Address */}
             <div className="mb-3">
               <input
                 type="text"
@@ -66,7 +92,7 @@ function Checkout() {
                 placeholder="Address"
               />
             </div>
-
+              {/* Address 2 Optional */}
             <div className="mb-3">
               <input
                 type="text"
@@ -76,7 +102,7 @@ function Checkout() {
                 placeholder="Address 2 (Optional)"
               />
             </div>
-
+              {/* Country */}
             <div className="row">
               <div className="col">
                 <input
@@ -87,6 +113,7 @@ function Checkout() {
                   placeholder="Country"
                 />
               </div>
+              {/* State */}
               <div className="col">
                 <input
                   type="text"
@@ -96,6 +123,7 @@ function Checkout() {
                   placeholder="State"
                 />
               </div>
+              {/* Zip */}
               <div className="col">
                 <input
                   type="text"
@@ -109,7 +137,7 @@ function Checkout() {
 
             <hr />
 
-            <div className="mb-3 form-check">
+            <div className="mt-4 pb-3 form-check">
               <input
                 type="checkbox"
                 className="form-check-input"
@@ -120,7 +148,7 @@ function Checkout() {
               </label>
             </div>
 
-            <div className="mb-3 form-check">
+            <div className="mb-4 form-check">
               <input
                 type="checkbox"
                 className="form-check-input"
@@ -132,107 +160,75 @@ function Checkout() {
             </div>
 
             <hr />
-            <div className="row">
-              <div className="row">
-                <div className="col">
-                  <ul>
-                    <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                      />
-                      <label
-                        className="form-check-label"
-                        for="flexRadioDefault2"
-                      >
-                        Credit card
-                      </label>
-                    </div>
+            <div className="row mt-5">
 
-                    <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label
-                        className="form-check-label"
-                        for="flexRadioDefault1"
-                      >
-                        Debit card
-                      </label>
-                    </div>
+              {/* 1st row */}
+              <div className="col-4">
+                <div className="row">
+                  <div className="col">
+                    <ul>
+                      <h5>Payment Options</h5>
+                      <div className="form-check">
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                        <label className="form-check-label" for="flexRadioDefault2" > 
+                          Credit card
+                        </label>  
+                      </div>
+                          
+                      <div className="form-check">  
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                        <label className="form-check-label" for="flexRadioDefault1"> 
+                          Debit card
+                        </label>
+                      </div>
+                        
+                      <div className="form-check">
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                        <label className="form-check-label" for="flexRadioDefault1" >
+                          Paypal
+                        </label>
+                      </div>
+                    </ul>
+                  </div>
+                </div>   
+              </div>
 
-                    <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label
-                        className="form-check-label"
-                        for="flexRadioDefault1"
-                      >
-                        Paypal
-                      </label>
-                    </div>
-                  </ul>
+                      {/*2nd col Card name */}
+              <div className="col-4">
+                <div className="row mb-3">        
+                  <div className="col-12">        
+                    <input type="text" className="form-control mb-3" id="InputCardname" aria-describedby="Cardname" placeholder="Cardname"/>
+                  </div>     
+                          {/*Card expiry  */}
+                  <div className="col-12">     
+                    <input type="date" className="form-control" id="InputCardexpiry" aria-describedby="nameExpiry" placeholder="cardExpiry"/> 
+                  </div>
                 </div>
               </div>
 
-              <div className="row mb-3">
-                <div className="col">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="InputCardname"
-                    aria-describedby="Cardname"
-                    placeholder="Cardname"
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="InputCardexpiry"
-                    aria-describedby="cardnameExpiry"
-                    placeholder="cardExpiry"
-                  />
-                </div>
-              </div>
 
-              <div className="row mb-3">
-                <div className="col">
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="InputCardnumber"
-                    aria-describedby="InputCardnumber"
-                    placeholder="cardNumber"
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="InputCVV"
-                    aria-describedby="cardCVV"
-                    placeholder="cardCVV"
-                  />
+              {/* 3rd col Card number*/}
+              <div className="col-4">
+                <div className="row mb-3">
+                  <div className="col-12">
+                    <input type="number" className="form-control mb-3" id="InputCardnumber" aria-describedby="InputCardnumber" placeholder="cardNumber"/>
+                  </div>    
+                      {/* Card CVV */}
+                  <div className="col-12">   
+                    <input type="text" className="form-control" id="InputCVV" aria-describedby="cardCVV" placeholder="cardCVV"/>
+                  </div>
                 </div>
               </div>
             </div>
           </form>
-        </div>
+        </div>   
+                  
 
         <div className="col-4 right-container">
           <h3>Your cart</h3>
           <div className="top-container">
             <form>
+              {/* Input First Book name */}
               <div className="mb-3">
                 <input
                   type="email"
@@ -241,6 +237,8 @@ function Checkout() {
                   placeholder="Book name "
                 />
               </div>
+              <hr />
+              {/* Input Second Book name */}
               <div className="mb-3">
                 <input
                   type="email"
@@ -249,6 +247,8 @@ function Checkout() {
                   placeholder="Second book name "
                 />
               </div>
+              <hr />
+              {/* Input Third book name */}
               <div className="mb-3">
                 <input
                   type="email"
@@ -257,6 +257,8 @@ function Checkout() {
                   placeholder="Third book name "
                 />
               </div>
+              <hr />
+              {/* Input Promo code */}
               <div className="mb-3">
                 <input
                   type="email"
@@ -265,6 +267,8 @@ function Checkout() {
                   placeholder="Promo Code "
                 />
               </div>
+              <hr />
+              {/* Input Total amount */}
               <div className="mb-3">
                 <input
                   type="email"
@@ -277,6 +281,7 @@ function Checkout() {
           </div>
 
           <div className="promocode-input">
+            {/* Input Box for Reedem with button */}
             <div className="input-group my-3">
               <input
                 type="text"
@@ -319,8 +324,8 @@ function Checkout() {
               (optional)
             </label>
           </div>
-
-          <button type="submit" className="btn btn-primary checkoutbtn my-5">
+            {/* Checkout Button */}
+          <button type="submit" className="btn btn-primary checkoutbtn my-3">
             Checkout
           </button>
         </div>
