@@ -1,4 +1,4 @@
-div.card {
+div.card-parent {
   height: 400px;
   background: #b8621b;
   box-shadow: 5px 10px #888888;
@@ -24,7 +24,4 @@ div.card-body {
   border-top: 1px solid black;
   color: white;
   overflow: hidden;
-}
-
-@keyframes shake {
 }
