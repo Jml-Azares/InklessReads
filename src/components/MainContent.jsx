@@ -39,7 +39,7 @@ export default function MainContent({ picks, api, start, end }) {
               className="card-parent-div col-12 col-md-4 col-lg-2 px-2 py-4"
               key={item.id}
             >
-              <div className="card">
+              <div className="card card-parent">
                 <div className="card-img p-1">
                   <img src={item.formats["image/jpeg"]} />
                 </div>
