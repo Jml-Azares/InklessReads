@@ -3,6 +3,16 @@
   background-color: #000000;
 }
 
+.list-unstyled{
+  text-indent: 20px;
+}
+
+
+.contactDetails{
+  text-indent: 40px;
+}
+
+
 .subs-btn {
   background-color: #b8621b;
   color: #ffffff;
@@ -23,13 +33,33 @@
 .terms-privacy {
   text-decoration: none;
   font-size: 13px;
+  
 }
 
 .links a {
   color: #ffffff;
+  text-indent: 20px;
+  
 }
 
 textarea {
   height: 100px;
   resize: none;
 }
+
+.copyRightsText{
+  padding-top: 30px;
+}
+
+.footerText{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.SocialIcon{
+  height: 60px;
+  width: 60px;
+  
+}
+
