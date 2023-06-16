@@ -7,11 +7,16 @@ import tiktok from "../assets/images/tiktok.png";
 import twitter from "../assets/images/twitter.png";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="container-fluid IL-footer">
       <footer className="py-5 p-4">
         <div className="row">
-
           {/* Contact details */}
           <div className="col-md-3 mb-3 contactDetails">
             <h5>Contact Details</h5>
@@ -30,26 +35,30 @@ export default function Footer() {
               </li>
             </ul>
 
-          {/* privacy policy and terms of use */}
-        <div>
-          <ul className="list-unstyled d-flex">
-            <li>
-              <Link
-                className="terms-privacy"
-                to="/privacyPolicy"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li className="">.</li>
-            <li className="">
-              <Link className="terms-privacy" to="/terms">
-                Terms of Use
-              </Link>
-            </li>
-          </ul>
-        </div>
-
+            {/* privacy policy and terms of use */}
+            <div>
+              <ul className="list-unstyled d-flex">
+                <li>
+                  <Link
+                    className="terms-privacy"
+                    to="/privacyPolicy"
+                    onClick={scrollToTop}
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li className="">.</li>
+                <li className="">
+                  <Link
+                    className="terms-privacy"
+                    to="/terms"
+                    onClick={scrollToTop}
+                  >
+                    Terms of Use
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* footer links to different pages */}
@@ -57,27 +66,43 @@ export default function Footer() {
             <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <Link to="/literature" className="nav-link p-0">
+                <Link
+                  to="/literature"
+                  className="nav-link p-0"
+                  onClick={scrollToTop}
+                >
                   Literature
                 </Link>
               </li>
               <li className="nav-item mb-2">
-                <Link to="/scienceFiction" className="nav-link p-0">
+                <Link
+                  to="/scienceFiction"
+                  className="nav-link p-0"
+                  onClick={scrollToTop}
+                >
                   Science Fiction
                 </Link>
               </li>
               <li className="nav-item mb-2">
-                <Link to="/history" className="nav-link p-0">
+                <Link
+                  to="/history"
+                  className="nav-link p-0"
+                  onClick={scrollToTop}
+                >
                   History
                 </Link>
               </li>
               <li className="nav-item mb-2">
-                <Link to="/Faq" className="nav-link p-0">
+                <Link to="/Faq" className="nav-link p-0" onClick={scrollToTop}>
                   FAQs
                 </Link>
               </li>
               <li className="nav-item mb-2">
-                <Link to="/about-us" className="nav-link p-0">
+                <Link
+                  to="/about-us"
+                  className="nav-link p-0"
+                  onClick={scrollToTop}
+                >
                   About
                 </Link>
               </li>
@@ -133,56 +158,66 @@ export default function Footer() {
               </div>
             </form>
 
-           {/* footer social media icons */}
-          <ul className="list-unstyled d-flex">
-            <li className="ms-3">
-              <Link
-                className="link-body-emphasis"
-                to="https://www.facebook.com/"
-                target="blank"
-              >
-                <img src={facebook} alt="facebook Logo" className="SocialIcon" />
-              </Link>
-            </li>
-            <li className="ms-3">
-              <Link
-                className="link-body-emphasis"
-                to="https://www.instagram.com/"
-                target="blank"
-              >
-                <img src={instagram} alt="instagram Logo" className="SocialIcon" />
-              </Link>
-            </li>
-            <li className="ms-3">
-              <Link
-                className="link-body-emphasis"
-                to="https://www.tiktok.com/en/"
-                target="blank"
-              >
-                <img src={tiktok} alt="tiktok Logo" className="SocialIcon" />
-              </Link>
-            </li>
-            <li className="ms-3">
-              <Link
-                className="link-body-emphasis"
-                to="https://twitter.com/"
-                target="blank"
-              >
-                <img src={twitter} alt="twitter Logo" className="SocialIcon" />
-              </Link>
-            </li>
-          </ul> 
-
+            {/* footer social media icons */}
+            <ul className="list-unstyled d-flex">
+              <li className="ms-3">
+                <Link
+                  className="link-body-emphasis"
+                  to="https://www.facebook.com/"
+                  target="blank"
+                >
+                  <img
+                    src={facebook}
+                    alt="facebook Logo"
+                    className="SocialIcon"
+                  />
+                </Link>
+              </li>
+              <li className="ms-3">
+                <Link
+                  className="link-body-emphasis"
+                  to="https://www.instagram.com/"
+                  target="blank"
+                >
+                  <img
+                    src={instagram}
+                    alt="instagram Logo"
+                    className="SocialIcon"
+                  />
+                </Link>
+              </li>
+              <li className="ms-3">
+                <Link
+                  className="link-body-emphasis"
+                  to="https://www.tiktok.com/en/"
+                  target="blank"
+                >
+                  <img src={tiktok} alt="tiktok Logo" className="SocialIcon" />
+                </Link>
+              </li>
+              <li className="ms-3">
+                <Link
+                  className="link-body-emphasis"
+                  to="https://twitter.com/"
+                  target="blank"
+                >
+                  <img
+                    src={twitter}
+                    alt="twitter Logo"
+                    className="SocialIcon"
+                  />
+                </Link>
+              </li>
+            </ul>
           </div>
-
         </div>
 
         {/* footer text copyrights */}
         <div className="d-flex flex-column flex-sm-row justify-content-between copyRightsText border-top">
-          <h5 className="footerText">&copy; 2023 Inkless Reads All rights reserved.</h5>
+          <h5 className="footerText">
+            &copy; 2023 Inkless Reads All rights reserved.
+          </h5>
         </div>
-
-        
       </footer>
     </div>
   );
