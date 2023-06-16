@@ -1,5 +1,4 @@
 import React from "react";
-import "./Hero.css";
 import HeroImage from "../assets/images/Header-Jumbo.jpg";
 
 export default function Hero() {
