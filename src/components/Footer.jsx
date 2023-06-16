@@ -1,13 +1,19 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
+import facebook from "../assets/images/facebook.png";
+import instagram from "../assets/images/instagram.png";
+import tiktok from "../assets/images/tiktok.png";
+import twitter from "../assets/images/twitter.png";
 
 export default function Footer() {
   return (
     <div className="container-fluid IL-footer">
       <footer className="py-5 p-4">
         <div className="row">
-          <div className="col-md-3 mb-3">
+
+          {/* Contact details */}
+          <div className="col-md-3 mb-3 contactDetails">
             <h5>Contact Details</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -18,14 +24,36 @@ export default function Footer() {
                 <i className="fa-solid fa-envelope-circle-check"></i>
                 <span> ireads@aol.com</span>
               </li>
-              <li className="nav-item mb-2">
+              <li className="nav-item mb-5">
                 <i className="fa-solid fa-location-dot"></i>
                 <span> Philippines</span>
               </li>
             </ul>
+
+          {/* privacy policy and terms of use */}
+        <div>
+          <ul className="list-unstyled d-flex">
+            <li>
+              <Link
+                className="terms-privacy"
+                to="/privacyPolicy"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li className="">.</li>
+            <li className="">
+              <Link className="terms-privacy" to="/terms">
+                Terms of Use
+              </Link>
+            </li>
+          </ul>
+        </div>
+
           </div>
 
-          <div className="col-md-2 mb-3 links">
+          {/* footer links to different pages */}
+          <div className="col-md-2 mb-3 links footerLinks">
             <h5>Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -56,6 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* contact form */}
           <div className="col-md-3 mb-3">
             <h5>Contact Us</h5>
             <div className="d-flex flex-column flex-sm-column w-100 gap-2">
@@ -83,8 +112,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-md-3 offset-md-1 mb-3">
-            <form>
+          {/* newsletter section */}
+          <div className="col-md-3 offset-md-1 my-3">
+            <form className="mb-3">
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
               <div className="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -102,11 +132,8 @@ export default function Footer() {
                 </button>
               </div>
             </form>
-          </div>
-        </div>
 
-        <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          <p>&copy; 2023 Inkless Reads All rights reserved.</p>
+           {/* footer social media icons */}
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
               <Link
@@ -114,7 +141,7 @@ export default function Footer() {
                 to="https://www.facebook.com/"
                 target="blank"
               >
-                <i className="fa-brands fa-facebook"></i>
+                <img src={facebook} alt="facebook Logo" className="SocialIcon" />
               </Link>
             </li>
             <li className="ms-3">
@@ -123,7 +150,7 @@ export default function Footer() {
                 to="https://www.instagram.com/"
                 target="blank"
               >
-                <i className="fa-brands fa-instagram"></i>
+                <img src={instagram} alt="instagram Logo" className="SocialIcon" />
               </Link>
             </li>
             <li className="ms-3">
@@ -132,7 +159,7 @@ export default function Footer() {
                 to="https://www.tiktok.com/en/"
                 target="blank"
               >
-                <i className="fa-brands fa-tiktok"></i>
+                <img src={tiktok} alt="tiktok Logo" className="SocialIcon" />
               </Link>
             </li>
             <li className="ms-3">
@@ -141,29 +168,21 @@ export default function Footer() {
                 to="https://twitter.com/"
                 target="blank"
               >
-                <i className="fa-brands fa-twitter"></i>
+                <img src={twitter} alt="twitter Logo" className="SocialIcon" />
               </Link>
             </li>
-          </ul>
+          </ul> 
+
+          </div>
+
         </div>
-        <div>
-          <ul className="list-unstyled d-flex">
-            <li>
-              <Link
-                className="text-secondary terms-privacy"
-                to="/privacyPolicy"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li className="ms-3">.</li>
-            <li className="ms-3">
-              <Link className="text-secondary terms-privacy" to="/terms">
-                Terms of Use
-              </Link>
-            </li>
-          </ul>
+
+        {/* footer text copyrights */}
+        <div className="d-flex flex-column flex-sm-row justify-content-between copyRightsText border-top">
+          <h5 className="footerText">&copy; 2023 Inkless Reads All rights reserved.</h5>
         </div>
+
+        
       </footer>
     </div>
   );
