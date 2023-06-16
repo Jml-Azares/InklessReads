@@ -43,7 +43,7 @@ export default function MainContent({ picks, api, start, end }) {
                 <div className="card-img p-1">
                   <img src={item.formats["image/jpeg"]} />
                 </div>
-                <div className="card-body">
+                <div className="card-body cardiB">
                   <p>{item.title}</p>
                   <p>{item.authors["0"].name}</p>
                 </div>
