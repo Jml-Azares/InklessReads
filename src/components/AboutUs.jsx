@@ -112,7 +112,7 @@ const AboutUs = () => {
 
       {/* -------------------Mission Vision------------------------ */}
 
-      <div className="card-group mb-5">
+      <div className="card-group mb-5 my-5">
         <div className="card mis-vis">
           <img src={mission} className="card-img-top" alt="..." />
           <div className="card-body">
