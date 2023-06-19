@@ -17,17 +17,17 @@ const AboutUs = () => {
         <h1>About Us</h1>
       </div>
 
-      <div class="px-4 text-center">
+      <div className="px-4 text-center">
         <img
-          class="d-block mx-auto mb-4"
+          className="d-block mx-auto mb-4"
           src={logo}
           alt=""
           width="300"
           height="300"
         />
-        <h1 class="display-5 fw-bold text-body-emphasis">Inkless Reads</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">
+        <h1 className="display-5 fw-bold text-body-emphasis">Inkless Reads</h1>
+        <div className="col-lg-6 mx-auto">
+          <p className="lead mb-4">
             Welcome to Inkless Reads, your go-to destination for a delightful
             reading experience! We are an innovative ebook website that aims to
             bring the joy of literature to readers all around the world. Whether

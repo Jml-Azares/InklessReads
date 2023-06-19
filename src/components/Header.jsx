@@ -6,10 +6,8 @@ import inkless from "../assets/images/IK.png";
 export default function Header() {
   const closeModal = () => {
     setIsOpen(false);
-
   };
 
-  
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -99,60 +97,102 @@ export default function Header() {
             ></Link>
 
             {/* ----------------------------user icon ------------------------------------*/}
-           
 
-                {/* <!-- Button trigger modal --> */}
-                <button type="button" className="btn fs-2" data-bs-toggle="modal" data-bs-target="#modalSignin">
-                   {/* ------------user icon -----------*/}
-                    <p className="user-icon px-3 fa-solid fa-user-large"></p>
-                </button>
+            {/* <!-- Button trigger modal --> */}
+            <button
+              type="button"
+              className="btn fs-2"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSignin"
+            >
+              {/* ------------user icon -----------*/}
+              <p className="user-icon px-3 fa-solid fa-user-large"></p>
+            </button>
 
-                {/* <!-- Modal --> */}
-                <div className="modal fade" id="modalSignin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div className="modal-dialog" role="document">
-                    <div className="modal-content rounded-4 shadow">
+            {/* <!-- Modal --> */}
+            <div
+              className="modal fade"
+              id="modalSignin"
+              tabIndex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog" role="document">
+                <div className="modal-content rounded-4 shadow">
+                  <div className="modal-header p-5 pb-4 border-bottom-0">
+                    <h1
+                      className="modal-title fw-bold mb-0 fs-2"
+                      id="exampleModalLabel"
+                    >
+                      Login to our Website
+                    </h1>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
 
-                      <div className="modal-header p-5 pb-4 border-bottom-0">
-                        <h1 className="modal-title fw-bold mb-0 fs-2" id="exampleModalLabel">Login to our Website</h1>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div className="modal-body">
+                    <form className="">
+                      <div className="form-floating mb-3">
+                        <input
+                          type="email"
+                          className="form-control rounded-3"
+                          id="floatingInput"
+                          placeholder="name@example.com"
+                        />
+                        <label htmlFor="floatingInput">Email address</label>
                       </div>
+                      <div className="form-floating mb-3">
+                        <input
+                          type="password"
+                          className="form-control rounded-3"
+                          id="floatingPassword"
+                          placeholder="Password"
+                        />
+                        <label htmlFor="floatingPassword">Password</label>
+                      </div>
+                      <button
+                        className="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                        type="submit"
+                      >
+                        Sign in
+                      </button>
 
-                        <div className="modal-body">
-                          <form className="">
-                            <div className="form-floating mb-3">
-                              <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com"/>
-                              <label for="floatingInput">Email address</label>
-                            </div>
-                            <div className="form-floating mb-3">
-                              <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password"/>
-                              <label for="floatingPassword">Password</label>
-                            </div>
-                            <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
-                            
-                            <hr className="my-4"/>
-                            <h2 className="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">                             
-                              Sign in with Facebook
-                            </button>
-                            <button class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3" type="submit">                             
-                              Sign in with Google
-                            </button>
+                      <hr className="my-4" />
+                      <h2 className="fs-5 fw-bold mb-3">
+                        Or use a third-party
+                      </h2>
+                      <button
+                        className="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                        type="submit"
+                      >
+                        Sign in with Facebook
+                      </button>
+                      <button
+                        className="w-100 py-2 mb-2 btn btn-outline-danger rounded-3"
+                        type="submit"
+                      >
+                        Sign in with Google
+                      </button>
 
-                            <hr className="my-4"/>
-                            <h2 className="fs-5 mb-1">Don't have account yet?</h2>
-                            <Link 
-                            to="/LoginReg" 
-                            className="fs-5" 
-                            id="signup-link"
-                            onClick={closeModal}>
-                             <p className="fs-6">Sign up here</p> 
-                            </Link>  
-
-                          </form>
-                        </div>  
-                    </div>
+                      <hr className="my-4" />
+                      <h2 className="fs-5 mb-1">Don't have account yet?</h2>
+                      <Link
+                        to="/LoginReg"
+                        className="fs-5"
+                        id="signup-link"
+                        onClick={closeModal}
+                      >
+                        <p className="fs-6">Sign up here</p>
+                      </Link>
+                    </form>
                   </div>
                 </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
