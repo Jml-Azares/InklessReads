@@ -14,7 +14,7 @@ function Literature() {
             Literature
           </h2>
         </div>
-        <div className="row px-5">
+        <div className="row m-0">
           {error && <div>{error}</div>}
           {loading && (
             <div className="col-12 d-flex justify-content-center">
@@ -26,10 +26,10 @@ function Literature() {
           {data &&
             data.map((item) => (
               <div
-                className="card-parent-div col-12 col-md-4 col-lg-2 p-3"
+                className="gallery-card-parent-div col-4 col-lg-2 p-2"
                 key={item.id}
               >
-                <div className="card-img p-1">
+                <div className="gallery-card-img p-1">
                   <Link to={`/book/${item.id}`}>
                     <img src={item.formats["image/jpeg"]} />
                   </Link>
