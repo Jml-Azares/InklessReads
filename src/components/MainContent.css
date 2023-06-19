@@ -17,6 +17,10 @@ div.card-img img {
   object-fit: contain;
 }
 
+.book-details img {
+  object-fit: contain;
+}
+
 .book-details {
   background: #b8621b;
 }
