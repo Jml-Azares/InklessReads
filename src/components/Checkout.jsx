@@ -21,7 +21,7 @@ function Checkout() {
                   placeholder="Firstname"
                 />
               </div>
-                {/* Input Last name */}
+              {/* Input Last name */}
               <div className="col">
                 <input
                   type="text"
@@ -32,7 +32,7 @@ function Checkout() {
                 />
               </div>
             </div>
-              {/* Input Username */}
+            {/* Input Username */}
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
                 @
@@ -51,13 +51,12 @@ function Checkout() {
                 <input
                   type="password"
                   className="form-control"
-                  
                   id="InputPassword"
                   aria-describedby="Password"
                   placeholder="Password"
                 />
               </div>
-                {/* Input Confirm Password */}
+              {/* Input Confirm Password */}
               <div className="col">
                 <input
                   type="password"
@@ -68,7 +67,7 @@ function Checkout() {
                 />
               </div>
             </div>
-              {/* Input Email Address */}
+            {/* Input Email Address */}
             <div className="mb-3">
               <input
                 type="email"
@@ -82,7 +81,7 @@ function Checkout() {
               </div>
             </div>
 
-              {/* Address */}
+            {/* Address */}
             <div className="mb-3">
               <input
                 type="text"
@@ -92,7 +91,7 @@ function Checkout() {
                 placeholder="Address"
               />
             </div>
-              {/* Address 2 Optional */}
+            {/* Address 2 Optional */}
             <div className="mb-3">
               <input
                 type="text"
@@ -102,7 +101,7 @@ function Checkout() {
                 placeholder="Address 2 (Optional)"
               />
             </div>
-              {/* Country */}
+            {/* Country */}
             <div className="row">
               <div className="col">
                 <input
@@ -143,7 +142,7 @@ function Checkout() {
                 className="form-check-input"
                 id="exampleCheck1"
               />
-              <label className="form-check-label" for="exampleCheck1">
+              <label className="form-check-label" htmlFor="exampleCheck1">
                 Shipping address is the same as my billing address
               </label>
             </div>
@@ -152,16 +151,15 @@ function Checkout() {
               <input
                 type="checkbox"
                 className="form-check-input"
-                id="exampleCheck1"
+                id="exampleCheck2"
               />
-              <label className="form-check-label" for="exampleCheck1">
+              <label className="form-check-label" htmlFor="exampleCheck2">
                 Save this information for next time
               </label>
             </div>
 
             <hr />
             <div className="row mt-5">
-
               {/* 1st row */}
               <div className="col-md-12 col-lg-4">
                 <div className="row">
@@ -169,60 +167,106 @@ function Checkout() {
                     <ul>
                       <h5>Payment Options</h5>
                       <div className="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                        <label className="form-check-label" for="flexRadioDefault2" > 
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault2"
+                        >
                           Credit card
-                        </label>  
+                        </label>
                       </div>
-                          
-                      <div className="form-check">  
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label className="form-check-label" for="flexRadioDefault1"> 
+
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault1"
+                        >
                           Debit card
                         </label>
                       </div>
-                        
+
                       <div className="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label className="form-check-label" for="flexRadioDefault1" >
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault3"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault3"
+                        >
                           Paypal
                         </label>
                       </div>
                     </ul>
                   </div>
-                </div>   
-              </div>
-
-                      {/*2nd col Card name */}
-              <div className="col-md-12 col-lg-4">
-                <div className="row mb-3">        
-                  <div className="col-12">        
-                    <input type="text" className="form-control mb-3" id="InputCardname" aria-describedby="Cardname" placeholder="Cardname"/>
-                  </div>     
-                          {/*Card expiry  */}
-                  <div className="col-12">     
-                    <input type="date" className="form-control" id="InputCardexpiry" aria-describedby="nameExpiry" placeholder="cardExpiry"/> 
-                  </div>
                 </div>
               </div>
 
+              {/*2nd col Card name */}
+              <div className="col-md-12 col-lg-4">
+                <div className="row mb-3">
+                  <div className="col-12">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      id="InputCardname"
+                      aria-describedby="Cardname"
+                      placeholder="Cardname"
+                    />
+                  </div>
+                  {/*Card expiry  */}
+                  <div className="col-12">
+                    <input
+                      type="date"
+                      className="form-control"
+                      id="InputCardexpiry"
+                      aria-describedby="nameExpiry"
+                      placeholder="cardExpiry"
+                    />
+                  </div>
+                </div>
+              </div>
 
               {/* 3rd col Card number*/}
               <div className="col-md-12 col-lg-4">
                 <div className="row mb-3">
                   <div className="col-12">
-                    <input type="number" className="form-control mb-3" id="InputCardnumber" aria-describedby="InputCardnumber" placeholder="cardNumber"/>
-                  </div>    
-                      {/* Card CVV */}
-                  <div className="col-12">   
-                    <input type="text" className="form-control" id="InputCVV" aria-describedby="cardCVV" placeholder="cardCVV"/>
+                    <input
+                      type="number"
+                      className="form-control mb-3"
+                      id="InputCardnumber"
+                      aria-describedby="InputCardnumber"
+                      placeholder="cardNumber"
+                    />
+                  </div>
+                  {/* Card CVV */}
+                  <div className="col-12">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="InputCVV"
+                      aria-describedby="cardCVV"
+                      placeholder="cardCVV"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </form>
-        </div>   
-                  
+        </div>
 
         <div className="col-sm-12 col-md-6 right-container">
           <h3>Your cart</h3>
@@ -243,7 +287,7 @@ function Checkout() {
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="exampleFormControlInput2"
                   placeholder="Second book name "
                 />
               </div>
@@ -253,7 +297,7 @@ function Checkout() {
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="exampleFormControlInput3"
                   placeholder="Third book name "
                 />
               </div>
@@ -263,7 +307,7 @@ function Checkout() {
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="exampleFormControlInput4"
                   placeholder="Promo Code "
                 />
               </div>
@@ -273,7 +317,7 @@ function Checkout() {
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="exampleFormControlInput5"
                   placeholder="Total Amount "
                 />
               </div>
@@ -306,7 +350,7 @@ function Checkout() {
               className="form-check-input"
               id="exampleCheck1"
             />
-            <label className="form-check-label" for="exampleCheck1">
+            <label className="form-check-label" htmlFor="exampleCheck1">
               Your personal data will be used to process your order, support
               your experience throughout this website, and for other purposes
               described in our privacy policy and terms and conditions.
@@ -319,12 +363,12 @@ function Checkout() {
               className="form-check-input"
               id="exampleCheck1"
             />
-            <label className="form-check-label" for="exampleCheck1">
+            <label className="form-check-label" htmlFor="exampleCheck1">
               I would like to receive referral marketing and promotional emails
               (optional)
             </label>
           </div>
-            {/* Checkout Button */}
+          {/* Checkout Button */}
           <button type="submit" className="btn btn-primary checkoutbtn my-3">
             Checkout
           </button>
