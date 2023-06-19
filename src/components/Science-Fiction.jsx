@@ -26,7 +26,9 @@ function ScienceFiction() {
           {data &&
             data.map((item) => (
               <div
+
                 className="gallery-card-parent-div col-4 col-lg-2 p-2"
+
                 key={item.id}
               >
                 <div className="gallery-card-img p-1">

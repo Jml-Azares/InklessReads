@@ -33,3 +33,11 @@
 .search-icon {
   color: white;
 }
+
+.cart-toggle{
+  min-height: 120px;
+}
+
+.card-body{
+  width: 300px;
+}
