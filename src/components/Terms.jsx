@@ -2,7 +2,7 @@ import React from "react";
 
 function Terms() {
   return (
-    <div className="p-4">
+    <div className="py-5 px-5 mx-auto" style={{ width: "80vw" }}>
       <h1>Terms of Use for Inkless Reads</h1>
 
       <p>
@@ -11,7 +11,7 @@ function Terms() {
         you agree to comply with these terms and conditions. Please read them
         carefully.
       </p>
-
+      <br />
       <h2>1. Intellectual Property</h2>
       <p>
         The content and materials available on Inkless Reads, including but not
@@ -22,7 +22,7 @@ function Terms() {
         distribute, or display any portion of the content without prior written
         consent from Inkless Reads.
       </p>
-
+      <br />
       <h2>2. User Conduct</h2>
       <p>When using Inkless Reads, you agree to:</p>
       <ul>
@@ -41,7 +41,7 @@ function Terms() {
           Reads or its related systems or networks.
         </li>
       </ul>
-
+      <br />
       <h2>3. Third-Party Content</h2>
       <p>
         Inkless Reads may include links to third-party websites, products, or
@@ -49,7 +49,7 @@ function Terms() {
         content, accuracy, or practices of these third parties. Your interaction
         with any third-party website or service is at your own risk.
       </p>
-
+      <br />
       <h2>4. Limitation of Liability</h2>
       <p>
         Inkless Reads and its affiliates, directors, employees, agents, and
@@ -58,7 +58,7 @@ function Terms() {
         your use of Inkless Reads, even if advised of the possibility of such
         damages.
       </p>
-
+      <br />
       <h2>5. Indemnification</h2>
       <p>
         You agree to indemnify and hold Inkless Reads and its affiliates,
@@ -67,7 +67,7 @@ function Terms() {
         due to or arising out of your breach of these Terms of Use or your
         violation of any law or the rights of a third party.
       </p>
-
+      <br />
       <h2>6. Governing Law</h2>
       <p>
         These Terms of Use shall be governed by and construed in accordance with
@@ -76,14 +76,14 @@ function Terms() {
         exclusively brought in the courts of federal or state courts located in
         Manila, Philippines.
       </p>
-
+      <br />
       <h2>7. Changes to the Terms of Use</h2>
       <p>
         Inkless Reads reserves the right to modify or update these Terms of Use
         at any time without prior notice. Continued use of Inkless Reads after
         any such changes shall constitute your consent to such changes.
       </p>
-
+      <br />
       <h2>8. Contact Us</h2>
       <p>
         If you have any questions or concerns regarding these Terms of Use,

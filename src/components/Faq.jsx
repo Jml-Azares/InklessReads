@@ -190,8 +190,8 @@ function Faq() {
             <div class="accordion-body acc-body">
               If you have any questions, concerns, or need assistance, you can
               reach out to our customer support team by sending an email to
-              support@inklessreads.com. We strive to respond to all inquiries
-              within 24 hours.
+              ireads@aol.com. We strive to respond to all inquiries within 24
+              hours.
             </div>
           </div>
         </div>
