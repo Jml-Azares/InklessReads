@@ -74,33 +74,16 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <div className="input-group">
-              <button
-                //search icon-----------------
-                className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
-                type="button"
-                id="button-addon1"
-              ></button>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-                aria-label="Example text with button addon"
-                aria-describedby="button-addon1"
-              />
-            </div>
-          </form>
+
+          
+
+          {/* -------------cart icon---------- */}
           <div className="nav-icons">
-            {/* -------------cart icon---------- */}
             <Link
               to="/Checkout"
               className="cart-icon px-3 fa-solid fa-cart-shopping"
             ></Link>
-
             {/* ----------------------------user icon ------------------------------------*/}
-           
-
                 {/* <!-- Button trigger modal --> */}
                 <button type="button" className="btn fs-2" data-bs-toggle="modal" data-bs-target="#modalSignin">
                    {/* ------------user icon -----------*/}
@@ -154,6 +137,26 @@ export default function Header() {
                   </div>
                 </div>
           </div>
+
+              {/* search icon */}
+                        <form className="d-flex" role="search">
+                          <div className="input-group">
+                            <button
+                              
+                              className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
+                              type="button"
+                              id="button-addon1"
+                            ></button>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Search"
+                              aria-label="Example text with button addon"
+                              aria-describedby="button-addon1"
+                            />
+                          </div>
+                        </form>
+
         </div>
       </div>
     </nav>

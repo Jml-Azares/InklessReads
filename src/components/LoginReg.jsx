@@ -12,14 +12,14 @@ function LoginReg() {
           <div className="row">
             {/* Login container */}
             
-            <div className="col-sm-12 col-md-12 col-lg-6 py-3 loginBox">
+            <div className="col-sm-12 col-md-12 col-lg-6  loginBox">
 
               <img src={CompanyLogo} alt="company logo" />
               
             </div>
 
             {/* Registration container */}
-            <div className="col-sm-12 col-md-12 col-lg-6 p-5 regBox">
+            <div className="col-sm-8 col-md-12 col-lg-6 p-5 regBox">
               <h3>Registration Form</h3>
               <p>Please fill the following with your personal information</p>
 

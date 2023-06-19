@@ -163,7 +163,7 @@ function Checkout() {
             <div className="row mt-5">
 
               {/* 1st row */}
-              <div className="col-sm-12 col-md-6">
+              <div className="col-md-12 col-lg-4">
                 <div className="row">
                   <div className="col">
                     <ul>
@@ -194,7 +194,7 @@ function Checkout() {
               </div>
 
                       {/*2nd col Card name */}
-              <div className="col-sm-12 col-md-6">
+              <div className="col-md-12 col-lg-4">
                 <div className="row mb-3">        
                   <div className="col-12">        
                     <input type="text" className="form-control mb-3" id="InputCardname" aria-describedby="Cardname" placeholder="Cardname"/>
@@ -208,7 +208,7 @@ function Checkout() {
 
 
               {/* 3rd col Card number*/}
-              <div className="col-sm-12 col-md-6">
+              <div className="col-md-12 col-lg-4">
                 <div className="row mb-3">
                   <div className="col-12">
                     <input type="number" className="form-control mb-3" id="InputCardnumber" aria-describedby="InputCardnumber" placeholder="cardNumber"/>
