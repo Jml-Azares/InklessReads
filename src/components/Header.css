@@ -41,3 +41,11 @@
 .card-body{
   width: 300px;
 }
+
+.modal-content{
+  background-color: #e3ccae;
+}
+
+.modalForm{
+  height: 50px;
+}
