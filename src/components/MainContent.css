@@ -41,7 +41,9 @@ div.gallery-card-img img {
 
 .media-element img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+
+  aspect-ratio: 2/3;
+
   object-fit: contain;
 }
 
