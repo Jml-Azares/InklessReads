@@ -11,32 +11,27 @@ export default function MainContent({ picks, api }) {
 
   return (
     <div className="container-fluid">
-      <div className="row my-5 py-5">
+      <div className="row my-5 py-3">
         <div className="row px-5">
           <h2 className="col-12 pb-5" style={{ textAlign: "center" }}>
             {picks}
           </h2>
-        </div>
-        <div className="row px-5">
           {error && <div>{error}</div>}
           {loading && (
-            <div className="col-12 d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <div className="spinner-border" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
             </div>
           )}
+        </div>
+        <div className="media-scroller p-1 m-0">
           {data &&
             data.map((item) => (
-              <div
-                className="card-parent-div col-12 col-md-4 col-lg-2 p-3"
-                key={item.id}
-              >
-                <div className="card-img p-1">
-                  <Link to={`/book/${item.id}`}>
-                    <img src={item.formats["image/jpeg"]} />
-                  </Link>
-                </div>
+              <div className="media-element p-2" key={item.id}>
+                <Link to={`/book/${item.id}`}>
+                  <img src={item.formats["image/jpeg"]} />
+                </Link>
               </div>
             ))}
         </div>

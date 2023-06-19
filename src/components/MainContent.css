@@ -1,17 +1,17 @@
-.card-parent-div {
+.gallery-card-parent-div {
   display: flex;
   justify-content: center;
 }
 
-div.card-img {
-  height: 320px;
+div.gallery-card-img {
   max-width: 210px;
+  aspect-ratio: 3/4;
   background: #b8621b;
   box-shadow: 5px 10px #888888;
   border-radius: 5px;
 }
 
-div.card-img img {
+div.gallery-card-img img {
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -23,4 +23,36 @@ div.card-img img {
 
 .book-details {
   background: #b8621b;
+}
+
+.media-scroller {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  background: #b8621b;
+  border-radius: 5px;
+}
+
+.media-element img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+@media (width < 821px) {
+  .media-scroller {
+    grid-auto-columns: 28%;
+  }
+}
+
+@media (width >= 821px) {
+  .media-scroller {
+    grid-auto-columns: 18%;
+  }
 }
