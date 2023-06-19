@@ -6,15 +6,18 @@
 
 .logMain-container{
   background-color: white;
-  padding: 50px;
-  margin: 50px;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 5px 10px #888888;
-
 }
 
-.loginBox button{
-  width: 100%;
+.loginBox{
+  text-align: center;
+  
+}
+
+
+.form-control{
+  line-height: 15px;
 }
 
 .regBox .regBtn {
@@ -32,20 +35,13 @@
   background-color: #b8621b;
 }
 
-.loginBtn:hover{
-  background-color: #262a56;
-}
-
 .input-group{
   border: none;
-  
 }
 
 .input-group-text{
   background-color: gray;
-  
 }
-
 
 .regBox .dropdown button{
   width: 100%;
