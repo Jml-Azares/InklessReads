@@ -1,44 +1,25 @@
 import React from 'react';
 import "./LoginReg.css";
+import CompanyLogo from "../assets/images/IK.png";
 
 function LoginReg() {
   return (
       <>
-        <h1 className='text-center pt-5'>Login and Registration Page</h1>
+        <h1 className='text-center pt-5'>Registration Page</h1>
 
-        <div className="container logMain-container">
+        <div className="container logMain-container mx-auto my-5">
               
           <div className="row">
             {/* Login container */}
             
-            <div className="col-6 px-5 loginBox">
-            <h3>Login to our Website</h3>
-              <p>Enter Username and Password to log on</p>
-              {/* Input Username */}
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1"><i className="loginIcon fa-solid fa-user"></i></span>
-                <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
-              </div>
-                {/* Input Password */}
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1"><i className="loginIcon fa-solid fa-key"></i></span>
-                <input type="Password" className="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"/>
-              </div>
+            <div className="col-sm-12 col-md-12 col-lg-6 py-3 loginBox">
 
-              <button type="button" className="btn btn-primary loginBtn mb-5">Sign in</button>
-            
-            <h4 className='text-center mb-5'>OR</h4>
-
-              <div class="d-grid gap-2">
-                  <button class="btn btn-primary" type="button">Facebook</button>
-                  <button class="btn btn-danger" type="button">Google</button>
-              </div>
-
-
+              <img src={CompanyLogo} alt="company logo" />
+              
             </div>
 
             {/* Registration container */}
-            <div className="col-6 px-5 regBox">
+            <div className="col-sm-12 col-md-12 col-lg-6 p-5 regBox">
               <h3>Registration Form</h3>
               <p>Please fill the following with your personal information</p>
 

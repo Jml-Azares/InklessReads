@@ -7,7 +7,7 @@ function Checkout() {
       <h1 className="text-center pt-5">Checkout Page</h1>
 
       <div className="row container px-5 py-5 mx-auto">
-        <div className="col-8 left-container">
+        <div className="col-sm-12 col-md-6 left-container">
           <h3>Billing address</h3>
           <form>
             <div className="row mb-3">
@@ -163,7 +163,7 @@ function Checkout() {
             <div className="row mt-5">
 
               {/* 1st row */}
-              <div className="col-4">
+              <div className="col-sm-12 col-md-6">
                 <div className="row">
                   <div className="col">
                     <ul>
@@ -194,7 +194,7 @@ function Checkout() {
               </div>
 
                       {/*2nd col Card name */}
-              <div className="col-4">
+              <div className="col-sm-12 col-md-6">
                 <div className="row mb-3">        
                   <div className="col-12">        
                     <input type="text" className="form-control mb-3" id="InputCardname" aria-describedby="Cardname" placeholder="Cardname"/>
@@ -208,7 +208,7 @@ function Checkout() {
 
 
               {/* 3rd col Card number*/}
-              <div className="col-4">
+              <div className="col-sm-12 col-md-6">
                 <div className="row mb-3">
                   <div className="col-12">
                     <input type="number" className="form-control mb-3" id="InputCardnumber" aria-describedby="InputCardnumber" placeholder="cardNumber"/>
@@ -224,7 +224,7 @@ function Checkout() {
         </div>   
                   
 
-        <div className="col-4 right-container">
+        <div className="col-sm-12 col-md-6 right-container">
           <h3>Your cart</h3>
           <div className="top-container">
             <form>
