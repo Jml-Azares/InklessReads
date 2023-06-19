@@ -12,9 +12,11 @@ const Book = () => {
       <div className="row book py-5 p-md-5">
         {error && <div>{error}</div>}
         {loading && (
-          <h4 className="col-12" style={{ textAlign: "center" }}>
-            Loading...
-          </h4>
+          <div className="col-12 d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
         )}
         {data &&
           data.map((item) => (
