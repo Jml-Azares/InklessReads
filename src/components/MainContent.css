@@ -1,27 +1,22 @@
-div.card-parent {
-  height: 400px;
-  background: #b8621b;
-  box-shadow: 5px 10px #888888;
+.card-parent-div {
+  display: flex;
+  justify-content: center;
 }
 
 div.card-img {
-  height: 70%;
+  height: 320px;
+  max-width: 210px;
+  background: #b8621b;
+  box-shadow: 5px 10px #888888;
+  border-radius: 5px;
 }
 
-div.card-img > img {
+div.card-img img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-div.card-img > img:hover {
-  transform: scale(1.05);
-  transition: transform 300ms;
-}
-
-div.cardiB {
-  height: 30%;
-  border-top: 1px solid black;
-  color: white;
-  overflow: hidden;
+.book-details {
+  background: #b8621b;
 }
