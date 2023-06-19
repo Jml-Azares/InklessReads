@@ -165,24 +165,17 @@ function LoginReg() {
 
             <div className="row">
               {/* Country */}
-              <div className="dropdown col-6">
-                <button
-                  className="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Country
-                </button>
-                <ul className="dropdown-menu">
+              <div className="col-6">
+                <select id="countrySelect" className="form-select">
+                  <option value="" disabled selected>
+                    -Select Country-
+                  </option>
                   {countries.map((country) => (
-                    <li key={country.alpha2Code}>
-                      <button className="dropdown-item" type="button">
-                        {country.name}
-                      </button>
-                    </li>
+                    <option key={country.alpha2Code} value={country.name}>
+                      {country.name}
+                    </option>
                   ))}
-                </ul>
+                </select>
               </div>
 
               {/* Zip */}
