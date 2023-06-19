@@ -92,7 +92,7 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <Link
-                  to="/terms-privacy"
+                  to="/PrivacyPolicy"
                   className="nav-link p-0"
                   onClick={scrollToTop}
                 >
@@ -101,7 +101,7 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <Link
-                  to="/terms-privacy"
+                  to="/Terms"
                   className="nav-link p-0"
                   onClick={scrollToTop}
                 >
