@@ -21,11 +21,11 @@ const Book = () => {
         {data &&
           data.map((item) => (
             <div className="book-details m-0 col-12 row" key={item.id}>
-              <img
-                className="p-3 col-12 col-md-3 col-lg-2"
-                src={item.formats["image/jpeg"]}
-              />
-              <div className="p-3 col-12 col-md-9 col-lg-10">
+              <div className="book-details-img p-3 col-12 col-md-3 col-lg-2">
+                <img src={item.formats["image/jpeg"]} />
+              </div>
+
+              <div className="book-details-body p-3 col-12 col-md-9 col-lg-10">
                 <div>
                   <h3>{item.title}</h3>
                   <h5>By {item.authors.map((author) => author.name)}</h5>
@@ -35,6 +35,11 @@ const Book = () => {
                   <p>Language/s: {item.languages}</p>
                   <p>Downloads: {item.download_count}</p>
                   <small>Tags: {item.subjects}</small>
+                </div>
+                <div className="button-container mt-4">
+                  <button className="btn">
+                    <p className="user-icon fa-solid fa-cart-shopping"></p>
+                  </button>
                 </div>
               </div>
             </div>

@@ -17,12 +17,21 @@ div.gallery-card-img img {
   object-fit: contain;
 }
 
-.book-details img {
+.book-details {
+  background: #b8621b;
+  text-align: justify;
+}
+
+.book-details-img img {
+  width: 100%;
   object-fit: contain;
 }
 
-.book-details {
-  background: #b8621b;
+.book-details-body .btn {
+  background: black;
+  height: 44px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .media-scroller {
@@ -50,6 +59,12 @@ div.gallery-card-img img {
 @media (width < 800px) {
   .media-scroller {
     grid-auto-columns: 28%;
+  }
+
+  .book-details .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
