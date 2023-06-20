@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
 
-export default function Header() {
+export default function Header({ cart }) {
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -225,7 +225,7 @@ export default function Header() {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <AddToCart />
+          <AddToCart cart={cart} />
 
           <br />
           <br />
