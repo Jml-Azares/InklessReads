@@ -1,6 +1,7 @@
 import React from "react";
 import MainContent from "./MainContent";
 import Testimonial from "./Testimonial";
+import Events from "./Events";
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
       />
     </div>
 
+    {/* Events Section */}
+      <Events />
     {/* testimoial section */}
       <Testimonial />
     </>
