@@ -6,7 +6,7 @@
 div.gallery-card-img {
   max-width: 210px;
   aspect-ratio: 3/4;
-  background: #b8621b;
+  background: #222;
   box-shadow: 5px 10px #888888;
   border-radius: 5px;
 }
@@ -44,8 +44,8 @@ div.gallery-card-img img {
 }
 
 .media-element {
-  background: #b8621b;
   border-radius: 5px;
+  background: #222;
 }
 
 .media-element img {

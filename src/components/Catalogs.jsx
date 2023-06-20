@@ -27,7 +27,7 @@ function Catalog({ api, catalog }) {
                 className="gallery-card-parent-div col-4 col-lg-2 p-2"
                 key={item.id}
               >
-                <div className="gallery-card-img p-1">
+                <div className="gallery-card-img p-2">
                   <Link to={`/book/${item.id}`}>
                     <img src={item.formats["image/jpeg"]} />
                   </Link>
