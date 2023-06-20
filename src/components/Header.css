@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #262a56;
+  background-color: #2b2b2b;
   padding: 10px 20px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .nav-item li a:hover {
-  color: #b8621b;
+  color: #423f3e;
 }
 
 .nav-icons {
@@ -26,7 +26,7 @@
 .cart-icon:hover,
 .user-icon:hover,
 .search-icon:hover {
-  color: #b8621b;
+  color: #423f3e;
 }
 .cart-icon,
 .user-icon,
@@ -34,18 +34,24 @@
   color: white;
 }
 
-.cart-toggle{
+.cart-toggle {
   min-height: 120px;
 }
 
-.card-body{
+.card-body {
   width: 300px;
 }
 
-.modal-content{
-  background-color: #e3ccae;
+.modal-content {
+  color: #ffffff;
+  background-color: #423f3e;
 }
 
-.modalForm{
+.modalForm {
   height: 50px;
+}
+
+.dropdown-menu {
+  background-color: #423f3e;
+  color: #ffffff;
 }

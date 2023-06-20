@@ -28,9 +28,13 @@
 
 .checkoutbtn {
   width: 100%;
-  background-color: #b8621b;
+  background-color: #2b2b2b;
 }
 
 .checkoutbtn:hover {
-  background-color: #262a56;
+  background-color: #423f3e;
+}
+
+#emailHelp {
+  color: #ffffff;
 }
