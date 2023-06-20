@@ -11,10 +11,10 @@ const useFetch = (url) => {
       if (!response.ok) {
         throw Error(`could not fetch the data for that resource`);
       }
-      const booksObject = await response.json();
-      const books = booksObject.results;
+      const dataObject = await response.json();
+      const data = dataObject.results;
 
-      setData(books);
+      setData(data);
       setLoading(false);
       setError(null);
     } catch (error) {
