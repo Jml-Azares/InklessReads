@@ -114,9 +114,9 @@ const AboutUs = () => {
 
       <div className="card-group mb-5 my-5">
         <div className="card mis-vis">
-          <img src={mission} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">Mission</h5>
+          <img src={mission} className="card-img-top" alt="Mission" />
+          <div className="card-body text-center w-100">
+            <h5 className="card-title text-center">Mission</h5>
             <p className="card-text">
               Our mission at Inkless Reads is to ignite a love for reading,
               connect readers with exceptional literature, and foster a vibrant
@@ -129,9 +129,9 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="card mis-vis">
-          <img src={vision} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">Vision</h5>
+          <img src={vision} className="card-img-top" alt="Vision" />
+          <div className="card-body text-center w-100">
+            <h5 className="card-title text-center ">Vision</h5>
             <p className="card-text">
               At Inkless Reads, our vision is to create a world where books are
               cherished and celebrated. We envision a future where reading is a

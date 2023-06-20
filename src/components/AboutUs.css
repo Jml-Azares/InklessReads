@@ -33,29 +33,12 @@
   width: 200px;
 }
 
-.missionVision {
-  padding: 50px;
-  text-align: center;
-  height: 520px;
-  margin-bottom: 30px;
-}
-
-.mission {
-  height: 200px;
-  width: 400px;
-}
-
-.vision {
-  height: 200px;
-  width: 400px;
-}
-
 .card-group {
   width: 80vw;
   margin: auto;
 }
 
-.mis-vis {
+.card.mis-vis {
   background-color: #e3ccae;
   border: none;
 }
