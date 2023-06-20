@@ -47,14 +47,20 @@ div.gallery-card-img img {
   object-fit: contain;
 }
 
-@media (width < 821px) {
+@media (width < 800px) {
   .media-scroller {
     grid-auto-columns: 28%;
   }
 }
 
-@media (width >= 821px) {
+@media (800px <= width < 1400px) {
   .media-scroller {
     grid-auto-columns: 18%;
+  }
+}
+
+@media (width >= 1400px) {
+  .media-scroller {
+    grid-auto-columns: 11%;
   }
 }
