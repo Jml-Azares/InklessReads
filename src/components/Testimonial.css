@@ -1,0 +1,16 @@
+.carousel{
+  background-color: black;
+  padding: 50px;
+}
+
+.reviewImg{
+  height: 150px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-bottom: 190px;
+}
+
+
+
