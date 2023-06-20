@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../API/useFetch";
 import "./BookDetails.css";
 
-const Book = () => {
+const Book = ({ cart, setCart }) => {
   const { id } = useParams();
   const { data, loading, error } = useFetch(
     `https://gutendex.com/books?ids=${id}`
@@ -13,6 +13,11 @@ const Book = () => {
   useEffect(() => {
     setAnimationLoaded(true);
   }, []);
+
+  const handleClick = () => {
+    const newCart = [...cart, data[0].title];
+    setCart(newCart);
+  };
 
   return (
     <div className="container-fluid">
@@ -48,7 +53,7 @@ const Book = () => {
                   <small>Tags: {item.subjects}</small>
                 </div>
                 <div className="button-container mt-4">
-                  <button className="btn">
+                  <button className="btn" onClick={handleClick}>
                     <p className="user-icon fa-solid fa-cart-shopping"></p>
                   </button>
                 </div>
