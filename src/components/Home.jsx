@@ -1,6 +1,7 @@
 import React from "react";
 import MainContent from "./MainContent";
 import Testimonial from "./Testimonial";
+import Events from "./Events";
 
 const Home = () => {
   return (
@@ -19,6 +20,11 @@ const Home = () => {
           api="https://gutendex.com/books/?page=2&topic=children"
         />
       </div>
+
+
+    {/* Events Section */}
+      <Events />
+    
 
       {/* testimoial section */}
       <Testimonial />
