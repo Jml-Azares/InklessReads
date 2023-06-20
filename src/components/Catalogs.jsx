@@ -29,14 +29,10 @@ function Catalog({ api, catalog }) {
                 key={item.id}
                 style={{ position: "relative" }}
               >
-<<<<<<< HEAD
-                <div className="gallery-card-img p-2">
-=======
                 <div
                   className="gallery-card-img py-2"
                   style={{ position: "relative", overflow: "hidden" }}
                 >
->>>>>>> main
                   <Link to={`/book/${item.id}`}>
                     <img
                       src={item.formats["image/jpeg"]}
