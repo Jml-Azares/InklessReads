@@ -14,6 +14,7 @@ import LoginReg from "./components/LoginReg";
 import Faq from "./components/Faq";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
+import Politics from "./components/politics";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/literature" element={<Literature />} />
           <Route path="/scienceFiction" element={<ScienceFiction />} />
           <Route path="/history" element={<History />} />
+          <Route path="/politics" element={<Politics />} />
           <Route path="/book/:id" element={<Book />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/loginReg" element={<LoginReg />} />
