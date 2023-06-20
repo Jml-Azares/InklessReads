@@ -166,8 +166,8 @@ function LoginReg() {
             <div className="row">
               {/* Country */}
               <div className="col-6">
-                <select id="countrySelect" className="form-select">
-                  <option value="" disabled selected>
+                <select id="countrySelect" className="form-select" defaultValue="">
+                  <option value="" disabled>
                     -Select Country-
                   </option>
                   {countries.map((country) => (
