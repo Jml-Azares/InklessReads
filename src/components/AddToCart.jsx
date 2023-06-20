@@ -1,14 +1,13 @@
-import { useState } from "react";
-
-const AddToCart = () => {
-  const [data, setData] = useState(null);
-
+const AddToCart = ({ cart }) => {
+  console.log(cart);
   return (
-    <div>
+    <>
       <ul>
-        <li></li>
+        {cart.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
       </ul>
-    </div>
+    </>
   );
 };
 

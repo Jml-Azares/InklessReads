@@ -2,8 +2,9 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
+import AddToCart from "./AddToCart";
 
-export default function Header() {
+export default function Header({ cart }) {
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -59,6 +60,11 @@ export default function Header() {
                   <li>
                     <Link className="dropdown-item" to="/history">
                       History
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/politics">
+                      Politics
                     </Link>
                   </li>
                 </ul>
@@ -224,51 +230,7 @@ export default function Header() {
           ></button>
         </div>
         <div className="offcanvas-body">
-          {/* canvas body header */}
-          <div className="row">
-            <div className="col-4 bookName">
-              <h5>Book Name</h5>
-            </div>
-            <div className="col-4 bookQty">
-              <h5>Quantity</h5>
-            </div>
-            <div className="col-4 bookPrice">
-              <h5>Amount</h5>
-            </div>
-          </div>
-
-          <hr />
-
-          {/* canvas body content */}
-          <div className="row">
-            <div className="col-4 bookName">
-              <h5>Book 1</h5>
-              <h5>Book 2</h5>
-            </div>
-            <div className="col-4 bookQty text-center">
-              <h5>1</h5>
-              <h5>2</h5>
-            </div>
-            <div className="col-4 bookPrice">
-              <h5>500 pesos</h5>
-              <h5>540 pesos</h5>
-            </div>
-          </div>
-
-          <hr />
-
-          {/* canvas body content */}
-          <div className="row">
-            <div className="col-4 bookName">
-              <h5>Books</h5>
-            </div>
-            <div className="col-4 bookQty text-center">
-              <h5>3</h5>
-            </div>
-            <div className="col-4 bookPrice">
-              <h5>1040 pesos</h5>
-            </div>
-          </div>
+          <AddToCart cart={cart} />
 
           <br />
           <br />
