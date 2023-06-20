@@ -1,6 +1,6 @@
 .IL-footer {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #171010;
 }
 
 .nav-link {
@@ -8,12 +8,12 @@
 }
 
 .subs-btn {
-  background-color: #b8621b;
+  background-color: #2b2b2b;
   color: #ffffff;
 }
 
 .subs-btn:hover {
-  background-color: #262a56;
+  background-color: #423f3e;
 }
 
 textarea {

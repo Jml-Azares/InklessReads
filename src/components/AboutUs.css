@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #ffffff;
 }
 
 .left-column {
@@ -33,29 +34,13 @@
   width: 200px;
 }
 
-.missionVision {
-  padding: 50px;
-  text-align: center;
-  height: 520px;
-  margin-bottom: 30px;
-}
-
-.mission {
-  height: 200px;
-  width: 400px;
-}
-
-.vision {
-  height: 200px;
-  width: 400px;
-}
-
 .card-group {
   width: 80vw;
   margin: auto;
 }
 
-.mis-vis {
-  background-color: #e3ccae;
+.card.mis-vis {
+  color: #ffffff;
+  background-color: #171010;
   border: none;
 }
