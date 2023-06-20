@@ -6,8 +6,8 @@
 div.gallery-card-img {
   max-width: 210px;
   aspect-ratio: 3/4;
-  background: #b8621b;
-  box-shadow: 5px 10px #888888;
+  background: #2b2b2b;
+  box-shadow: 5px 10px #171010;
   border-radius: 5px;
 }
 
@@ -18,7 +18,8 @@ div.gallery-card-img img {
 }
 
 .book-details {
-  background: #b8621b;
+  color: #ffffff;
+  background: #2b2b2b;
   text-align: justify;
 }
 
@@ -44,7 +45,7 @@ div.gallery-card-img img {
 }
 
 .media-element {
-  background: #b8621b;
+  background: #2b2b2b;
   border-radius: 5px;
 }
 

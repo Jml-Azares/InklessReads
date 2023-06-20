@@ -3,14 +3,15 @@
 }
 
 .acc-btn {
-  background-color: #b8621b;
+  background-color: #171010;
+  color: #ffffff;
 }
 
 .acc-btn:hover {
   color: #ffffff;
-  background-color: #262a56;
+  background-color: #2b2b2b;
 }
 
 .acc-body {
-  background-color: #e3ccae;
+  background-color: #423f3e;
 }

@@ -25,7 +25,6 @@ const AboutUs = () => {
           width="300"
           height="300"
         />
-        <h1 className="display-5 fw-bold text-body-emphasis">Inkless Reads</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
             Welcome to Inkless Reads, your go-to destination for a delightful
