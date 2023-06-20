@@ -4,45 +4,33 @@
   box-sizing: border-box;
 }
 
-.left-container{
-
-
-}
-
-.top-container{
+.top-container {
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   padding: 10px;
-
-  
 }
 
-.top-container input{
+.top-container input {
   border: none;
- 
 }
 
-.promocode-input{
- 
-}
-.promocode-input button{
+.promocode-input button {
   background-color: gray;
 }
 
-.form-label{
+.form-label {
   line-height: 5px;
 }
 
-.form-control{
+.form-control {
   line-height: 5px;
 }
 
-.checkoutbtn{
+.checkoutbtn {
   width: 100%;
   background-color: #b8621b;
 }
 
-.checkoutbtn:hover{
+.checkoutbtn:hover {
   background-color: #262a56;
 }
-
