@@ -14,6 +14,7 @@ import LoginReg from "./components/LoginReg";
 import Faq from "./components/Faq";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
+import Politics from "./components/politics";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
           <Route path="/scienceFiction" element={<ScienceFiction />} />
+          <Route path="/politics" element={<Politics />} />
           <Route path="/history" element={<History />} />
           <Route
             path="/book/:id"

@@ -62,6 +62,11 @@ export default function Header({ cart }) {
                       History
                     </Link>
                   </li>
+                  <li>
+                    <Link className="dropdown-item" to="/politics">
+                      Politics
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
