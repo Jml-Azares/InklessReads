@@ -2,11 +2,11 @@ const AddToCart = ({ cart }) => {
   console.log(cart);
   return (
     <>
-      <ul>
-        {cart.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
+      {cart.map((item, i) => (
+        <div className="row">
+          <small className="col-8">{item}</small>
+        </div>
+      ))}
     </>
   );
 };
