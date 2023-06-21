@@ -166,7 +166,6 @@ function LoginReg() {
             <div className="row">
               {/* Country */}
               <div className="col-6">
-
                 <select
                   id="countrySelect"
                   className="form-select"
