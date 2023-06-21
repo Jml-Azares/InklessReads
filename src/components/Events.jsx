@@ -35,7 +35,9 @@ const Events = () => {
   return (
     <>
 
+
       <div className="container mx-auto Events">
+
 
         <h1 className="text-white">Upcoming Events</h1>
 
@@ -43,6 +45,7 @@ const Events = () => {
         <div className="row box">
           <div className="container">
             <div className="row">
+
 
 
               <div className="col-sm-12 col-ms-12 col-lg-6 date-container   text-center mx-auto">
@@ -58,9 +61,11 @@ const Events = () => {
               
               <div className="col-sm-6 col-md-6 col-lg-4 Img">
                 <img src={BookExpo} alt="Book Expo" className="eventImg" />
+
               </div>
               </div>
             </div>
+
 
 
 
@@ -74,30 +79,16 @@ const Events = () => {
                     Private activities
                   </Link>
 
-                  <p className="text-dark-emphasis">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
 
-                  <div className="d-flex flex-wrap border-top mt-4 pt-3">
-                    <div className="mb-4 mb-lg-0">
-                      <div className="d-flex flex-wrap align-items-center mb-1">
-                        <span className="custom-block-span text-dark-emphasis">
-                          Location:
-                        </span>
+                    <div className="d-flex flex-wrap align-items-center">
+                      <span className="custom-block-span text-dark-emphasis">
+                        Ticket:
+                      </span>
 
-                        <p className="mb-0 text-dark-emphasis">
-                          National Center, NYC
-                        </p>
-                      </div>
-
-                      <div className="d-flex flex-wrap align-items-center">
-                        <span className="custom-block-span text-dark-emphasis">
-                          Ticket:
-                        </span>
-
-                        <p className="mb-0 text-dark-emphasis">$250</p>
-                      </div>
+                      <p className="mb-0 text-dark-emphasis">$250</p>
                     </div>
+                  </div>
+
 
                     <div className="d-flex align-items-center ms-lg-auto">
                       <Link
@@ -109,12 +100,15 @@ const Events = () => {
                         Buy Ticket
                       </Link>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
 
         {/* -------------------2nd row-------------------------- */}
 
@@ -130,30 +124,18 @@ const Events = () => {
                     Festival Day & Literary Marketplace
                   </Link>
 
-                  <p className="text-dark-emphasis">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
 
-                  <div className="d-flex flex-wrap border-top mt-4 pt-3">
-                    <div className="mb-4 mb-lg-0">
-                      <div className="d-flex flex-wrap align-items-center mb-1">
-                        <span className="custom-block-span text-dark-emphasis">
-                          Location:
-                        </span>
+      <div className="row ">
+        <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
+          <div className="custom-block-info eventContent pe-5">
+            <Link to="#" className="events-title text-dark-emphasis mb-3 fs-2">
+              Festival Day & Literary Marketplace
+            </Link>
 
-                        <p className="mb-0 text-dark-emphasis">
-                          Brooklyn Borough Hall and surrounding venues
-                        </p>
-                      </div>
+            <p className="text-dark-emphasis">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
 
-                      <div className="d-flex flex-wrap align-items-center">
-                        <span className="custom-block-span text-dark-emphasis">
-                          Ticket:
-                        </span>
-
-                        <p className="mb-0 text-dark-emphasis">$250</p>
-                      </div>
-                    </div>
 
                     <div className="d-flex align-items-center ms-lg-auto">
                       <Link
@@ -166,8 +148,9 @@ const Events = () => {
                       </Link>
                     </div>
                   </div>
+
                 </div>
-              </div>
+
 
 
               <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
@@ -213,10 +196,12 @@ const Events = () => {
                     </p>
                   </div>
 
-                  <div className="d-flex flex-wrap align-items-center">
-                    <span className="custom-block-span text-dark-emphasis">
-                      Ticket:
-                    </span>
+
+                <div className="d-flex flex-wrap align-items-center">
+                  <span className="custom-block-span text-dark-emphasis">
+                    Ticket:
+                  </span>
+
 
                     <p className="mb-0 text-dark-emphasis">$250</p>
                   </div>
@@ -226,6 +211,7 @@ const Events = () => {
                         Buy Ticket
                       </Link>
                     </div>
+
 
                 </div>
 

@@ -18,7 +18,7 @@ function Checkout() {
   }, []);
   return (
     <>
-      <h1 className="text-center pt-5">Checkout Page</h1>
+      <h1 className="text-center pt-5 text-light">Checkout Page</h1>
 
       <div className="row container px-5 py-5 mx-auto">
         <div className="col-sm-12 col-md-6 left-container">
@@ -102,7 +102,7 @@ function Checkout() {
                 className="form-control"
                 id="InputAddress"
                 aria-describedby="Address"
-                placeholder="Street Name"
+                placeholder="Address Line 1"
               />
             </div>
             {/* Address 2 Optional */}
@@ -112,7 +112,7 @@ function Checkout() {
                 className="form-control"
                 id="InputAddress2"
                 aria-describedby="Address2"
-                placeholder="Apt/Ste #/Floor #/Unit/Bldg #"
+                placeholder="Address Line 2"
               />
             </div>
             {/* Country */}
@@ -396,7 +396,7 @@ function Checkout() {
             </label>
           </div>
           {/* Checkout Button */}
-          <button type="submit" className="btn btn-primary checkoutbtn my-3">
+          <button type="button" className="btn btn-secondary checkoutbtn my-3">
             Checkout
           </button>
         </div>
