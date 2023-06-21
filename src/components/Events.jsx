@@ -42,7 +42,7 @@ const Events = () => {
           <div className="container">
             <div className="row">
 
-              <div className="col-sm-12 col-ms-12 col-lg-6 date-container   text-center mx-auto">
+              <div className="col-sm-12 col-ms-12 col-lg-6 date-container text-center mx-auto">
 
                 <div className="row">
                   <div className="col-sm-6 col-md-6 col-lg-4 date">
@@ -58,8 +58,6 @@ const Events = () => {
               </div>
               </div>
             </div>
-
-
 
               <div className="col-sm-12 col-md-6 col-lg-6">
                 <div className="custom-block-info eventContent pe-5">
@@ -111,8 +109,7 @@ const Events = () => {
         </div>
 
         {/* -------------------2nd row-------------------------- */}
-        <div className="row ">
-       
+        <div className="row ">    
               <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
                 <div className="custom-block-info eventContent pe-5">
                   <Link
@@ -162,7 +159,6 @@ const Events = () => {
               <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
                 <img src={BookExpo2} alt="Book Expo2" className="eventImg" />
               </div>
-
         </div>
 
         {/* -----------------------3rd row------------------------- */}
@@ -183,8 +179,6 @@ const Events = () => {
               <h2>
                 <strong>Nov 30 2023</strong>
               </h2>
-
-
               <div className="d-flex flex-wrap border-top mt-1 pt-1">
                 <div className="mb-1 mb-lg-0">
                   <div className="d-flex flex-wrap align-items-center mb-1">
@@ -209,20 +203,11 @@ const Events = () => {
                         Buy Ticket
                       </Link>
                     </div>
-
-                </div>
-
-                
+                </div>              
               </div>
             </div>
           </div>
-
         </div>
-
-
-        
-
-
       </div>
     </>
   );
