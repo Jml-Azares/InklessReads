@@ -48,22 +48,25 @@ export default function Header({ cart }) {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/literature">
+                    <Link className="dropdown-item drop-item" to="/literature">
                       Literature
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/scienceFiction">
+                    <Link
+                      className="dropdown-item drop-item"
+                      to="/scienceFiction"
+                    >
                       Science Fiction
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/history">
+                    <Link className="dropdown-item drop-item" to="/history">
                       History
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/politics">
+                    <Link className="dropdown-item drop-item" to="/politics">
                       Politics
                     </Link>
                   </li>

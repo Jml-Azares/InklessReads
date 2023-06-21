@@ -1,29 +1,28 @@
-.events-section{
+/* animation */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.events-section {
   background-color: #99908c;
   padding: 50px;
 }
 
-.date{
+.date {
   background-color: gray;
   border-radius: 30px;
-  
+
   text-align: center;
   font-weight: 700;
- 
+
   width: 200px;
   height: 150px;
 }
-
-/* animation */
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 .Events {
-  
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -47,7 +46,9 @@ h1 {
   height: 400px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transform: translateX(400%);
   transition: transform 0.4s ease;
 }
@@ -63,9 +64,8 @@ h1 {
   font-size: 20px;
 }
 
-.eventImg{
+.eventImg {
   height: 100%;
   width: 100%;
   border-radius: 20px;
-
 }

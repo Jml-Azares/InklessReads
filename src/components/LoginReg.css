@@ -1,27 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.logMain-container{
+.logMain-container {
   background-color: white;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 5px 10px #888888;
 }
 
-.loginBox{
+.loginBox {
   text-align: center;
- 
 }
 
-.loginBox img{
+.loginBox img {
   height: 100%;
   width: 100%;
 }
 
-
-.form-control{
+.form-control {
   line-height: 20px;
 }
 
@@ -32,22 +30,22 @@
   background-color: #b8621b;
 }
 
-.regBox .regBtn:hover{
+.regBox .regBtn:hover {
   background-color: #262a56;
 }
 
-.loginBtn{
+.loginBtn {
   background-color: #b8621b;
 }
 
-.input-group{
+.input-group {
   border: none;
 }
 
-.input-group-text{
+.input-group-text {
   background-color: gray;
 }
 
-.regBox .dropdown button{
+.regBox .dropdown button {
   width: 100%;
 }
