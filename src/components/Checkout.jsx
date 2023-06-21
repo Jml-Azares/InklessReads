@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Checkout.css";
+import axios from "axios";
 
 function Checkout() {
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    // Fetch the list of countries from the API
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        setCountries(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <>
-      <h1 className="text-center pt-5">Checkout Page</h1>
+      <h1 className="text-center pt-5 text-light">Checkout Page</h1>
 
       <div className="row container px-5 py-5 mx-auto">
         <div className="col-sm-12 col-md-6 left-container">
@@ -74,7 +88,7 @@ function Checkout() {
                 className="form-control"
                 id="InputEmail1"
                 aria-describedby="emailHelp"
-                placeholder="Email address (Optional)"
+                placeholder="Email address"
               />
               <div id="emailHelp" className="form-text">
                 We'll never share your email with anyone else.
@@ -88,7 +102,7 @@ function Checkout() {
                 className="form-control"
                 id="InputAddress"
                 aria-describedby="Address"
-                placeholder="Address"
+                placeholder="Address Line 1"
               />
             </div>
             {/* Address 2 Optional */}
@@ -98,19 +112,32 @@ function Checkout() {
                 className="form-control"
                 id="InputAddress2"
                 aria-describedby="Address2"
-                placeholder="Address 2 (Optional)"
+                placeholder="Address Line 2"
               />
             </div>
             {/* Country */}
             <div className="row">
               <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
+                <select
+                  className="form-select"
                   id="InputCountry"
-                  aria-describedby="Country"
-                  placeholder="Country"
-                />
+                  // aria-describedby="Country"
+                  // placeholder="Country"
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    -Select Country-
+                  </option>
+                  {countries.map((country) => (
+                    <option
+                      className="country-drop"
+                      key={country.name.common}
+                      value={country.name.common}
+                    >
+                      {country.name.common}
+                    </option>
+                  ))}
+                </select>
               </div>
               {/* State */}
               <div className="col">
@@ -119,7 +146,7 @@ function Checkout() {
                   className="form-control"
                   id="InputState"
                   aria-describedby="State"
-                  placeholder="State"
+                  placeholder="State/Province"
                 />
               </div>
               {/* Zip */}
@@ -128,8 +155,8 @@ function Checkout() {
                   type="text"
                   className="form-control"
                   id="InputZip"
-                  aria-describedby="Zip"
-                  placeholder="Zip"
+                  aria-describedby="City"
+                  placeholder="City"
                 />
               </div>
             </div>
@@ -369,7 +396,7 @@ function Checkout() {
             </label>
           </div>
           {/* Checkout Button */}
-          <button type="submit" className="btn btn-primary checkoutbtn my-3">
+          <button type="button" className="btn btn-secondary checkoutbtn my-3">
             Checkout
           </button>
         </div>

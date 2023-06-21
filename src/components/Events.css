@@ -14,7 +14,6 @@
   font-weight: 10;
   width: 25%;
   height: 100px;
-  
 }
 
 .Events {
@@ -60,6 +59,7 @@ h1 {
 }
 
 .eventImg {
+
   height: 80%;
   width: 80%;
   border-radius: 20px;
@@ -71,6 +71,11 @@ h1 {
 
 .date-container {
   padding-right: 30px;
+
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+
 }
 
 

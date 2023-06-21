@@ -7,15 +7,6 @@
   color: #ffffff;
 }
 
-.subs-btn {
-  background-color: #2b2b2b;
-  color: #ffffff;
-}
-
-.subs-btn:hover {
-  background-color: #423f3e;
-}
-
 textarea {
   height: 100px;
   resize: none;
@@ -30,6 +21,5 @@ iframe{
   width: 350px;
   height: 300px;
   border: 0;
- 
-
 }
+
