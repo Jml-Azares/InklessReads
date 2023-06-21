@@ -7,15 +7,6 @@
   color: #ffffff;
 }
 
-.subs-btn {
-  background-color: #2b2b2b;
-  color: #ffffff;
-}
-
-.subs-btn:hover {
-  background-color: #423f3e;
-}
-
 textarea {
   height: 100px;
   resize: none;
@@ -25,4 +16,3 @@ textarea {
   height: 30px;
   width: 30px;
 }
-
