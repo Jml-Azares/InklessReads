@@ -1,29 +1,23 @@
-.events-section{
-  background-color: #99908c;
-  padding: 50px;
-}
-
-.date{
-  background-color: gray;
-  border-radius: 30px;
-  
-  text-align: center;
-  font-weight: 700;
- 
-  width: 200px;
-  height: 150px;
-}
-
 /* animation */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-* {
-  box-sizing: border-box;
+.events-section {
+  background-color: #99908c;
+  padding: 50px;
+}
+
+.date {
+  background-color: gray;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 10;
+  width: 25%;
+  height: 100px;
+  
 }
 
 .Events {
-  
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -34,7 +28,7 @@
 }
 
 h1 {
-  color: #7e685a;
+  color: white;
 }
 
 .box {
@@ -44,10 +38,12 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 410px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transform: translateX(400%);
   transition: transform 0.4s ease;
 }
@@ -63,9 +59,49 @@ h1 {
   font-size: 20px;
 }
 
-.eventImg{
-  height: 100%;
-  width: 100%;
+.eventImg {
+  height: 80%;
+  width: 80%;
   border-radius: 20px;
-
 }
+
+.Img{
+  width: 75%;
+}
+
+.date-container {
+  padding-right: 30px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.eventButton{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background: linear-gradient(90deg, #423f3e 0%, #8f8f8f 100%);
+padding: 10px 30px;
+border: solid #2b2b2b 2px;
+box-shadow: rgb(161, 160, 160) 5px 5px 30px 13px;
+border-radius: 10px;
+transition : 564ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.eventButton:hover{
+
+transition : 564ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background: linear-gradient(90deg, #423f3e 0%, #8f8f8f 100%);
+color: #ffffff;
+border: solid 2px #423f3e;
+}
+
