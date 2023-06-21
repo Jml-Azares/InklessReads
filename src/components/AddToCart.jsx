@@ -1,10 +1,11 @@
+import useFetch from "../API/useFetch";
+
 const AddToCart = ({ cart }) => {
-  console.log(cart);
   return (
     <>
-      {cart.map((item, i) => (
-        <div className="row">
-          <small className="col-8">{item}</small>
+      {cart.map((item) => (
+        <div className="row" key={item.id}>
+          <small className="col-8">{item.title}</small>
         </div>
       ))}
     </>

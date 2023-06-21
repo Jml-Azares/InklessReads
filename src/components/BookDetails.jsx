@@ -15,8 +15,15 @@ const Book = ({ cart, setCart }) => {
   }, []);
 
   const handleClick = () => {
-    const newCart = [...cart, data[0].title];
-    setCart(newCart);
+    const itemExists = cart.some((item) => item.id === id);
+
+    if (itemExists) {
+      console.log("Item already exists in the cart.");
+    } else {
+      const newCart = [...cart, { id: id, title: data[0].title }];
+      console.log(newCart);
+      setCart(newCart);
+    }
   };
 
   return (
