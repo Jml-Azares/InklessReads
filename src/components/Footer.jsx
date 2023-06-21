@@ -13,28 +13,46 @@ export default function Footer() {
       behavior: "smooth",
     });
   };
+
   return (
     <div className="container-fluid px-5 IL-footer">
       <footer className="pt-5">
         <div className="row">
+          {/* contact details */}
           <div className="col-6 col-md-2 mb-3">
-            <h5>Contact Details</h5>
-            <ul className="nav flex-column">
-              <li className="nav-item mb-2">
-                <i className="fa-solid fa-square-phone"></i>
-                <span> +630000000000</span>
-              </li>
-              <li className="nav-item mb-2">
-                <i className="fa-solid fa-envelope-circle-check"></i>
-                <span> ireads@aol.com</span>
-              </li>
-              <li className="nav-item mb-5">
-                <i className="fa-solid fa-location-dot"></i>
-                <span> Philippines</span>
-              </li>
-            </ul>
+            <div className="row">
+              <div className="col-sm-12 col-md-12">
+                <h5>Contact Details</h5>
+                <ul className="nav flex-column">
+                  <li className="nav-item mb-2">
+                    <i className="fa-solid fa-square-phone"></i>
+                    <span> +630000000000</span>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <i className="fa-solid fa-envelope-circle-check"></i>
+                    <span> ireads@aol.com</span>
+                  </li>
+                  <li className="nav-item mb-5">
+                    <i className="fa-solid fa-location-dot"></i>
+                    <span> Philippines</span>
+                  </li>
+                </ul>
+              </div>
+              {/* google maps */}
+              <div
+                className="col-sm-12 col-md-12"
+                referrerPolicy="no-referrer-when-downgrade"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123504.21022926751!2d120.97978792906643!3d14.683921220237673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ba0942ef7375%3A0x4a9a32d9fe083d40!2sQuezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1687313097572!5m2!1sen!2sph"
+                  allowFullScreen={true}
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
           </div>
 
+          {/* catalogs */}
           <div className="col-6 col-md-2 mb-3">
             <h5>Catalogs</h5>
             <ul className="nav flex-column">
@@ -68,6 +86,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* page links */}
           <div className="col-6 col-md-2 mb-3">
             <h5>Links</h5>
             <ul className="nav flex-column">
@@ -111,6 +130,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* news letter section and contact form */}
           <div className="col-md-5 offset-md-1 mb-3">
             <form>
               <h5>Subscribe to our newsletter</h5>
@@ -156,7 +176,10 @@ export default function Footer() {
             </form>
           </div>
         </div>
+
         <br />
+
+        {/* footer copyrights and icons */}
         <div className="d-flex flex-column flex-sm-row justify-content-between py-3 border-top">
           <p>&copy; 2023 Inkless Reads, Inc. All rights reserved.</p>
           <ul className="list-unstyled d-flex">
@@ -165,6 +188,7 @@ export default function Footer() {
                 className="link-body-emphasis"
                 href="https://www.facebook.com/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={facebook}
@@ -178,6 +202,7 @@ export default function Footer() {
                 className="link-body-emphasis"
                 href="https://www.instagram.com/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={instagram}
@@ -191,6 +216,7 @@ export default function Footer() {
                 className="link-body-emphasis"
                 href="https://www.tiktok.com/en/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={tiktok} alt="Tiktok Logo" className="SocialIcon" />
               </a>
@@ -200,6 +226,7 @@ export default function Footer() {
                 className="link-body-emphasis"
                 href="https://twitter.com/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={twitter} alt="Twitter Logo" className="SocialIcon" />
               </a>

@@ -16,3 +16,10 @@ textarea {
   height: 30px;
   width: 30px;
 }
+
+iframe{
+  width: 350px;
+  height: 300px;
+  border: 0;
+}
+
