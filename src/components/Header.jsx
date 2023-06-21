@@ -1,12 +1,15 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
 
 export default function Header({ cart }) {
-  const closeModal = () => {
-    setIsOpen(false);
+  const navigate = useNavigate();
+
+  const goToCheckout = () => {
+    navigate("/Checkout");
   };
 
   return (
@@ -48,22 +51,25 @@ export default function Header({ cart }) {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/literature">
+                    <Link className="dropdown-item drop-item" to="/literature">
                       Literature
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/scienceFiction">
+                    <Link
+                      className="dropdown-item drop-item"
+                      to="/scienceFiction"
+                    >
                       Science Fiction
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/history">
+                    <Link className="dropdown-item drop-item" to="/history">
                       History
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/politics">
+                    <Link className="dropdown-item drop-item" to="/politics">
                       Politics
                     </Link>
                   </li>
@@ -179,7 +185,7 @@ export default function Header({ cart }) {
                           to="/LoginReg"
                           className="fs-5"
                           id="signup-link"
-                          onClick={closeModal}
+                          data-bs-dismiss="modal"
                         >
                           <p className="fs-6">Sign up here</p>
                         </Link>
@@ -234,9 +240,13 @@ export default function Header({ cart }) {
 
           <br />
           <br />
-          <Link to="/Checkout" onClick={closeModal}>
-            <p>Proceed to checkout</p>
-          </Link>
+          <button
+            className="btn btn-primary"
+            data-bs-dismiss="offcanvas"
+            onClick={goToCheckout}
+          >
+            Proceed to checkout
+          </button>
         </div>
       </div>
     </>

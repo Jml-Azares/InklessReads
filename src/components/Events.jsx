@@ -34,13 +34,16 @@ const Events = () => {
 
   return (
     <>
+
       <div className="container mx-auto Events">
+
         <h1 className="text-white">Upcoming Events</h1>
 
         {/* -------------1st row---------------------------------- */}
         <div className="row box">
           <div className="container">
             <div className="row">
+
 
               <div className="col-sm-12 col-ms-12 col-lg-6 date-container   text-center mx-auto">
 
@@ -61,7 +64,8 @@ const Events = () => {
 
 
 
-              <div className="col-sm-12 col-md-6 col-lg-6">
+
+            
                 <div className="custom-block-info eventContent pe-5">
                   <Link
                     to="#"
@@ -98,7 +102,9 @@ const Events = () => {
                     <div className="d-flex align-items-center ms-lg-auto">
                       <Link
                         to="#"
+
                         className="btn btn-secondary eventButton"
+
                       >
                         Buy Ticket
                       </Link>
@@ -111,6 +117,7 @@ const Events = () => {
         </div>
 
         {/* -------------------2nd row-------------------------- */}
+
         <div className="row ">
        
               <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
@@ -118,6 +125,7 @@ const Events = () => {
                   <Link
                     to="#"
                     className="events-title text-dark-emphasis mb-3 fs-2"
+
                   >
                     Festival Day & Literary Marketplace
                   </Link>
@@ -150,7 +158,9 @@ const Events = () => {
                     <div className="d-flex align-items-center ms-lg-auto">
                       <Link
                         to="#"
+
                         className="btn btn-secondary eventButton"
+
                       >
                         Buy Ticket
                       </Link>
@@ -159,20 +169,24 @@ const Events = () => {
                 </div>
               </div>
 
+
               <div className="col-sm-12 col-ms-12 col-lg-4 mx-auto box">
                 <img src={BookExpo2} alt="Book Expo2" className="eventImg" />
               </div>
+
 
         </div>
 
         {/* -----------------------3rd row------------------------- */}
         <div className="row box">
 
+
           <div className="col-sm-12 col-md-12 col-lg-4 m-2">
             <img src={BookExpo3} alt="Book Expo3" className="eventImg mx-4" />
           </div>
 
           <div className="col-sm-12 col-md-12 col-lg-4">
+
             <div className="custom-block-info eventContent pe-5">
               <Link
                 to="#"
@@ -180,6 +194,7 @@ const Events = () => {
               >
                 International Book Fair
               </Link>
+
               <h2>
                 <strong>Nov 30 2023</strong>
               </h2>
@@ -187,6 +202,7 @@ const Events = () => {
 
               <div className="d-flex flex-wrap border-top mt-1 pt-1">
                 <div className="mb-1 mb-lg-0">
+
                   <div className="d-flex flex-wrap align-items-center mb-1">
                     <span className="custom-block-span text-dark-emphasis">
                       Location:
@@ -204,6 +220,7 @@ const Events = () => {
 
                     <p className="mb-0 text-dark-emphasis">$250</p>
                   </div>
+
                     <div className="d-flex align-items-center ms-lg-auto text-end">
                       <Link to="#" className="btn btn-secondary eventButton">
                         Buy Ticket
@@ -223,9 +240,12 @@ const Events = () => {
         
 
 
+
       </div>
     </>
   );
 };
 
+
 export default Events;
+
