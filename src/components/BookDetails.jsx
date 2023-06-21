@@ -1,20 +1,36 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../API/useFetch";
+import "./BookDetails.css";
 
-const Book = () => {
+const Book = ({ cart, setCart }) => {
   const { id } = useParams();
   const { data, loading, error } = useFetch(
     `https://gutendex.com/books?ids=${id}`
   );
+  const [animationLoaded, setAnimationLoaded] = useState(false);
+
+  useEffect(() => {
+    setAnimationLoaded(true);
+  }, []);
+
+  const handleClick = () => {
+    const newCart = [...cart, data[0].title];
+    setCart(newCart);
+  };
 
   return (
-    <div className="container-fluid ">
-      <div className="row book py-5 p-md-5">
+    <div className="container-fluid">
+      <div
+        className={`row book py-5 p-md-5 ${
+          animationLoaded ? "animate-book" : ""
+        }`}
+      >
         {error && <div>{error}</div>}
         {loading && (
           <div className="col-12 d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
           </div>
         )}
@@ -22,7 +38,7 @@ const Book = () => {
           data.map((item) => (
             <div className="book-details m-0 col-12 row" key={item.id}>
               <div className="book-details-img p-3 col-12 col-md-3 col-lg-2">
-                <img src={item.formats["image/jpeg"]} />
+                <img src={item.formats["image/jpeg"]} alt="Book Cover" />
               </div>
 
               <div className="book-details-body p-3 col-12 col-md-9 col-lg-10">
@@ -37,7 +53,7 @@ const Book = () => {
                   <small>Tags: {item.subjects}</small>
                 </div>
                 <div className="button-container mt-4">
-                  <button className="btn">
+                  <button className="btn" onClick={handleClick}>
                     <p className="user-icon fa-solid fa-cart-shopping"></p>
                   </button>
                 </div>
@@ -48,4 +64,5 @@ const Book = () => {
     </div>
   );
 };
+
 export default Book;
