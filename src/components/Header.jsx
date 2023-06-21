@@ -1,12 +1,15 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
 
 export default function Header({ cart }) {
-  const closeModal = () => {
-    setIsOpen(false);
+  const navigate = useNavigate();
+
+  const goToCheckout = () => {
+    navigate("/Checkout");
   };
 
   return (
@@ -182,7 +185,7 @@ export default function Header({ cart }) {
                           to="/LoginReg"
                           className="fs-5"
                           id="signup-link"
-                          onClick={closeModal}
+                          data-bs-dismiss="modal"
                         >
                           <p className="fs-6">Sign up here</p>
                         </Link>
@@ -237,9 +240,13 @@ export default function Header({ cart }) {
 
           <br />
           <br />
-          <Link to="/Checkout" onClick={closeModal}>
-            <p>Proceed to checkout</p>
-          </Link>
+          <button
+            className="btn btn-primary"
+            data-bs-dismiss="offcanvas"
+            onClick={goToCheckout}
+          >
+            Proceed to checkout
+          </button>
         </div>
       </div>
     </>
