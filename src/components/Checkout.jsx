@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Checkout.css";
 import axios from "axios";
+import AddToCart from "./AddToCart";
 
-function Checkout() {
+function Checkout({ cart, setCart }) {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -299,54 +300,33 @@ function Checkout() {
           <h3>Your cart</h3>
           <div className="top-container">
             <form>
-              {/* Input First Book name */}
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Book name "
-                />
-              </div>
-              <hr />
-              {/* Input Second Book name */}
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput2"
-                  placeholder="Second book name "
-                />
-              </div>
-              <hr />
-              {/* Input Third book name */}
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput3"
-                  placeholder="Third book name "
-                />
-              </div>
-              <hr />
-              {/* Input Promo code */}
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput4"
-                  placeholder="Promo Code "
-                />
-              </div>
-              <hr />
-              {/* Input Total amount */}
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput5"
-                  placeholder="Total Amount "
-                />
+              {cart.map((item) => (
+                <>
+                  <div className="your-cart-books row p-3" key={item.id}>
+                    <small className="col-9">{item.title}</small>
+                    <small className="col-3">$1</small>
+                  </div>
+                  <hr />
+                </>
+              ))}
+              <div className="your-cart-amount">
+                {/* Input Promo code */}
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="exampleFormControlInput4"
+                    placeholder="Promo Code "
+                  />
+                </div>
+                <hr />
+                {/* Input Total amount */}
+                <div
+                  className="mb-3"
+                  style={{ color: "black", textAlign: "center" }}
+                >
+                  ${cart.length}
+                </div>
               </div>
             </form>
           </div>
