@@ -1,9 +1,19 @@
+import React, { useState } from "react";
 import useFetch from "../API/useFetch";
 import { Link } from "react-router-dom";
 import "./catalog.css";
 
 function Catalog({ api, catalog }) {
   const { data, loading, error } = useFetch(api);
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (itemId) => {
+    setHoveredItem(itemId);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
 
   return (
     <div className="container-fluid">
@@ -25,14 +35,15 @@ function Catalog({ api, catalog }) {
           {data &&
             data.map((item) => (
               <div
-                className="gallery-card-parent-div col-4 col-lg-2 p-4"
+                className={`gallery-card-parent-div col-4 col-lg-2 p-4 ${
+                  hoveredItem === item.id ? "hovered" : ""
+                }`}
                 key={item.id}
                 style={{ position: "relative" }}
+                onMouseEnter={() => handleMouseEnter(item.id)}
+                onMouseLeave={handleMouseLeave}
               >
-                <div
-                  className="gallery-card-img py-2"
-                  style={{ position: "relative", overflow: "hidden" }}
-                >
+                <div className="gallery-card-img py-2">
                   <Link to={`/book/${item.id}`}>
                     <img
                       src={item.formats["image/jpeg"]}
