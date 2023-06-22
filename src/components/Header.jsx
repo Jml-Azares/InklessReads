@@ -245,9 +245,11 @@ export default function Header({ cart, setCart }) {
 
           <br />
           <br />
-          <Link data-bs-dismiss="offcanvas" onClick={goToCheckout}>
-            Proceed to checkout
-          </Link>
+          {cart.length !== 0 && (
+            <Link data-bs-dismiss="offcanvas" onClick={goToCheckout}>
+              Proceed to checkout
+            </Link>
+          )}
         </div>
       </div>
     </>

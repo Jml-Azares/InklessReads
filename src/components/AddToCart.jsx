@@ -19,6 +19,7 @@ const AddToCart = ({ cart, setCart }) => {
               }}
             ></button>
           </div>
+          <hr />
         </div>
       ))}
     </>
