@@ -4,6 +4,7 @@ import "./Events.css";
 import BookExpo from "../assets/images/bookExpo.jpg";
 import BookExpo2 from "../assets/images/bookExpo2.jpg";
 import BookExpo3 from "../assets/images/bookExpo3.jpg";
+import BookExpo4 from "../assets/images/bookExpo4.jpg";
 
 const Events = () => {
   useEffect(() => {
@@ -34,111 +35,150 @@ const Events = () => {
 
   return (
     <div className="container mx-auto Events">
-      <h1 className="text-white">Upcoming Events</h1>
+      {/*------------------ moving ads ----------------------------------*/}
+      <marquee>
+        <h5>
+          📚 Discover the World of Knowledge with Inkless Reads! 🌍 🎉
+          Limited-Time Offer: Exclusive Promo and Discount on eBooks! 🎉 🔖
+          Discounted Prices: Enjoy significant price reductions on our entire
+          range of eBooks.🎉 🔖 Uncover hidden gems and popular bestsellers at
+          prices that will make your wallet smile. 🌍📚 Diverse Selection: With
+          thousands of titles to choose from, you'll never run out of reading
+          options.🎉🔖 Expand your literary horizons and discover new authors
+          and genres that will captivate your imagination. 🌍💻 Easy Access:
+          Access your eBooks anytime, anywhere, and on any device. 💻Whether you
+          prefer reading on your e-reader, tablet, smartphone, or computer,
+          we've got you covered.🎉
+        </h5>
+      </marquee>
 
-      {/* -------------1st row---------------------------------- */}
-      <div className="row box">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-6 date-container text-center mx-auto">
-              <div className="row">
-                <div className="col-sm-6 col-md-6 col-lg-4 date">
-                  <p className="fs-3">24</p>
-                  <strong>Dec 2023</strong>
-                  <h5 className="text-danger">Book Expo</h5>
-                </div>
-                <div className="col-sm-6 col-md-6 col-lg-4 Img">
-                  <img src={BookExpo} alt="Book Expo" className="eventImg" />
-                </div>
-              </div>
-            </div>
+      <h1 className="eventHeader">Upcoming Events</h1>
 
-            <div className="col-sm-12 col-md-6 col-lg-6">
-              <div className="custom-block-info eventContent pe-5">
-                <Link
-                  to="#"
-                  className="events-title mb-3 text-dark-emphasis fs-2"
-                >
-                  Private activities
-                </Link>
-
-                <div className="d-flex flex-wrap align-items-center">
-                  <span className="custom-block-span text-dark-emphasis">
-                    Ticket:
-                  </span>
-                  <p className="mb-0 text-dark-emphasis">$250</p>
-                </div>
-
-                <div className="d-flex align-items-center ms-lg-auto">
-                  <Link to="#" className="btn btn-secondary eventButton">
-                    Buy Ticket
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* -------------------2nd row-------------------------- */}
-      <div className="row">
-        <div className="col-sm-12 col-md-12 col-lg-4 mx-auto box">
-          <div className="custom-block-info eventContent pe-5">
-            <Link to="#" className="events-title text-dark-emphasis mb-3 fs-2">
-              Festival Day & Literary Marketplace
-            </Link>
-            <p className="text-dark-emphasis">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-            <div className="d-flex align-items-center ms-lg-auto">
-              <Link to="#" className="btn btn-secondary eventButton">
-                Buy Ticket
+      {/* ----------------1st row event slider animation---------------- */}
+      <div className="row box mb-2">
+        <div className="col-md-6">
+          <div className="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <strong className="d-inline-block mb-2">
+                Jacob Javits Center in New York City
+              </strong>
+              <h3 className="eventHeader mb-0">Book Expo</h3>
+              <div className="mb-1 text-danger">Nov 12 2023</div>
+              <p className="card-text mb-auto">
+                BookExpo Online 2023 will also present an additional day of
+                bookseller programming in late July that will include education
+                sessions, speed dating, UnBound content, and publisher
+                showcases.
+              </p>
+              <Link to="#" className="icon-link gap-1">
+                Buy Tickets
               </Link>
             </div>
+            <div className="col-auto d-none d-lg-block">
+              <img
+                src={BookExpo}
+                alt="Book Expo"
+                className="eventImg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
+            </div>
           </div>
         </div>
-
-        <div className="col-sm-12 col-md-12 col-lg-4 mx-auto box">
-          <img src={BookExpo2} alt="Book Expo2" className="eventImg" />
+        <div className="col-md-6">
+          <div className="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <strong className="d-inline-block mb-2">
+                Edinburgh EH2 4YN, United Kingdom
+              </strong>
+              <h3 className="eventHeader mb-0">Edinburgh Book Festival</h3>
+              <div className="mb-1 text-danger">Aug 11 2024</div>
+              <p className="mb-auto">
+                We are the largest public celebration of the written word in the
+                world. Every August, we bring around more than 500 writers and
+                thinkers across the planet.
+              </p>
+              <Link to="#" className="icon-link gap-1">
+                Buy Tickets
+              </Link>
+            </div>
+            <div className="col-auto d-none d-lg-block">
+              <img
+                src={BookExpo2}
+                alt="Book Expo2"
+                className="eventImg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* -----------------------3rd row------------------------- */}
-      <div className="row box">
-        <div className="col-sm-12 col-md-12 col-lg-4 m-2">
-          <img src={BookExpo3} alt="Book Expo3" className="eventImg mx-4" />
+      {/*---------------- 2nd row event slider animation----------------- */}
+      <div className="row box mb-2">
+        <div className="col-md-6">
+          <div className="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <strong className="d-inline-block mb-2">
+                World Trade Center Pasay City
+              </strong>
+              <h3 className="eventHeader mb-0">Philippine Book Festival</h3>
+              <div className="mb-1 text-danger">December 2 2023</div>
+              <p className="card-text mb-auto">
+                From December 2 to 4, bibliophiles can feast on the stalls of
+                over 140 publishers whose wide range of books for all ages
+                offerings are all Filipino-authored.
+              </p>
+              <Link to="#" className="icon-link gap-1">
+                Buy Tickets
+              </Link>
+            </div>
+            <div className="col-auto d-none d-lg-block">
+              <img
+                src={BookExpo3}
+                alt="Book Expo3"
+                className="eventImg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
+            </div>
+          </div>
         </div>
-
-        <div className="col-sm-12 col-md-12 col-lg-4">
-          <div className="custom-block-info eventContent pe-5">
-            <Link to="#" className="events-title mb-3 text-dark-emphasis fs-2">
-              International Book Fair
-            </Link>
-            <h2>
-              <strong>Nov 30 2023</strong>
-            </h2>
-            <div className="d-flex flex-wrap border-top mt-1 pt-1">
-              <div className="mb-1 mb-lg-0">
-                <div className="d-flex flex-wrap align-items-center mb-1">
-                  <span className="custom-block-span text-dark-emphasis">
-                    Location:
-                  </span>
-                  <p className="mb-0 text-dark-emphasis">
-                    World Trade Center, Pasay City
-                  </p>
-                </div>
-                <div className="d-flex flex-wrap align-items-center">
-                  <span className="custom-block-span text-dark-emphasis">
-                    Ticket:
-                  </span>
-                  <p className="mb-0 text-dark-emphasis">$250</p>
-                </div>
-                <div className="d-flex align-items-center ms-lg-auto text-end">
-                  <Link to="#" className="btn btn-secondary eventButton">
-                    Buy Ticket
-                  </Link>
-                </div>
-              </div>
+        <div className="col-md-6">
+          <div className="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <strong className="d-inline-block mb-2">Online</strong>
+              <h3 className="eventHeader mb-0">
+                {" "}
+                Manila International Book Fair
+              </h3>
+              <div className="mb-1 text-danger">Nov 24 2023</div>
+              <p className="mb-auto">
+                From the smell of fresh ink and digital paper to the buzz of
+                enthusiastic readers, there's nothing quite like the energy of
+                the Manila International Book Fair!
+              </p>
+              <Link to="#" className="icon-link gap-1 ">
+                Buy Tickets
+              </Link>
+            </div>
+            <div className="col-auto d-none d-lg-block">
+              <img
+                src={BookExpo4}
+                alt="Book Expo4"
+                className="eventImg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              />
             </div>
           </div>
         </div>
