@@ -301,13 +301,11 @@ function Checkout({ cart, setCart }) {
           <div className="top-container">
             <form>
               {cart.map((item) => (
-                <>
-                  <div className="your-cart-books row p-3" key={item.id}>
-                    <small className="col-9">{item.title}</small>
-                    <small className="col-3">$1</small>
-                  </div>
+                <div className="your-cart-books row p-3" key={item.id}>
+                  <small className="col-9">{item.title}</small>
+                  <small className="col-3">$1</small>
                   <hr />
-                </>
+                </div>
               ))}
               <div className="your-cart-amount">
                 {/* Input Promo code */}
