@@ -131,7 +131,7 @@ function Checkout({ cart, setCart }) {
                   </option>
                   {countries.map((country) => (
                     <option
-                      className="country-drop"
+                      className="text-black"
                       key={country.name.common}
                       value={country.name.common}
                     >
@@ -301,7 +301,7 @@ function Checkout({ cart, setCart }) {
           <div className="top-container">
             <form>
               {cart.map((item) => (
-                <div className="your-cart-books row p-3" key={item.id}>
+                <div className="your-cart-books row" key={item.id}>
                   <small className="col-9">{item.title}</small>
                   <small className="col-3">$1</small>
                   <hr />

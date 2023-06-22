@@ -257,32 +257,13 @@ function LoginReg() {
 
               {/* City */}
               <div className="dropdown col-4">
-                <button
-                  className="btn btn-outline-secondary dropdown-toggle"
+                <input
+                  className="form-control"
                   id="city"
                   type="text"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  City
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Caloocan City
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Quezon CIty
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Quezon Province
-                    </button>
-                  </li>
-                </ul>
+                  aria-describedby="City"
+                  placeholder="City/Town"
+                ></input>
               </div>
             </div>
 
@@ -298,7 +279,11 @@ function LoginReg() {
                     -Select Country-
                   </option>
                   {countries.map((country) => (
-                    <option key={country.alpha2Code} value={country.name}>
+                    <option
+                      className="text-black"
+                      key={country.alpha2Code}
+                      value={country.name}
+                    >
                       {country.name}
                     </option>
                   ))}
@@ -319,7 +304,7 @@ function LoginReg() {
 
             <button
               type="button"
-              className="btn btn-primary regBtn"
+              className="btn btn-secondary regBtn"
               // onClick={register}
             >
               Register
