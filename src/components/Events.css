@@ -58,7 +58,8 @@ h1 {
 
 .eventImg {
   height: 100%;
-  width: 200px;
+  width: 230px;
+  object-fit: cover;
 }
 
 .bd-placeholder-img {

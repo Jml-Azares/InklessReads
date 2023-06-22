@@ -11,8 +11,8 @@ export default function Header({ cart, setCart }) {
   const goToCheckout = () => {
     navigate("/Checkout");
   };
-  
-const goToLogInReg = () => {
+
+  const goToLogInReg = () => {
     navigate("/loginReg");
   };
 
@@ -60,14 +60,13 @@ const goToLogInReg = () => {
   //     });
   // }
 
-  
-
-
   return (
     <>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <img src={inkless} alt="Company Logo" className="logo" />
+          <Link>
+            <img src={inkless} alt="Company Logo" className="logo" />
+          </Link>
           <button
             className="navbar-toggler bg-body-tertiary"
             type="button"
