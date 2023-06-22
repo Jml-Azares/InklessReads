@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
 
-export default function Header({ cart }) {
+export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
 
   const goToCheckout = () => {
     navigate("/Checkout");
+  };
+
+  const goToLogInReg = () => {
+    navigate("/loginReg");
   };
 
   return (
@@ -181,13 +185,14 @@ export default function Header({ cart }) {
 
                         <hr className="my-4" />
                         <h2 className="fs-5 mb-1">Don't have account yet?</h2>
+
                         <Link
-                          to="/LoginReg"
-                          className="fs-5"
                           id="signup-link"
+                          className="fs-6"
                           data-bs-dismiss="modal"
+                          onClick={goToLogInReg}
                         >
-                          <p className="fs-6">Sign up here</p>
+                          Sign up here
                         </Link>
                       </form>
                     </div>
@@ -235,18 +240,14 @@ export default function Header({ cart }) {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
-          <AddToCart cart={cart} />
+        <div className="offcanvas-body" data-bs-theme="dark">
+          <AddToCart cart={cart} setCart={setCart} />
 
           <br />
           <br />
-          <button
-            className="btn btn-primary"
-            data-bs-dismiss="offcanvas"
-            onClick={goToCheckout}
-          >
+          <Link data-bs-dismiss="offcanvas" onClick={goToCheckout}>
             Proceed to checkout
-          </button>
+          </Link>
         </div>
       </div>
     </>
