@@ -1,7 +1,47 @@
-.book-cover-image {
-  transition: transform 0.3s ease;
+.gallery-card-parent-div {
+  position: relative;
+  perspective: 1000px;
+  transition: transform 0.3s;
 }
 
-.book-cover-image:hover {
-  transform: scale(1.2);
+.hovered .gallery-card-img {
+  transform: translateX(-10px);
+}
+
+.gallery-card-img {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.hovered .gallery-card-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #ffffff;
+  animation-name: example;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes example {
+  0% {
+    border-left: 2px solid #ffffff;
+  }
+  25% {
+    border-left: 3px solid #ffe6e6;
+  }
+  50% {
+    border-left: 4px solid ghostwhite;
+  }
+  100% {
+    border-left: 5px solid gainsboro;
+  }
+}
+
+.book-cover-image {
+  width: 100%;
 }

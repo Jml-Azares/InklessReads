@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
 
-export default function Header({ cart }) {
+export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
 
   const goToCheckout = () => {
     navigate("/Checkout");
+  };
+  
+const goToLogInReg = () => {
+    navigate("/loginReg");
   };
 
   // function login() {
@@ -55,6 +59,9 @@ export default function Header({ cart }) {
   //       alert(error_message);
   //     });
   // }
+
+  
+
 
   return (
     <>
@@ -226,13 +233,14 @@ export default function Header({ cart }) {
 
                         <hr className="my-4" />
                         <h2 className="fs-5 mb-1">Don't have account yet?</h2>
+
                         <Link
-                          navigate="/LoginReg"
-                          className="fs-5"
                           id="signup-link"
+                          className="fs-6"
                           data-bs-dismiss="modal"
+                          onClick={goToLogInReg}
                         >
-                          <p className="fs-6">Sign up here</p>
+                          Sign up here
                         </Link>
                       </form>
                     </div>
@@ -280,18 +288,16 @@ export default function Header({ cart }) {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
-          <AddToCart cart={cart} />
+        <div className="offcanvas-body" data-bs-theme="dark">
+          <AddToCart cart={cart} setCart={setCart} />
 
           <br />
           <br />
-          <button
-            className="btn btn-primary"
-            data-bs-dismiss="offcanvas"
-            onClick={goToCheckout}
-          >
-            Proceed to checkout
-          </button>
+          {cart.length !== 0 && (
+            <Link data-bs-dismiss="offcanvas" onClick={goToCheckout}>
+              Proceed to checkout
+            </Link>
+          )}
         </div>
       </div>
     </>
