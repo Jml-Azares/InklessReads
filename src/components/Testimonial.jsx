@@ -37,7 +37,7 @@ const Testimonial = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={Review1} className="d-block reviewImg" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-block">
               <h5>Brad Pitt</h5>
               <p>
                 <cite>Celebrity</cite>
@@ -53,27 +53,35 @@ const Testimonial = () => {
               </blockquote>
             </div>
           </div>
+
           <div className="carousel-item">
-            <img src={Review2} className="d-block reviewImg" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Dwayne Johnson</h5>
-              <p>
-                <cite>Celebrity</cite>
-              </p>
-              <blockquote>
-                "Matagal ko nang ginagamit ang online ebook na website na ito,
-                at hindi ko ito mairerekomenda nang sapat. Ang hanay ng mga
-                genre at may-akda ay kahanga-hanga, na tumutugon sa lahat ng uri
-                ng mga mambabasa. Ang layout ng website ay malinis at
-                kaakit-akit sa paningin, Dagdag pa, ang abot-kayang presyo para
-                sa mga ebook ay ginagawa itong naa-access sa lahat. Ipagpatuloy
-                ang mahusay na trabaho!"
-              </blockquote>
+            <div className="row">
+              <div className="col-12 text-center my-5">
+                <img src={Review2} className="reviewImg" alt="..." />
+              </div>
+              <div className="col-12 my-5">
+                <div className="carousel-caption d-block">
+                  <h5>Dwayne Johnson</h5>
+                  <p>
+                    <cite>Celebrity</cite>
+                  </p>
+                  <blockquote>
+                    "Matagal ko nang ginagamit ang online ebook na website na
+                    ito, at hindi ko ito mairerekomenda nang sapat. Ang hanay ng
+                    mga genre at may-akda ay kahanga-hanga, na tumutugon sa
+                    lahat ng uri ng mga mambabasa. Ang layout ng website ay
+                    malinis at kaakit-akit sa paningin, Dagdag pa, ang
+                    abot-kayang presyo para sa mga ebook ay ginagawa itong
+                    naa-access sa lahat. Ipagpatuloy ang mahusay na trabaho!"
+                  </blockquote>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="carousel-item">
             <img src={Review3} className="d-block reviewImg" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-block">
               <h5>Leonardo DiCarpio</h5>
               <p>
                 <cite>Celebrity</cite>
