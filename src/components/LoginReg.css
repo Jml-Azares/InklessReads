@@ -27,15 +27,6 @@
   margin-top: 20px;
   width: 100%;
   font-size: larger;
-  background-color: #b8621b;
-}
-
-.regBox .regBtn:hover {
-  background-color: #262a56;
-}
-
-.loginBtn {
-  background-color: #b8621b;
 }
 
 .input-group {
