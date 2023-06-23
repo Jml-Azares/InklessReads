@@ -15,6 +15,7 @@ import Faq from "./components/Faq";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 import Politics from "./components/politics";
+import Romance from "./components/romance";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/scienceFiction" element={<ScienceFiction />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/history" element={<History />} />
+          <Route path="/romance" element={<Romance />} />
           <Route
             path="/book/:id"
             element={<Book cart={cart} setCart={setCart} />}

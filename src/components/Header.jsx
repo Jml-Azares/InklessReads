@@ -79,6 +79,11 @@ export default function Header({ cart, setCart }) {
                       Politics
                     </Link>
                   </li>
+                  <li>
+                    <Link className="dropdown-item drop-item" to="/romance">
+                      Romance
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -101,7 +106,7 @@ export default function Header({ cart, setCart }) {
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
               >
-                <p className="user-icon fa-solid fa-cart-shopping"></p>
+                <p className="user-icon fa-solid fa-cart-arrow-down"></p>
               </button>
 
               {/* ----------------------------user icon ------------------------------------*/}
@@ -113,7 +118,7 @@ export default function Header({ cart, setCart }) {
                 data-bs-target="#modalSignin"
               >
                 {/* ------------user icon -----------*/}
-                <p className="user-icon fa-solid fa-user-large"></p>
+                <p className="user-icon fa-solid fa-user-tie"></p>
               </button>
 
               {/* <!---------------------- Modal --------------------------------------> */}
