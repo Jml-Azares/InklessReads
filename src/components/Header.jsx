@@ -208,7 +208,7 @@ export default function Header({ cart, setCart }) {
                           <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <button
-                          className="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                          className="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
                           type="submit"
                           onClick={login}
                         >
@@ -220,14 +220,14 @@ export default function Header({ cart, setCart }) {
                           Or use a third-party
                         </h2>
                         <button
-                          className="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                          className="w-100 py-2 mb-2 btn btn-primary rounded-3"
                           type="submit"
                           onClick={login}
                         >
                           Sign in with Facebook
                         </button>
                         <button
-                          className="w-100 py-2 mb-2 btn btn-outline-danger rounded-3"
+                          className="w-100 py-2 mb-2 btn btn-danger rounded-3"
                           type="submit"
                           onClick={login}
                         >
