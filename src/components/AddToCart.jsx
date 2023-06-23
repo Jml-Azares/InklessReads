@@ -1,4 +1,4 @@
-import useFetch from "../API/useFetch";
+import { Link } from "react-router-dom";
 
 const AddToCart = ({ cart, setCart }) => {
   const handleClick = (id) => {
@@ -12,12 +12,14 @@ const AddToCart = ({ cart, setCart }) => {
         <div className="row" key={item.id}>
           <small className="col-9">{item.title}</small>
           <div className="btn-close-container col-3">
-            <button
-              className="btn-close"
+            <Link
+              className="btn-close-trash"
               onClick={() => {
                 handleClick(item.id);
               }}
-            ></button>
+            >
+              <i class="fa-regular fa-trash-can"></i>
+            </Link>
           </div>
           <hr />
         </div>
