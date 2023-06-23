@@ -16,55 +16,11 @@ export default function Header({ cart, setCart }) {
     navigate("/loginReg");
   };
 
-  // function login() {
-  //   // Get all our input fields
-  //   const email = document.getElementById("email").value;
-  //   const password = document.getElementById("password").value;
-
-  //   // validate input fields
-  //   if (
-  //     validate_email(email) == false ||
-  //     validate_password(password) == false
-  //   ) {
-  //     alert("Email or Password is Invalid!");
-  //     return;
-  //     // dont continue running the code
-  //   }
-  //   auth
-  //     .signInWithEmailAndPassword(email, password)
-  //     .then(function () {
-  //       // declare user variable
-  //       var user = auth.currentUser;
-
-  //       // add this user to firebase database
-  //       var database_ref = database.ref();
-
-  //       // create user data
-  //       var user_data = {
-  //         last_login: Date.now(),
-  //       };
-
-  //       // push to firebase database
-  //       database_ref.child("users/" + user.uid).update(user_data);
-
-  //       // done
-  //       alert("User Looged In!!");
-  //     })
-
-  //     .catch(function (error) {
-  //       // Firebase will use this to alert its errors
-  //       var error_code = error.code;
-  //       var error_message = error.message;
-
-  //       alert(error_message);
-  //     });
-  // }
-
   return (
     <>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <Link>
+          <Link to="/">
             <img src={inkless} alt="Company Logo" className="logo" />
           </Link>
           <button
@@ -208,7 +164,6 @@ export default function Header({ cart, setCart }) {
                         <button
                           className="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
                           type="submit"
-                          // onClick={login}
                         >
                           Sign in
                         </button>

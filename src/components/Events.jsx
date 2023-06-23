@@ -35,24 +35,7 @@ const Events = () => {
 
   return (
     <div className="container mx-auto Events">
-      {/*------------------ moving ads ----------------------------------*/}
-      <marquee>
-        <h5>
-          📚 Discover the World of Knowledge with Inkless Reads! 🌍 🎉
-          Limited-Time Offer: Exclusive Promo and Discount on eBooks! 🎉 🔖
-          Discounted Prices: Enjoy significant price reductions on our entire
-          range of eBooks.🎉 🔖 Uncover hidden gems and popular bestsellers at
-          prices that will make your wallet smile. 🌍📚 Diverse Selection: With
-          thousands of titles to choose from, you'll never run out of reading
-          options.🎉🔖 Expand your literary horizons and discover new authors
-          and genres that will captivate your imagination. 🌍💻 Easy Access:
-          Access your eBooks anytime, anywhere, and on any device. 💻Whether you
-          prefer reading on your e-reader, tablet, smartphone, or computer,
-          we've got you covered.🎉
-        </h5>
-      </marquee>
-
-      <h1 className="eventHeader">Upcoming Events</h1>
+      <h1 className="">Upcoming Events</h1>
 
       {/* ----------------1st row event slider animation---------------- */}
       <div className="row box mb-2">
@@ -62,7 +45,7 @@ const Events = () => {
               <strong className="d-inline-block mb-2">
                 Jacob Javits Center in New York City
               </strong>
-              <h3 className="eventHeader mb-0">Book Expo</h3>
+              <h3 className=" mb-0">Book Expo</h3>
               <div className="mb-1 text-danger">Nov 12 2023</div>
               <p className="card-text mb-auto">
                 BookExpo Online 2023 will also present an additional day of
@@ -93,7 +76,7 @@ const Events = () => {
               <strong className="d-inline-block mb-2">
                 Edinburgh EH2 4YN, United Kingdom
               </strong>
-              <h3 className="eventHeader mb-0">Edinburgh Book Festival</h3>
+              <h3 className=" mb-0">Edinburgh Book Festival</h3>
               <div className="mb-1 text-danger">Aug 11 2024</div>
               <p className="mb-auto">
                 We are the largest public celebration of the written word in the
@@ -127,7 +110,7 @@ const Events = () => {
               <strong className="d-inline-block mb-2">
                 World Trade Center Pasay City
               </strong>
-              <h3 className="eventHeader mb-0">Philippine Book Festival</h3>
+              <h3 className=" mb-0">Philippine Book Festival</h3>
               <div className="mb-1 text-danger">December 2 2023</div>
               <p className="card-text mb-auto">
                 From December 2 to 4, bibliophiles can feast on the stalls of
@@ -155,10 +138,7 @@ const Events = () => {
           <div className="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div className="col p-4 d-flex flex-column position-static">
               <strong className="d-inline-block mb-2">Online</strong>
-              <h3 className="eventHeader mb-0">
-                {" "}
-                Manila International Book Fair
-              </h3>
+              <h3 className=" mb-0"> Manila International Book Fair</h3>
               <div className="mb-1 text-danger">Nov 24 2023</div>
               <p className="mb-auto">
                 From the smell of fresh ink and digital paper to the buzz of
