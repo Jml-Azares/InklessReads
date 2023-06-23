@@ -3,11 +3,6 @@ import axios from "axios";
 import "./LoginReg.css";
 import CompanyLogo from "../assets/images/IK.png";
 
-import { initializeApp } from "firebase/app";
-// import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/database";
-
 function LoginReg() {
   const [countries, setCountries] = useState([]);
 
