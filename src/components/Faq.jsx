@@ -5,11 +5,14 @@ function Faq() {
   return (
     <div className="py-5">
       <h1 className="text-center pb-4">Frequently Ask Questions</h1>
-      <div class="accordion accordion-flush mx-auto ink-acc" id="ink-accordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+      <div
+        className="accordion accordion-flush mx-auto ink-acc"
+        id="ink-accordion"
+      >
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne"
@@ -21,10 +24,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseOne"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               To create an account on Inkless Reads, click on the "Sign Up"
               button located at the top right corner of the page. Fill in the
               required information, including your name, email address, and
@@ -34,10 +37,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo"
@@ -49,10 +52,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseTwo"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               To purchase an ebook, browse through our collection and click on
               the desired book. On the book's page, you will find a "Buy Now"
               button. Clicking on it will take you to the checkout page where
@@ -63,10 +66,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree"
@@ -78,10 +81,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseThree"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               Yes, you can access your purchased ebooks on multiple devices.
               Simply log in to your Inkless Reads account on the device you wish
               to use and navigate to your library. You will find all your
@@ -90,10 +93,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFour"
@@ -105,10 +108,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseFour"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               To download an ebook, go to your library where you can see the
               list of ebooks you've purchased. Click on the "Download" button
               next to the desired ebook, and it will be saved to your device for
@@ -117,10 +120,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFive"
@@ -132,10 +135,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseFive"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               Inkless Reads supports ebooks in PDF and EPUB formats. Most
               devices and ebook readers are compatible with these formats,
               allowing you to read the ebooks on various devices.
@@ -143,10 +146,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseSix"
@@ -158,10 +161,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseSix"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               Due to the nature of digital products, we do not offer returns or
               refunds for purchased ebooks. We encourage you to review the book
               details and sample chapters before making a purchase decision.
@@ -169,10 +172,10 @@ function Faq() {
           </div>
         </div>
         <br />
-        <div class="accordion-item">
-          <h2 class="accordion-header">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed acc-btn"
+              className="accordion-button collapsed acc-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseSeven"
@@ -184,10 +187,10 @@ function Faq() {
           </h2>
           <div
             id="flush-collapseSeven"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             data-bs-parent="#ink-accordion"
           >
-            <div class="accordion-body acc-body">
+            <div className="accordion-body acc-body">
               If you have any questions, concerns, or need assistance, you can
               reach out to our customer support team by sending an email to
               ireads@aol.com. We strive to respond to all inquiries within 24
