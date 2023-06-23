@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./LoginReg.css";
 import CompanyLogo from "../assets/images/IK.png";
+
+import { initializeApp } from "firebase/app";
 // import firebase from "firebase/app";
-// import "firebase/auth";
-// import "firebase/database";
+import "firebase/auth";
+import "firebase/database";
 
 function LoginReg() {
   const [countries, setCountries] = useState([]);
@@ -22,124 +24,129 @@ function LoginReg() {
     fetchCountries();
   }, []);
 
-  // // Your web app's Firebase configuration
-  // const firebaseConfig = {
-  //   apiKey: "YOUR_API_KEY",
-  //   authDomain: "YOUR_AUTH_DOMAIN",
-  //   projectId: "YOUR_PROJECT_ID",
-  //   storageBucket: "YOUR_STORAGE_BUCKET",
-  //   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  //   appId: "YOUR_APP_ID",
-  //   measurementId: "YOUR_MEASUREMENT_ID",
-  // };
+  // ------------------firebase function starts here---------------
 
-  // // Initialize Firebase
-  // if (!firebase.apps.length) {
-  //   firebase.initializeApp(firebaseConfig);
-  // }
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6Mpl4yfQr1nHqA5195GBewE9qAIn4ilo",
+    authDomain: "login-with-firebase-b10c5.firebaseapp.com",
+    projectId: "login-with-firebase-b10c5",
+    storageBucket: "login-with-firebase-b10c5.appspot.com",
+    messagingSenderId: "187672162395",
+    appId: "1:187672162395:web:5c6418f6894c3e00b70f7e",
+    measurementId: "G-B2KL5YX2T2",
+  };
 
-  // const auth = firebase.auth();
-  // const database = firebase.database();
+  // Initialize Firebase
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
 
-  // // Set up for register function
-  // function register() {
-  //   // get all input fields
-  //   const firstname = document.getElementById("firstname").value;
-  //   const lastname = document.getElementById("lastname").value;
-  //   const password = document.getElementById("password").value;
-  //   const confirmPassword = document.getElementById("confirmPassword").value;
-  //   const email = document.getElementById("email").value;
-  //   const birthday = document.getElementById("birthday").value;
-  //   const contact = document.getElementById("contact").value;
-  //   const address = document.getElementById("address").value;
-  //   const city = document.getElementById("city").value;
-  //   const countrySelect = document.getElementById("countrySelect").value;
-  //   const zip = document.getElementById("zip").value;
+  const auth = firebase.auth();
+  const database = firebase.database();
 
-  //   // validate input fields
-  //   if (
-  //     validate_email(email) === false ||
-  //     validate_password(password) === false
-  //   ) {
-  //     alert("Email and Password are invalid");
-  //     return;
-  //   }
-  //   if (
-  //     validate_field(firstname) &&
-  //     validate_field(lastname) &&
-  //     validate_field(confirmPassword) === false
-  //   ) {
-  //     alert("One or More Extra fields are invalid");
-  //     return;
-  //   }
+  // Set up for register function
+  function register() {
+    // get all input fields
+    const firstname = document.getElementById("firstname").value;
+    const lastname = document.getElementById("lastname").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const email = document.getElementById("email").value;
+    const birthday = document.getElementById("birthday").value;
+    const contact = document.getElementById("contact").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("city").value;
+    const countrySelect = document.getElementById("countrySelect").value;
+    const zip = document.getElementById("zip").value;
 
-  //   // Move on with Auth
-  //   auth
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then(function () {
-  //       var user = auth.currentUser;
+    // validate input fields
+    if (
+      validate_email(email) === false ||
+      validate_password(password) === false
+    ) {
+      alert("Email and Password are invalid");
+      return;
+    }
+    if (
+      validate_field(firstname) &&
+      validate_field(lastname) &&
+      validate_field(confirmPassword) === false
+    ) {
+      alert("One or More Extra fields are invalid");
+      return;
+    }
 
-  //       // Add this user to firebase database
-  //       var database_ref = database.ref();
+    // Move on with Auth
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(function () {
+        var user = auth.currentUser;
 
-  //       //create user data
-  //       var user_data = {
-  //         email: email,
-  //         firstname: firstname,
-  //         lastname: lastname,
-  //         birthday: birthday,
-  //         contact: contact,
-  //         address: address,
-  //         city: city,
-  //         countrySelect: countrySelect,
-  //         zip: zip,
-  //         last_login: Date.now(),
-  //       };
+        // Add this user to firebase database
+        var database_ref = database.ref();
 
-  //       database_ref.child("user/" + user.uid).set(user_data);
+        //create user data
+        var user_data = {
+          email: email,
+          firstname: firstname,
+          lastname: lastname,
+          birthday: birthday,
+          contact: contact,
+          address: address,
+          city: city,
+          countrySelect: countrySelect,
+          zip: zip,
+          last_login: Date.now(),
+        };
 
-  //       alert("User Created!!");
-  //     })
-  //     .catch(function (error) {
-  //       // Firebase will use this to alert its errors
-  //       var error_code = error.code;
-  //       var error_message = error.message;
+        database_ref.child("user/" + user.uid).set(user_data);
 
-  //       alert(error_message);
-  //     });
-  // }
+        alert("User Created!!");
+      })
+      .catch(function (error) {
+        // Firebase will use this to alert its errors
+        var error_code = error.code;
+        var error_message = error.message;
 
-  // function validate_email(email) {
-  //   const expression = /^[^@]+@\w+(\.\w+)+\w$/;
-  //   if (expression.test(email) === true) {
-  //     //Email is good
-  //     return true;
-  //   } else {
-  //     //Email is not good
-  //     return false;
-  //   }
-  // }
+        alert(error_message);
+      });
+  }
 
-  // function validate_password(password) {
-  //   //firebase only accepts lengths greater than 6
-  //   if (password.length < 6) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }
+  function validate_email(email) {
+    const expression = /^[^@]+@\w+(\.\w+)+\w$/;
+    if (expression.test(email) === true) {
+      //Email is good
+      return true;
+    } else {
+      //Email is not good
+      return false;
+    }
+  }
 
-  // function validate_field(field) {
-  //   if (field === null) {
-  //     return false;
-  //   }
+  function validate_password(password) {
+    //firebase only accepts lengths greater than 6
+    if (password.length < 6) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-  //   if (field.length <= 0) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }
+  function validate_field(field) {
+    if (field === null) {
+      return false;
+    }
+
+    if (field.length <= 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  const app = initializeApp(firebaseConfig);
+  // -------------fire base functions ends here---------------------
 
   return (
     <>
@@ -320,7 +327,7 @@ function LoginReg() {
             <button
               type="button"
               className="btn btn-primary regBtn"
-              // onClick={register}
+              onClick={register}
             >
               Register
             </button>

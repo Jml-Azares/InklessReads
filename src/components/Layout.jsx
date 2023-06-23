@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import Footer from "./Footer";
+import Chatbot from "./Chatbot";
 import { Outlet } from "react-router-dom";
 
 const Layout = ({ cart, setCart }) => {
@@ -10,6 +11,7 @@ const Layout = ({ cart, setCart }) => {
       <Header cart={cart} setCart={setCart} />
       <Hero />
       <Outlet />
+      <Chatbot />
       <Footer />
     </>
   );
