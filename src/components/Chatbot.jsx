@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Chatbot.css";
-import ChatbotIcon from "/path/to/assets/images/Chatbot.gif";
+import ChatbotIcon from "../assets/images/chatbot.gif";
 
 const Chatbot = () => {
   return (
