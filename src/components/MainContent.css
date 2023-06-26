@@ -35,20 +35,6 @@ div.gallery-card-img img {
   text-align: center;
 }
 
-.media-scroller {
-  display: grid;
-  gap: 1rem;
-  grid-auto-flow: column;
-
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-}
-
-.media-element {
-  background: #2b2b2b;
-  border-radius: 5px;
-}
-
 .media-element img {
   width: 100%;
 
@@ -58,8 +44,6 @@ div.gallery-card-img img {
 }
 
 .media-element {
-  background: #2b2b2b;
-  border-radius: 5px;
   overflow: hidden;
   position: relative;
 }
@@ -78,28 +62,7 @@ div.gallery-card-img img {
 
 .book-cover-wrapper {
   position: relative;
-}
+  background: #2b2b2b;
 
-@media (width < 800px) {
-  .media-scroller {
-    grid-auto-columns: 28%;
-  }
-
-  .book-details .button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media (800px <= width < 1400px) {
-  .media-scroller {
-    grid-auto-columns: 18%;
-  }
-}
-
-@media (width >= 1400px) {
-  .media-scroller {
-    grid-auto-columns: 11%;
-  }
+  border-radius: 5px;
 }
