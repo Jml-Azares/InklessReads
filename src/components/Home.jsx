@@ -21,10 +21,8 @@ const Home = () => {
         />
       </div>
 
-
-    {/* Events Section */}
+      {/* Events Section */}
       <Events />
-    
 
       {/* testimoial section */}
       <Testimonial />

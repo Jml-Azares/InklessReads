@@ -1,36 +1,63 @@
-// https://gutendex.com/books
-// https://gutendex.com/
-// https://gutendex.com/books/?ids=1513,2701,145,2641,67979,100
-
 import { useState, useEffect } from "react";
 import useFetch from "../API/useFetch";
 import { Link } from "react-router-dom";
 import "./MainContent.css";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 
 export default function MainContent({ picks, api }) {
   const { data, loading, error } = useFetch(api);
-  const [perPage, setPerPage] = useState(10);
   const [sliderWidth, setSliderWidth] = useState(null);
+  const [perPage, setPerPage] = useState(10);
+  let resizeTimeout;
 
   const handleResize = () => {
-    if (window.innerWidth < 768) {
-      setPerPage(3);
-      setSliderWidth("small");
-    } else if (window.innerWidth < 1024) {
-      setPerPage(6);
-      setSliderWidth("medium");
-    } else {
-      setPerPage(10);
-      setSliderWidth("large");
-    }
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const windowWidth = window.innerWidth;
+      let newPerPage = 10; // Default value for large screens
+
+      if (windowWidth < 768) {
+        newPerPage = 3;
+        setSliderWidth("small");
+      } else if (windowWidth < 1024) {
+        newPerPage = 6;
+        setSliderWidth("medium");
+      } else {
+        setSliderWidth("large");
+      }
+
+      setPerPage(newPerPage);
+    }, 250); // Adjust the debounce delay as needed
   };
-  window.addEventListener("resize", handleResize);
 
   useEffect(() => {
     handleResize();
+
+    // Cleanup function
+    return () => {
+      clearTimeout(resizeTimeout);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+  const [sliderId] = useState(
+    `splide-${Math.random().toString(36).substr(2, 9)}`
+  );
+
+  useEffect(() => {
+    if (data) {
+      const splide = new Splide(`#${sliderId}`, {
+        perPage,
+        rewind: true,
+        pagination: false,
+      });
+
+      splide.mount();
+    }
+  }, [data, perPage]);
 
   return (
     <div className={`container-fluid ${sliderWidth !== "small" && "w-75"}`}>
@@ -48,36 +75,31 @@ export default function MainContent({ picks, api }) {
             </div>
           )}
         </div>
-        <Splide
-          hasTrack={false}
-          className="media-scroller p-1 m-0"
-          options={{
-            type: "loop",
-            drag: "free",
-            snap: true,
-            perPage,
-          }}
-        >
-          <SplideTrack>
-            {data &&
-              data.map((item) => (
-                <SplideSlide className="media-element px-1" key={item.id}>
-                  <Link to={`/book/${item.id}`}>
-                    <div className="book-cover-wrapper p-2">
-                      <img
-                        src={item.formats["image/jpeg"]}
-                        alt={item.title}
-                        className="book-cover-image"
-                      />
-                    </div>
-                  </Link>
-                </SplideSlide>
-              ))}
-          </SplideTrack>
-          <div className="splide__progress">
-            <div className="splide__progress__bar" />
-          </div>
-        </Splide>
+        {picks && (
+          <section className="media-scroller p-1 m-0 splide" id={sliderId}>
+            <div className="splide__track">
+              <ul className="splide__list">
+                {data &&
+                  data.map((item) => (
+                    <li
+                      className="splide__slide media-element px-1"
+                      key={item.id}
+                    >
+                      <Link to={`/book/${item.id}`}>
+                        <div className="book-cover-wrapper p-2">
+                          <img
+                            src={item.formats["image/jpeg"]}
+                            alt={item.title}
+                            className="book-cover-image"
+                          />
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );
