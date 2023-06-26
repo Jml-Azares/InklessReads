@@ -209,7 +209,7 @@ export default function Header({ cart, setCart }) {
             </div>
 
             {/*------------------------- search icon--------------------------------- */}
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <div className="input-group">
                 <button
                   className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
@@ -224,7 +224,7 @@ export default function Header({ cart, setCart }) {
                   aria-describedby="button-addon1"
                 />
               </div>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>
