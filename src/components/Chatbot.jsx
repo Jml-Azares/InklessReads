@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Chatbot.css";
-import chatbotIcon from "../assets/images/Chatbot.gif";
+import ChatbotIcon from "/path/to/assets/images/Chatbot.gif";
 
 const Chatbot = () => {
   return (
@@ -19,7 +19,7 @@ const Chatbot = () => {
 
         <form className="dropdown-menu chatBox p-4">
           <div className="text-center">
-            <img src={chatbotIcon} alt="chatbot" className="chatbotImg" />
+            <img src={ChatbotIcon} alt="chatbot" className="chatbotImg" />
             <h5>Our team is Offline at this time!</h5>
             <hr />
           </div>
