@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
-import logo from "../assets/images/IK.png";
+// import logo from "../assets/images/IK.png";
 import AboutImage1 from "../assets/images/about-image1.jpg";
 import AboutImage2 from "../assets/images/about-image2.jpg";
 import avatar from "../assets/images/avatar.jpg";
@@ -18,13 +18,13 @@ const AboutUs = () => {
       </div>
 
       <div className="px-4 text-center">
-        <img
+        {/* <img
           className="d-block mx-auto mb-4"
           src={logo}
           alt=""
           width="300"
           height="300"
-        />
+        /> */}
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
             Welcome to Inkless Reads, your go-to destination for a delightful
