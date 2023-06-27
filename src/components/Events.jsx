@@ -39,8 +39,8 @@ const Events = () => {
 
       {/* ----------------1st row event slider animation---------------- */}
       <div className="row box mb-2">
-        <div className="col-md-6">
-          <div className="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div className="col-md-6  p-3">
+          <div className="row g-0 rounded overflow-hidden  flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div className="col p-4 d-flex flex-column position-static">
               <strong className="d-inline-block mb-2">
                 Jacob Javits Center in New York City
@@ -70,6 +70,7 @@ const Events = () => {
             </div>
           </div>
         </div>
+
         <div className="col-md-6">
           <div className="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div className="col p-4 d-flex flex-column position-static">

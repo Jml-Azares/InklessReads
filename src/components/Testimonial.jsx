@@ -56,10 +56,10 @@ const Testimonial = () => {
 
           <div className="carousel-item">
             <div className="row">
-              <div className="col-12 text-center my-5">
+              <div className="col-12 text-center">
                 <img src={Review2} className="reviewImg" alt="..." />
               </div>
-              <div className="col-12 my-5">
+              <div className="col-12">
                 <div className="carousel-caption d-block">
                   <h5>Dwayne Johnson</h5>
                   <p>

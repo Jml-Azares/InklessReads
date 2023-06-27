@@ -1,20 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
-.events-section {
-  background-color: #99908c;
-  padding: 50px;
-}
-
-.date {
-  background-color: gray;
-  border-radius: 30px;
-  text-align: center;
-  font-weight: 10;
-  width: 25%;
-  height: 100px;
-}
-
 .Events {
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -85,4 +71,8 @@ h1 {
 
 .icon-link:hover {
   color: #fe0000;
+}
+
+.eventContainer {
+  border: #fe0000 solid 1px;
 }

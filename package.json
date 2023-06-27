@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@splidejs/react-splide": "^0.7.12",
     "@rollup/plugin-image": "^3.0.2",
     "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.4.0",
