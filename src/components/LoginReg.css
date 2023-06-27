@@ -40,3 +40,7 @@
 .regBox .dropdown button {
   width: 100%;
 }
+
+.error {
+  color: red;
+}
