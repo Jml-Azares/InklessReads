@@ -41,6 +41,6 @@
 
 .card.mis-vis {
   color: #ffffff;
-  background-color: #171010;
+  background-color: inherit;
   border: none;
 }

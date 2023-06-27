@@ -134,10 +134,10 @@ function LoginReg() {
 
           {/* Registration container */}
           <form
+            className="col-12 col-lg-6 p-5"
             name="signup"
             id="signup-form"
             onSubmit={handleFormSubmit}
-            className="col-12 col-lg-6 p-5"
           >
             <div className="regBox">
               <h3>Registration Form</h3>
