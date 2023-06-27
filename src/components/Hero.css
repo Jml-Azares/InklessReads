@@ -56,6 +56,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px white;
   transition: transform 0.9s ease;
 }
 
