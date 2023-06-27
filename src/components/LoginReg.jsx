@@ -44,7 +44,29 @@ function LoginReg() {
   }, []);
 
   function handleReset() {
-    document.getElementById("signup-form").reset();
+    setFirstname("");
+    setLastname("");
+    setPassword("");
+    setConfirmPassword("");
+    setEmail("");
+    setDate("");
+    setContact("");
+    setAddress("");
+    setCity("");
+    setCountry("");
+    setZip("");
+
+    setErrorFirstname(null);
+    setErrorLastname("");
+    setErrorPassword("");
+    setErrorConfirmPassword("");
+    setErrorEmail("");
+    setErrorDate("");
+    setErrorContact("");
+    setErrorAddress("");
+    setErrorCity("");
+    setErrorCountry("");
+    setErrorZip("");
   }
 
   function handleFormSubmit(event) {
@@ -106,13 +128,18 @@ function LoginReg() {
       <div className="container logMain-container mx-auto my-5">
         <div className="row">
           {/* Login container */}
-          <div className="col-sm-12 col-md-12 col-lg-6  loginBox">
+          <div className="col-12 col-lg-6  loginBox">
             <img src={CompanyLogo} alt="company logo" />
           </div>
 
           {/* Registration container */}
-          <form name="signup" id="signup-form" onSubmit={handleFormSubmit}>
-            <div className="col-sm-8 col-md-12 col-lg-6 p-5  regBox">
+          <form
+            className="col-12 col-lg-6 p-5"
+            name="signup"
+            id="signup-form"
+            onSubmit={handleFormSubmit}
+          >
+            <div className="regBox">
               <h3>Registration Form</h3>
               <p>Please fill in the following with your personal information</p>
 
@@ -326,11 +353,14 @@ function LoginReg() {
                 Register
               </button>
 
-              <div className="form-control">
-                <button type="reset" name="resetBtn" onClick={handleReset}>
-                  Reset
-                </button>
-              </div>
+              <button
+                type="reset"
+                name="resetBtn"
+                onClick={handleReset}
+                className="btn btn-secondary regBtn"
+              >
+                Reset
+              </button>
             </div>
           </form>
         </div>
