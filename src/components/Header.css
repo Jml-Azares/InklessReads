@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2b2b2b;
+  background-color: #454545;
   padding: 10px 20px;
 }
 
@@ -26,12 +26,12 @@
 .cart-icon:hover,
 .user-icon:hover,
 .search-icon:hover {
-  color: #423f3e;
+  color: gray;
 }
 .cart-icon,
 .user-icon,
 .search-icon {
-  color: white;
+  color: #ffffff;
 }
 
 .cart-toggle {

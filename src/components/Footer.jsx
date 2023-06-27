@@ -71,6 +71,24 @@ export default function Footer() {
                         History
                       </Link>
                     </li>
+                    <li className="nav-item mb-2">
+                      <Link
+                        to="/politics"
+                        className="nav-link p-0"
+                        onClick={scrollToTop}
+                      >
+                        Politics
+                      </Link>
+                    </li>
+                    <li className="nav-item mb-2">
+                      <Link
+                        to="/romance"
+                        className="nav-link p-0"
+                        onClick={scrollToTop}
+                      >
+                        Romance
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
