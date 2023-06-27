@@ -180,7 +180,7 @@ function LoginReg() {
               </div>
             </div>
 
-            <button type="button" className="btn btn-primary regBtn">
+            <button type="button" className="btn btn-secondary regBtn">
               Register
             </button>
           </div>
