@@ -1,134 +1,159 @@
 import React from "react";
 import "./Testimonial.css";
-import Review1 from "../assets/images/review1.jpg";
-import Review2 from "../assets/images/review2.jpg";
-import Review3 from "../assets/images/review3.jpg";
+import homeCarousel1 from "../assets/images/review1.jpg";
+import homeCarousel2 from "../assets/images/review2.jpg";
+import homeCarousel3 from "../assets/images/review3.jpg";
 
 const Testimonial = () => {
   return (
     <>
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={Review1} className="d-block reviewImg" alt="..." />
-            <div className="carousel-caption d-block">
-              <h5>Brad Pitt</h5>
-              <p>
-                <cite>Celebrity</cite>
-              </p>
-              <blockquote>
-                "Wow! Napadpad ako sa online na website ng ebook na ito, at
-                nabigla ako sa koleksyong inaalok nila. Ang interface ay
-                user-friendly, na ginagawang madali ang pag-browse at pagtuklas
-                ng mga bagong pamagat. Ang pinakamagandang bahagi ay ang mga
-                ebook ay available sa iba't ibang format, para mabasa ko ang mga
-                ito sa anumang device. Salamat sa kamangha-manghang platform na
-                ito!"
-              </blockquote>
-            </div>
-          </div>
-
-          <div className="carousel-item">
-            <div className="row">
-              <div className="col-12 text-center">
-                <img src={Review2} className="reviewImg" alt="..." />
-              </div>
-              <div className="col-12">
-                <div className="carousel-caption d-block">
-                  <h5>Dwayne Johnson</h5>
-                  <p>
-                    <cite>Celebrity</cite>
-                  </p>
-                  <blockquote>
-                    "Matagal ko nang ginagamit ang online ebook na website na
-                    ito, at hindi ko ito mairerekomenda nang sapat. Ang hanay ng
-                    mga genre at may-akda ay kahanga-hanga, na tumutugon sa
-                    lahat ng uri ng mga mambabasa. Ang layout ng website ay
-                    malinis at kaakit-akit sa paningin, Dagdag pa, ang
-                    abot-kayang presyo para sa mga ebook ay ginagawa itong
-                    naa-access sa lahat. Ipagpatuloy ang mahusay na trabaho!"
-                  </blockquote>
+      {/* ---------------testimonials----------------- */}
+      <div className="container-fluid cardMainContainer p-5">
+        <div className="row">
+          <div className="col-sm-12 col-md-6">
+            {/* -----------------carousel -----------------------*/}
+            <div
+              id="carouselExampleAutoplaying"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  {/* <img src={homeCarousel1} className="d-block " alt="..." /> */}
+                  <div className="card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-4">
+                        <img
+                          src={homeCarousel1}
+                          className="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title text-dark">Brad Pitt</h5>
+                          <p className="card-text text-dark">
+                            "Wow! Napadpad ako sa online na website ng ebook na
+                            ito, at nabigla ako sa koleksyong inaalok nila. Ang
+                            interface ay user-friendly, na ginagawang madali ang
+                            pag-browse at pagtuklas ng mga bagong pamagat."
+                          </p>
+                          <p className="card-text">
+                            <small className="text-body-secondary">
+                              Last updated 3 mins ago
+                            </small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  {/* <img src={homeCarousel2} className="d-block " alt="..." /> */}
+                  <div className="card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-4">
+                        <img
+                          src={homeCarousel2}
+                          className="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title text-dark">
+                            Dwayne Johnson
+                          </h5>
+                          <p className="card-text text-dark">
+                            "Matagal ko nang ginagamit ang online ebook na
+                            website na ito, at hindi ko ito mairerekomenda nang
+                            sapat. Ang hanay ng mga genre at may-akda ay
+                            kahanga-hanga, na tumutugon sa lahat ng uri ng mga
+                            mambabasa."
+                          </p>
+                          <p className="card-text">
+                            <small className="text-body-secondary">
+                              Last updated 3 mins ago
+                            </small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  {/* <img src={homeCarousel3} className="d-block " alt="..." /> */}
+                  <div className="card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-4">
+                        <img
+                          src={homeCarousel3}
+                          className="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title text-dark">
+                            Leonardo DiCarpio
+                          </h5>
+                          <p className="card-text text-dark">
+                            "Bilang isang masugid na mambabasa, sinubukan ko ang
+                            ilang online na platform ng ebook, ngunit ang isang
+                            ito ay namumukod-tangi sa iba."
+                          </p>
+                          <p className="card-text">
+                            <small className="text-body-secondary">
+                              Last updated 3 mins ago
+                            </small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
 
-          <div className="carousel-item">
-            <img src={Review3} className="d-block reviewImg" alt="..." />
-            <div className="carousel-caption d-block">
-              <h5>Leonardo DiCarpio</h5>
-              <p>
-                <cite>Celebrity</cite>
-              </p>
-              <blockquote>
-                "Bilang isang masugid na mambabasa, sinubukan ko ang ilang
-                online na platform ng ebook, ngunit ang isang ito ay
-                namumukod-tangi sa iba. Ang paggana ng paghahanap ng website ay
-                nangunguna, na nagpapahintulot sa akin na makahanap ng mga
-                partikular na pamagat o mag-explore ng mga rekomendasyon nang
-                walang kahirap-hirap. Ang kalidad ng mga ebook ay mahusay, may
-                tumpak na pag-format at kaunting mga error. Pinahahalagahan ko
-                ang pagsisikap na ginagawa ng koponan sa pag-curate ng
-                magkakaibang at nakakaengganyo na koleksyon. Ito ang aking
-                pupuntahan para sa lahat ng aking pangangailangan sa digital na
-                pagbabasa!"
-              </blockquote>
-            </div>
+          {/*testimonial right container  */}
+          <div className="col-sm-12 col-md-6 pt-4">
+            <h3 className="text-dark">
+              At <strong className="text-dark">Inkless Reads</strong> , we
+              genuinely value our customers' feedback and reviews. Your
+              satisfaction is our top priority, and we strive to provide you
+              with exceptional service every step of the way. We believe that
+              your opinions and experiences shape our growth and success as a
+              company.
+            </h3>
           </div>
         </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
+      {/* </div> */}
     </>
   );
 };

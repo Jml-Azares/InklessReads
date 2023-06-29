@@ -1,13 +1,19 @@
 import React from "react";
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 // import logo from "../assets/images/IK.png";
 import AboutImage1 from "../assets/images/about-image1.jpg";
 import AboutImage2 from "../assets/images/about-image2.jpg";
-import avatar from "../assets/images/avatar.jpg";
-import avatar2 from "../assets/images/avatar2.jpg";
-import avatar1 from "../assets/images/avatar1.jpg";
+
 import mission from "../assets/images/missionImage.png";
 import vision from "../assets/images/visionImage.png";
+
+import avatar from "../assets/images/avatar.jpg";
+import avatar1 from "../assets/images/avatar1.jpg";
+import avatar2 from "../assets/images/avatar2.jpg";
+import dante from "../assets/images/dante.jpg";
+import joseph from "../assets/images/joseph.jpg";
+import luis from "../assets/images/luis.jpg";
 
 const AboutUs = () => {
   return (
@@ -18,13 +24,6 @@ const AboutUs = () => {
       </div>
 
       <div className="px-4 text-center">
-        {/* <img
-          className="d-block mx-auto mb-4"
-          src={logo}
-          alt=""
-          width="300"
-          height="300"
-        /> */}
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
             Welcome to Inkless Reads, your go-to destination for a delightful
@@ -147,36 +146,274 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* ---------------Meet the Team------------------------------ */}
-      <div className="team m-5 text-center">
-        <div className="teamHeader p-5">
-          <h3>Meet the amazing team behind this Incredible project</h3>
+      {/* <!-- Team --> */}
+      <section id="team" className="pb-5">
+        <div className="container">
+          <h5 className="section-title h1">OUR TEAM</h5>
+          <div className="row ">
+            {/* <!-- Team member Dante avatar--> */}
+            <div className="col-xs-12 col-sm-12 col-md-4">
+              <div
+                className="image-flip"
+                onTouchStart={() => {
+                  this.classNameList.toggle("hover");
+                }}
+              >
+                <div className="mainflip">
+                  <div className="frontside">
+                    <div className="card">
+                      <div className="card-body text-center">
+                        <p>
+                          <img
+                            className=" img-fluid my-3"
+                            src={avatar}
+                            alt="card image"
+                          />
+                        </p>
+                        <h4 className="card-title">Fullstack Developer</h4>
+                        <blockquote className="text-dark">
+                          "My software never has bugs. It just develops random
+                          features."
+                        </blockquote>
+                        <div className="text-end pe-5">
+                          <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="backside">
+                    <div className="card">
+                      <div className="card-body text-center mt-3">
+                        <img
+                          className="imgBack mb-2"
+                          src={dante}
+                          alt="card image"
+                        />
+                        <h4 className="card-title">Dante Alcantara Jr</h4>
+                        <ul className="list-inline pt-3">
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-facebook text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-twitter text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-github text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-linkedin text-dark"></i>
+                            </Link>
+                          </li>
+                          <div className="text-end pe-5 pt-2">
+                            <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Team member Joseph avatar--> */}
+            <div className="col-xs-12 col-sm-12 col-md-4">
+              <div
+                className="image-flip"
+                onTouchStart={() => {
+                  this.classNameList.toggle("hover");
+                }}
+              >
+                <div className="mainflip">
+                  <div className="frontside">
+                    <div className="card">
+                      <div className="card-body text-center">
+                        <p>
+                          <img
+                            className=" img-fluid my-3"
+                            src={avatar2}
+                            alt="card image"
+                          />
+                        </p>
+                        <h4 className="card-title">Fullstack Developer</h4>
+                        <blockquote className="text-dark">
+                          "The only problem with troubleshooting is that
+                          sometimes trouble shoots back."
+                        </blockquote>
+                        <div className="text-end pe-5">
+                          <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="backside">
+                    <div className="card">
+                      <div className="card-body text-center mt-3">
+                        <img
+                          className="imgBack mb-2"
+                          src={joseph}
+                          alt="card image"
+                        />
+                        <h4 className="card-title">JOSEPH MORONI AZARES</h4>
+                        <ul className="list-inline pt-3">
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-facebook text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-twitter text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-github text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-linkedin text-dark"></i>
+                            </Link>
+                          </li>
+                          <div className="text-end pe-5 pt-2">
+                            <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Team member Luis avatar--> */}
+            <div className="col-xs-12 col-sm-12 col-md-4">
+              <div
+                className="image-flip"
+                onTouchStart={() => {
+                  this.classNameList.toggle("hover");
+                }}
+              >
+                <div className="mainflip">
+                  <div className="frontside">
+                    <div className="card">
+                      <div className="card-body text-center">
+                        <p>
+                          <img
+                            className=" img-fluid my-3"
+                            src={avatar1}
+                            alt="card image"
+                          />
+                        </p>
+                        <h4 className="card-title">Fullstack Developer</h4>
+                        <blockquote className="text-dark">
+                          "I'm not anti-social; I'm just not user friendly"
+                        </blockquote>
+                        <div className="text-end pe-5 pt-3">
+                          <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="backside">
+                    <div className="card">
+                      <div className="card-body text-center mt-3">
+                        <img
+                          className="imgBack mb-2"
+                          src={luis}
+                          alt="card image"
+                        />
+                        <h4 className="card-title">LUIS ANGELO TABUG</h4>
+                        <ul className="list-inline pt-3">
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-facebook text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-twitter text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-github text-dark"></i>
+                            </Link>
+                          </li>
+                          <li className="list-inline-item">
+                            <Link
+                              className="social-icon text-xs-center"
+                              target="_blank"
+                              to="#"
+                            >
+                              <i className="fa-brands fa-linkedin text-dark"></i>
+                            </Link>
+                          </li>
+                          <div className="text-end pe-5 pt-3">
+                            <i className="fa-solid fa-arrows-rotate text-dark"></i>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="row">
-          <div className="col teamLeft">
-            <img src={avatar} alt="Team avatar" className="avatar" />
-            <h5>Dante Alcantara Jr</h5>
-            <blockquote>
-              "My software never has bugs. It just develops random features."
-            </blockquote>
-          </div>
-          <div className="col teamMid">
-            <img src={avatar2} alt="Team avatar" className="avatar2" />
-            <h5>Joseph Moroni Azares</h5>
-            <blockquote>
-              "The only problem with troubleshooting is that sometimes trouble
-              shoots back."
-            </blockquote>
-          </div>
-          <div className="col teamRight">
-            <img src={avatar1} alt="Team avatar" className="avatar1" />
-            <h5>Luis Angelo Tabug</h5>
-            <blockquote>
-              "I'm not anti-social; I'm just not user friendly"
-            </blockquote>
-          </div>
-        </div>
-      </div>
+      </section>
+      {/* <!-- Team --> */}
     </>
   );
 };
