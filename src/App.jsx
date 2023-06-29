@@ -16,6 +16,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
+import SearchResults from "./components/searchresult";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/searchresult/:query" element={<SearchResults />} />
         </Route>
         <Route path="*" element={<NoPage />} />
       </Routes>
