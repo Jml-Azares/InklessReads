@@ -30,20 +30,6 @@
   background: #eee !important;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #343a40;
-  border-color: #343a40;
-  box-shadow: none;
-  outline: none;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
-}
-
 section {
   padding: 60px 0;
 }
