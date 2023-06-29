@@ -35,7 +35,7 @@ function Catalog({ api, catalog }) {
           {data &&
             data.map((item) => (
               <div
-                className={`gallery-card-parent-div col-4 col-lg-2 p-4 ${
+                className={`gallery-card-parent-div col-4 col-lg-2 p-1 p-md-4 ${
                   hoveredItem === item.id ? "hovered" : ""
                 }`}
                 key={item.id}
