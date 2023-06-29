@@ -20,7 +20,9 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}>
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   );
 };
