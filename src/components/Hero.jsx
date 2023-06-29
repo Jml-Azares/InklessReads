@@ -11,7 +11,7 @@ export default function Hero() {
     "Discover new worlds, gain knowledge, and embark on unforgettable reading experiences with just a few clicks.",
     "Welcome to a world of endless possibilities.",
   ];
-  const iSpeed = 100;
+  const iSpeed = 50;
   const iScrollAt = 20;
 
   let iIndex = 0;
@@ -54,6 +54,7 @@ export default function Hero() {
         <h1 className="display-5 fw-bold text-light mb-3 IK">INKLESS READS</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4 text-light">
+            {/* Use dangerouslySetInnerHTML to render the animated text */}
             <span dangerouslySetInnerHTML={{ __html: text }} />
             {typingComplete && <span className="cursor">|</span>}
           </p>
