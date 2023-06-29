@@ -11,12 +11,12 @@ export default function Hero() {
     "Discover new worlds, gain knowledge, and embark on unforgettable reading experiences with just a few clicks.",
     "Welcome to a world of endless possibilities.",
   ];
-  const iSpeed = 100; // time delay of print out
-  const iScrollAt = 20; // start scrolling up at this many lines
+  const iSpeed = 100;
+  const iScrollAt = 20;
 
-  let iIndex = 0; // start printing array at this position
-  let iTextPos = 0; // initialize text position
-  let iArrLength = aText[0].length; // the length of the text array
+  let iIndex = 0;
+  let iTextPos = 0;
+  let iArrLength = aText[0].length;
 
   useEffect(() => {
     const typewriter = () => {
