@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./search.css";
+import { Link } from "react-router-dom";
 
-const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearch = () => {
-    console.log("Search term:", searchTerm);
-  };
+const Search = () => {
+  const [searchInput, setSearchInput] = useState("");
 
   return (
     <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search a book..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      />
-      <button onClick={handleSearch}>
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </button>
+      <form>
+        <input
+          type="text"
+          onChange={(e) => {
+            setSearchInput(e.target.value);
+          }}
+        />
+        <Link to={`/searchresult/${searchInput}`}>
+          <button type="submit">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </Link>
+      </form>
     </div>
   );
 };
 
-export default SearchBar;
+export default Search;
