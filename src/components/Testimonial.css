@@ -1,15 +1,10 @@
-.carousel {
-  background-color: black;
-  padding: 50px;
-  height: 100%;
+.carousel-item img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.reviewImg {
-  height: 150px;
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  margin-bottom: 190px;
-  object-fit: cover;
+.cardMainContainer {
+  border: 1px solid black;
+  background-color: whitesmoke;
 }
