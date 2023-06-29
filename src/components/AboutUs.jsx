@@ -153,12 +153,7 @@ const AboutUs = () => {
           <div className="row ">
             {/* <!-- Team member Dante avatar--> */}
             <div className="col-xs-12 col-sm-12 col-md-4">
-              <div
-                className="image-flip"
-                onTouchStart={() => {
-                  this.classNameList.toggle("hover");
-                }}
-              >
+              <div className="image-flip">
                 <div className="mainflip">
                   <div className="frontside">
                     <div className="card">
@@ -240,12 +235,7 @@ const AboutUs = () => {
 
             {/* <!-- Team member Joseph avatar--> */}
             <div className="col-xs-12 col-sm-12 col-md-4">
-              <div
-                className="image-flip"
-                onTouchStart={() => {
-                  this.classNameList.toggle("hover");
-                }}
-              >
+              <div className="image-flip">
                 <div className="mainflip">
                   <div className="frontside">
                     <div className="card">
@@ -327,12 +317,7 @@ const AboutUs = () => {
 
             {/* <!-- Team member Luis avatar--> */}
             <div className="col-xs-12 col-sm-12 col-md-4">
-              <div
-                className="image-flip"
-                onTouchStart={() => {
-                  this.classNameList.toggle("hover");
-                }}
-              >
+              <div className="image-flip">
                 <div className="mainflip">
                   <div className="frontside">
                     <div className="card">
