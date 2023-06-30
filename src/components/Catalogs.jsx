@@ -21,14 +21,15 @@ function Catalog({ api, catalog }) {
   }, [data]);
 
   const compareByProperty = (a, b, property) => {
-    if (a[property] && b[property]) {
-      console.log("hello World");
-    } else if (a[property]) {
-      console.log("hello World");
-    } else if (b[property]) {
-      console.log("hello World");
+    if (a.length !== 0 && b.length !== 0) {
+      return a[0][property].localeCompare(b[0][property]);
+      // console.log(a[0][property].localeCompare(b[0][property]));
+    } else if (a.length !== 0) {
+      return -1;
+    } else if (b.length !== 0) {
+      return 1;
     } else {
-      console.log("hello World");
+      return 0;
     }
   };
 
@@ -39,9 +40,9 @@ function Catalog({ api, catalog }) {
       sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
       setBooks(sortedBooks);
     } else if (criteria === "author") {
-      sortedBooks.sort((a, b) => {
-        compareByProperty(a.authors[0], b.authors[0], "name");
-      });
+      sortedBooks.sort((a, b) =>
+        compareByProperty(a.authors, b.authors, "name")
+      );
       setBooks(sortedBooks);
     }
   };
