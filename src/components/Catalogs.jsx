@@ -49,18 +49,26 @@ function Catalog({ api, catalog }) {
 
   return (
     <div className="container-fluid">
-      <div className="row my-5">
+      <div className="row mx-auto my-5">
         <div className="px-4 d-flex justify-content-between">
           <h2 className="">{catalog}</h2>
           <select
-            className=""
+            className="text-dark p-1 border-0 bg-white form-control text-center mb-1"
+            style={{ width: "100px" }}
             onChange={(e) => {
               sort(e.target.value);
             }}
           >
-            <option value="">--Sort--</option>
-            <option value="title">Title</option>
-            <option value="author">Author</option>
+            <option value="" className="bg-dark">
+              --Sort--
+            </option>
+            <option value="title" className="bg-dark">
+              Title
+            </option>
+            <option value="author" className="bg-dark">
+              Author
+            </option>
+
           </select>
         </div>
         <div className="row m-0">
