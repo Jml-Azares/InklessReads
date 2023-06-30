@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useFetch from "../API/useFetch";
 import { Link } from "react-router-dom";
 import "./catalog.css";
 
 function Catalog({ api, catalog }) {
   const { data, loading, error } = useFetch(api);
+  const [books, setBooks] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (itemId) => {
@@ -15,13 +16,60 @@ function Catalog({ api, catalog }) {
     setHoveredItem(null);
   };
 
+  useEffect(() => {
+    setBooks(data);
+  }, [data]);
+
+  const compareByProperty = (a, b, property) => {
+    if (a.length !== 0 && b.length !== 0) {
+      return a[0][property].localeCompare(b[0][property]);
+      // console.log(a[0][property].localeCompare(b[0][property]));
+    } else if (a.length !== 0) {
+      return -1;
+    } else if (b.length !== 0) {
+      return 1;
+    } else {
+      return 0;
+    }
+  };
+
+  const sort = (criteria) => {
+    const sortedBooks = [...books];
+
+    if (criteria === "title") {
+      sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+      setBooks(sortedBooks);
+    } else if (criteria === "author") {
+      sortedBooks.sort((a, b) =>
+        compareByProperty(a.authors, b.authors, "name")
+      );
+      setBooks(sortedBooks);
+    }
+  };
+
   return (
     <div className="container-fluid">
-      <div className="row my-5">
-        <div className="row px-4">
-          <h2 className="col-12 pb-5" style={{ textAlign: "left" }}>
-            {catalog}
-          </h2>
+      <div className="row mx-auto my-5">
+        <div className="px-4 d-flex justify-content-between">
+          <h2 className="">{catalog}</h2>
+
+          <select
+            className="text-dark p-1 border-0 bg-white form-control text-center mb-1"
+            style={{ width: "100px" }}
+            onChange={(e) => {
+              sort(e.target.value);
+            }}
+          >
+            <option value="" className="bg-dark">
+              --Sort--
+            </option>
+            <option value="title" className="bg-dark">
+              Title
+            </option>
+            <option value="author" className="bg-dark">
+              Author
+            </option>
+          </select>
         </div>
         <div className="row m-0">
           {error && <div>{error}</div>}
@@ -32,8 +80,8 @@ function Catalog({ api, catalog }) {
               </div>
             </div>
           )}
-          {data &&
-            data.map((item) => (
+          {books &&
+            books.map((item) => (
               <div
                 className={`gallery-card-parent-div col-4 col-lg-2 p-1 p-md-4 ${
                   hoveredItem === item.id ? "hovered" : ""
