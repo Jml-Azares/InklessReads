@@ -10,6 +10,7 @@ const Search = () => {
       <form>
         <input
           type="text"
+          placeholder="Search a book name..."
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}
