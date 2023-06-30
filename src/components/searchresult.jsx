@@ -14,6 +14,9 @@ const SearchResults = () => {
     const searchString = newSearchArray.join("%20");
 
     const getAPI = async () => {
+      setData(null);
+      setError(null);
+      setLoading(true);
       try {
         const res = await fetch(
           `https://gutendex.com/books?search=${searchString}`
