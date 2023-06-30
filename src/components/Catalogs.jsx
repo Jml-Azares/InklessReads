@@ -52,7 +52,6 @@ function Catalog({ api, catalog }) {
       <div className="row mx-auto my-5">
         <div className="px-4 d-flex justify-content-between">
           <h2 className="">{catalog}</h2>
-
           <select
             className="text-dark p-1 border-0 bg-white form-control text-center mb-1"
             style={{ width: "100px" }}
@@ -69,6 +68,7 @@ function Catalog({ api, catalog }) {
             <option value="author" className="bg-dark">
               Author
             </option>
+
           </select>
         </div>
         <div className="row m-0">

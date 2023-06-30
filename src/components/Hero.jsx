@@ -11,7 +11,7 @@ export default function Hero() {
     "Discover new worlds, gain knowledge, and embark on unforgettable reading experiences with just a few clicks.",
     "Welcome to a world of endless possibilities.",
   ];
-  const iSpeed = 100;
+  const iSpeed = 50;
   const iScrollAt = 20;
 
   let iIndex = 0;
