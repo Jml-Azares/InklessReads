@@ -18,9 +18,9 @@ export default function Header({ cart, setCart }) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar bg-dark navbar-expand-lg">
         <div className="container-fluid">
-          <Link to="/">
+          <Link to="/home">
             <img src={inkless} alt="Company Logo" className="logo" />
           </Link>
           <button
@@ -40,7 +40,7 @@ export default function Header({ cart, setCart }) {
                 <Link
                   className="nav-link active text-white"
                   aria-current="page"
-                  to="/"
+                  to="/home"
                 >
                   Inkless Reads
                 </Link>
@@ -95,11 +95,51 @@ export default function Header({ cart, setCart }) {
                   About-Us
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  aria-current="page"
+                  to="/contactPage"
+                >
+                  Contacts
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  aria-current="page"
+                  to="/blogs"
+                >
+                  Blogs
+                </Link>
+              </li>
             </ul>
 
             <div className="nav-icons d-flex">
+              <div>
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link text-white"
+                      aria-current="page"
+                      to="/userProfile"
+                    >
+                      User Profile
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link text-white"
+                      aria-current="page"
+                      to="/AdminDash"
+                    >
+                      Admin
+                    </Link>
+                  </li>
+                </ul>
+              </div>
               {/* ----------------------------cart icon------------------------------------- */}
-              <button
+              {/* <button
                 className="btn text-white fs-2"
                 type="button"
                 data-bs-toggle="offcanvas"
@@ -107,36 +147,111 @@ export default function Header({ cart, setCart }) {
                 aria-controls="offcanvasRight"
               >
                 <p className="user-icon fa-solid fa-cart-arrow-down"></p>
-              </button>
+              </button> */}
 
-              {/* ----------------------------user icon ------------------------------------*/}
-              {/* <!-- Button trigger modal --> */}
-              <button
-                type="button"
-                className="btn fs-2"
-                data-bs-toggle="modal"
-                data-bs-target="#modalSignin"
-              >
-                {/* ------------user icon -----------*/}
-                <p className="user-icon fa-solid fa-user-tie"></p>
-              </button>
-
-              {/* <!---------------------- Modal --------------------------------------> */}
-              <div
+              {/* <!-------User Login/Register---------> */}
+              {/* <!-- login modal --> */}
+              {/* <div
                 className="modal fade"
-                id="modalSignin"
-                tabIndex="-1"
-                aria-labelledby="exampleModalLabel"
+                id="exampleModalToggle"
                 aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel"
+                tabIndex="-1"
               >
-                <div className="modal-dialog" role="document">
-                  <div className="modal-content rounded-4 shadow">
-                    <div className="modal-header p-5 pb-4 border-bottom-0">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
                       <h1
-                        className="modal-title fw-bold mb-0 fs-2"
-                        id="exampleModalLabel"
+                        className="modal-title fs-5"
+                        id="exampleModalToggleLabel"
                       >
-                        Login to our Website
+                        Login
+                      </h1>
+                      <button
+                        type="button"
+                        className="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+
+                    <form action="login.php" method="post">
+                      <div className="modal-body">
+                        <div className="mb-3">
+                          <label htmlFor="email" className="form-label">
+                            Email address
+                          </label>
+                          <input
+                            type="email"
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            aria-describedby="emailHelp"
+                          />
+                          <div id="emailHelp" className="form-text">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+
+                        <div className="mb-3">
+                          <label htmlFor="password" className="form-label">
+                            Password
+                          </label>
+                          <input
+                            type="password"
+                            className="form-control"
+                            id="Password"
+                            name="password"
+                          />
+                        </div>
+
+                        <div className="mb-3 form-check">
+                          <input
+                            type="checkbox"
+                            className="form-check-input"
+                            id="exampleCheck1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="exampleCheck1"
+                          >
+                            Check me out
+                          </label>
+                        </div>
+                        <input type="submit" className="btn btn-primary" />
+                      </div>
+                    </form>
+
+                    <div className="modal-footer">
+                      <h6>Don't have account yet?</h6>
+                      <button
+                        className="btn btn-primary"
+                        data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal"
+                      >
+                        Register here
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+
+              {/* <!-- registration modal --> */}
+              {/* <div
+                className="modal fade"
+                id="exampleModalToggle2"
+                aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel2"
+                tabIndex="-1"
+              >
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h1
+                        className="modal-title fs-5"
+                        id="exampleModalToggleLabel2"
+                      >
+                        Register
                       </h1>
                       <button
                         type="button"
@@ -147,90 +262,249 @@ export default function Header({ cart, setCart }) {
                     </div>
 
                     <div className="modal-body">
-                      <form className="">
-                        <div className="form mb-3">
+                      <form
+                        action="connect.php"
+                        method="post"
+                        className="row g-3 needs-validation"
+                        noValidate
+                      >
+                        <div className="col-md-6">
+                          <label htmlFor="firstNAme" className="form-label">
+                            First name
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="firstName"
+                            name="firstName"
+                            required
+                          />
+                          <div className="valid-feedback">Looks good!</div>
+                        </div>
+                        <div className="col-md-6">
+                          <label htmlFor="lastName" className="form-label">
+                            Last name
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="lastName"
+                            name="lastName"
+                            required
+                          />
+                          <div className="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <div className="col-md-6">
+                          <label htmlFor="password" className="form-label">
+                            Password
+                          </label>
+                          <div className="input-group has-validation">
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="password"
+                              name="password"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                            />
+                            <div className="invalid-feedback">
+                              Please input password.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="col-md-6">
+                          <label htmlFor="Cpassword" className="form-label">
+                            Confirm Password
+                          </label>
+                          <div className="input-group has-validation">
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="Cpassword"
+                              name="Cpassword"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                            />
+                            <div className="invalid-feedback">
+                              Please input password.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="col-md-12">
+                          <label htmlFor="email" className="form-label">
+                            Email
+                          </label>
                           <input
                             type="email"
-                            className="form-control modalForm rounded-3"
-                            id="floatingInput"
-                            placeholder="name@example.com"
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            required
                           />
-                          <label htmlFor="floatingInput">Email address</label>
+                          <div className="valid-feedback">Looks good!</div>
                         </div>
-                        <div className="form mb-3">
+
+                        <div className="col-md-6">
+                          <label htmlFor="birthdate" className="form-label">
+                            Birthdate
+                          </label>
                           <input
-                            type="password"
-                            className="form-control modalForm rounded-3"
-                            id="floatingPassword"
-                            placeholder="Password"
+                            type="date"
+                            className="form-control lh-1"
+                            id="birthdate"
+                            name="birthdate"
+                            required
                           />
-                          <label htmlFor="floatingPassword">Password</label>
+
+                          <div className="invalid-feedback">
+                            Please input birthdate.
+                          </div>
                         </div>
-                        <button
-                          className="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
-                          type="submit"
-                        >
-                          Sign in
-                        </button>
 
-                        <hr className="my-4" />
-                        <h2 className="fs-5 fw-bold mb-3">
-                          Or use a third-party
-                        </h2>
-                        <button
-                          className="w-100 py-2 mb-2 btn btn-primary rounded-3"
-                          type="submit"
-                        >
-                          Sign in with Facebook
-                        </button>
-                        <button
-                          className="w-100 py-2 mb-2 btn btn-danger rounded-3"
-                          type="submit"
-                        >
-                          Sign in with Google
-                        </button>
+                        <div className="col-md-6">
+                          <label htmlFor="number" className="form-label">
+                            Contact number
+                          </label>
+                          <input
+                            type="number"
+                            className="form-control"
+                            id="number"
+                            name="number"
+                            required
+                          />
 
-                        <hr className="my-4" />
-                        <h2 className="fs-5 mb-1">Don't have account yet?</h2>
+                          <div className="invalid-feedback">
+                            Please input a valid contact number.
+                          </div>
+                        </div>
 
-                        <Link
-                          id="signup-link"
-                          className="fs-6"
-                          data-bs-dismiss="modal"
-                          onClick={goToLogInReg}
-                        >
-                          Sign up here
-                        </Link>
+                        <div className="col-md-6">
+                          <label htmlFor="address" className="form-label">
+                            Address
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="address"
+                            name="address"
+                            required
+                          />
+
+                          <div className="invalid-feedback">
+                            Please input a valid address.
+                          </div>
+                        </div>
+
+                        <div className="col-md-6">
+                          <label htmlFor="city" className="form-label">
+                            City
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="city"
+                            name="city"
+                            required
+                          />
+                          <div className="invalid-feedback">
+                            Please provide a valid city.
+                          </div>
+                        </div>
+
+                        <div className="col-md-6">
+                          <label htmlFor="country" className="form-label">
+                            Country
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="country"
+                            name="country"
+                            required
+                          />
+
+                          <div className="invalid-feedback">
+                            Please input Country name.
+                          </div>
+                        </div>
+
+                        <div className="col-md-6">
+                          <label htmlFor="zip" className="form-label">
+                            Zip
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="zip"
+                            name="zip"
+                            required
+                          />
+                          <div className="invalid-feedback">
+                            Please provide a valid zip.
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="checkbox"
+                              id="invalidCheck"
+                              required
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="invalidCheck"
+                            >
+                              Agree to terms and conditions
+                            </label>
+                            <div className="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <input
+                            className="btn btn-primary w-100"
+                            type="submit"
+                          />
+                        </div>
                       </form>
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        className="btn btn-primary"
+                        data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal"
+                      >
+                        Back to Login
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
+              <button
+                className="btn text-white fs-2"
+                type="button"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+                style={{
+                  backgroundColor: "transparent",
+                  borderColor: "transparent",
+                }}
+              >
+                <i className="user-icon fa-solid fa-user-tie"></i>
+              </button> */}
+              {/* <!-------End of User Login/Register---------> */}
             </div>
-
-            {/*------------------------- search icon--------------------------------- */}
-            {/* <form className="d-flex" role="search">
-              <div className="input-group">
-                <button
-                  className="search-icon btn btn-outline-secondary fa-solid fa-magnifying-glass"
-                  type="button"
-                  id="button-addon1"
-                ></button>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter a book name..."
-                  aria-label="Example text with button addon"
-                  aria-describedby="button-addon1"
-                />
-              </div>
-            </form> */}
           </div>
         </div>
       </nav>
 
       {/*------------------------------- Offcanvas------------------------------- */}
-      <div
+      {/* <div
         className="offcanvas offcanvas-end bg-dark text-white"
         tabIndex="-1"
         id="offcanvasRight"
@@ -258,7 +532,7 @@ export default function Header({ cart, setCart }) {
             </Link>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
