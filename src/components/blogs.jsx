@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-function blogs() {
+function Blogs() {
   const [formData, setFormData] = useState({
     title: "",
     body: "",
@@ -62,4 +62,4 @@ function blogs() {
   );
 }
 
-export default blogs;
+export default Blogs;
