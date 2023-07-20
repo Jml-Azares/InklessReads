@@ -17,7 +17,7 @@ import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
-import LandingPage from "./components/landingPage";
+import LandingPage from "./components/LandingPage";
 import Blogs from "./components/blogs";
 import UserProfile from "./userProfile";
 import AdminDash from "./components/adminDash";
