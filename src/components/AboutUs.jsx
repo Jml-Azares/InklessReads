@@ -14,10 +14,14 @@ import avatar2 from "../assets/images/avatar2.jpg";
 import dante from "../assets/images/dante.jpg";
 import joseph from "../assets/images/joseph.jpg";
 import luis from "../assets/images/luis.jpg";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const AboutUs = () => {
   return (
     <>
+      <Header />
+
       {/* -----------------About Us Starts Here---------------------- */}
       <div className="aboutUs-head text-center py-3">
         <h1>About Us</h1>
@@ -399,6 +403,8 @@ const AboutUs = () => {
         </div>
       </section>
       {/* <!-- Team --> */}
+
+      <Footer />
     </>
   );
 };

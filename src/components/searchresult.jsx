@@ -64,7 +64,9 @@ const SearchResults = () => {
             </div>
           )}
           {!loading && data && data.length === 0 && (
-            <div className="col-12">No results found.</div>
+            <div className="col-12">
+              No results found. Please try another one.
+            </div>
           )}
           {data &&
             data.map((item) => (
