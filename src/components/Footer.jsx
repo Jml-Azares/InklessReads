@@ -15,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="container-fluid px-5 IL-footer">
+    <div className="container-fluid px-5 bg-dark IL-footer">
       <footer className="pt-5">
         <div className="row">
           <div className="col-sm-12 col-md-6 mb-2">

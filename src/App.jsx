@@ -10,13 +10,17 @@ import ScienceFiction from "./components/Science-Fiction";
 import History from "./components/History";
 import Book from "./components/BookDetails";
 import Checkout from "./components/Checkout";
-import LoginReg from "./components/LoginReg";
+import ContactPage from "./components/contactPage";
 import Faq from "./components/Faq";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
+import LandingPage from "./components/landingPage";
+import Blogs from "./components/blogs";
+import UserProfile from "./userProfile";
+import AdminDash from "./components/adminDash";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -25,7 +29,8 @@ const App = () => {
     <>
       <Routes>
         <Route element={<Layout cart={cart} setCart={setCart} />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
           <Route path="/scienceFiction" element={<ScienceFiction />} />
@@ -40,7 +45,10 @@ const App = () => {
             path="/checkout"
             element={<Checkout cart={cart} setCart={setCart} />}
           />
-          <Route path="/loginReg" element={<LoginReg />} />
+          <Route path="/ContactPage" element={<ContactPage />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/userProfile" element={<UserProfile />} />
+          <Route path="/AdminDash" element={<AdminDash />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
