@@ -1,5 +1,9 @@
+import { useState } from "react";
+import axios from "axios";
+
 import Header from "./Header";
 import Footer from "./Footer";
+import "./blogs.css";
 
 function Blogs() {
   const [formData, setFormData] = useState({
@@ -34,28 +38,32 @@ function Blogs() {
   return (
     <>
       <Header />
-      <div>
-        <h2>Create Blog</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Title:</label>
-            <input
-              type="text"
-              name="title"
-              value={formData.title}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>Body:</label>
-            <textarea
-              name="body"
-              value={formData.body}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <div className="blog-form-container">
+        <div className="blog-form">
+          <h2 className="title">Create Blog</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="blog-title-input">
+              <label>Title:</label>
+              <input
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="blog-body-input">
+              <label>Body:</label>
+              <textarea
+                name="body"
+                value={formData.body}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <button className="btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
       <Footer />
     </>
