@@ -20,7 +20,7 @@ import SearchResults from "./components/searchresult";
 import LandingPage from "./components/LandingPage";
 import Blogs from "./components/blogs";
 import UserProfile from "./UserProfile";
-import AdminDash from "./components/adminDash";
+import AdminDash from "./components/AdminDash";
 
 const App = () => {
   const [cart, setCart] = useState([]);
