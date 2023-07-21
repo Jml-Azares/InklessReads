@@ -17,7 +17,9 @@ import SearchResults from "./components/searchresult";
 import LandingPage from "./components/LandingPage";
 import UserProfile from "./UserProfile";
 import AdminDash from "./components/AdminDash";
-import Blogs from "./components/blogs";
+import CreateBlogs from "./components/CreateBlog";
+import BlogsNav from "./components/BlogsNav";
+import Blogs from "./components/Blogs";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -43,7 +45,10 @@ const App = () => {
             element={<Checkout cart={cart} setCart={setCart} />}
           />
           <Route path="/ContactPage" element={<ContactPage />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route element={<BlogsNav />}>
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/create-blog" element={<CreateBlogs />} />
+          </Route>
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/AdminDash" element={<AdminDash />} />
           <Route path="/searchresult/:query" element={<SearchResults />} />
