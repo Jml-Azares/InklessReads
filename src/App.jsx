@@ -11,13 +11,10 @@ import History from "./components/History";
 import Book from "./components/BookDetails";
 import Checkout from "./components/Checkout";
 import ContactPage from "./components/contactPage";
-import Faq from "./components/Faq";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
-import LandingPage from "./components/landingPage";
+import LandingPage from "./components/LandingPage";
 import Blogs from "./components/blogs";
 import UserProfile from "./userProfile";
 import AdminDash from "./components/adminDash";
@@ -49,9 +46,6 @@ const App = () => {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/AdminDash" element={<AdminDash />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
           <Route path="/searchresult/:query" element={<SearchResults />} />
         </Route>
         <Route path="*" element={<NoPage />} />
