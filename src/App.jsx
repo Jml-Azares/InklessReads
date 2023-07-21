@@ -11,9 +11,6 @@ import History from "./components/History";
 import Book from "./components/BookDetails";
 import Checkout from "./components/Checkout";
 import ContactPage from "./components/contactPage";
-import Faq from "./components/Faq";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
@@ -28,8 +25,8 @@ const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route element={<Layout cart={cart} setCart={setCart} />}>
-          <Route path="/" element={<LandingPage />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
@@ -49,9 +46,6 @@ const App = () => {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/AdminDash" element={<AdminDash />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
           <Route path="/searchresult/:query" element={<SearchResults />} />
         </Route>
         <Route path="*" element={<NoPage />} />
