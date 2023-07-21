@@ -20,6 +20,7 @@ import AdminDash from "./components/AdminDash";
 import CreateBlogs from "./components/CreateBlog";
 import BlogsNav from "./components/BlogsNav";
 import Blogs from "./components/Blogs";
+import BlogDetails from "./components/BlogDetails";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -48,6 +49,7 @@ const App = () => {
           <Route element={<BlogsNav />}>
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/create-blog" element={<CreateBlogs />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
           </Route>
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/AdminDash" element={<AdminDash />} />
