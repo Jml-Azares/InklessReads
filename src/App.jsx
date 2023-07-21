@@ -15,9 +15,9 @@ import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
 import LandingPage from "./components/LandingPage";
+import UserProfile from "./UserProfile";
+import AdminDash from "./components/AdminDash";
 import Blogs from "./components/blogs";
-import UserProfile from "./userProfile";
-import AdminDash from "./components/adminDash";
 
 const App = () => {
   const [cart, setCart] = useState([]);
