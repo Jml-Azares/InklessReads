@@ -1,12 +1,7 @@
 import React from "react";
 import logo from "../assets/images/IK.png";
-<<<<<<< HEAD
-import logo2 from "../assets/images/logo2.png";
-import Footer from "./Footer";
-=======
 import Axios from "axios";
 import { useState } from "react";
->>>>>>> b586bbd737afdf50ad601e91c4b37e526a72f420
 
 const LandingPage = () => {
   const [firstName, setFirstname] = useState("");
@@ -20,14 +15,14 @@ const LandingPage = () => {
   const register = (e) => {
     e.preventDefault();
     Axios.post("http://localhost:3001/register", {
-      Firstname: firstName,
-      Lastname: lastName,
+      firstName: firstName,
+      lastName: lastName,
       email: email,
       password: password,
-      number: number,
+      contact: number, // Use 'contact' instead of 'number'
     }).then((response) => {
-      // setRegisterStatus(response);
-      // console.log(response);
+      setRegisterStatus(response);
+      console.log(response);
       if (response.data.message) {
         setRegisterStatus(response.data.message);
       } else {
@@ -59,11 +54,7 @@ const LandingPage = () => {
         >
           <div className="container px-4">
             <a className="navbar-brand" href="#page-top">
-<<<<<<< HEAD
-              <img src={logo2} alt="Company Logo" className="logo" />
-=======
               INKLESS READS
->>>>>>> b586bbd737afdf50ad601e91c4b37e526a72f420
             </a>
             <button
               className="navbar-toggler"
@@ -535,26 +526,13 @@ const LandingPage = () => {
         </nav>
 
         {/* <!-- Hero--> */}
-<<<<<<< HEAD
-        <div className="container  col-xl-10 col-xxl-8 px-4 py-0">
-          <div className="row align-items-center g-lg-5 pb-5">
-            <div className="col-lg-7 text-center text-lg-start">
-              <img src={logo} alt="company logo" />
-              {/* <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">
-                Vertically centered hero sign-up form
-              </h1>
-              <p className="text-dark col-lg-10 fs-4">
-                Below is an example form built entirely with Bootstraps form
-                controls.
-              </p> */}
-=======
         <div
           className="container mx-auto  col-xl-10 col-xxl-8 px-4"
           style={{ marginTop: "100px", marginBottom: "100px", height: "70vh" }}
         >
           <div className="row">
             <div className="col-lg-6">
-              <div className="mx-5">
+              <div className="mx-5 d-none d-md-none d-xl-block d-xxl-block ">
                 <img
                   src={logo}
                   alt="company logo"
@@ -574,7 +552,6 @@ const LandingPage = () => {
               >
                 Pinirotong tampal-puke
               </p>
->>>>>>> b586bbd737afdf50ad601e91c4b37e526a72f420
             </div>
 
             {/* -------------------login--------------- */}
@@ -997,7 +974,13 @@ const LandingPage = () => {
         </div>
 
         {/* <!-- Footer--> */}
-        <Footer />
+        <footer className="py-3 bg-dark fixed-bottom">
+          <div className="container px-4">
+            <p className="m-0 text-center text-white">
+              Copyright &copy; Inkless Reads 2023
+            </p>
+          </div>
+        </footer>
       </div>
     </>
   );
