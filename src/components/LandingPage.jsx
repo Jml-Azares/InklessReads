@@ -1,6 +1,8 @@
 import React from "react";
 import "./LandingPage.css";
 import logo from "../assets/images/IK.png";
+import logo2 from "../assets/images/logo2.png";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
@@ -12,7 +14,7 @@ const LandingPage = () => {
         >
           <div className="container px-4">
             <a className="navbar-brand" href="#page-top">
-              Inkless Reads
+              <img src={logo2} alt="Company Logo" className="logo" />
             </a>
             <button
               className="navbar-toggler"
@@ -52,13 +54,13 @@ const LandingPage = () => {
           <div className="row align-items-center g-lg-5 pb-5">
             <div className="col-lg-7 text-center text-lg-start">
               <img src={logo} alt="company logo" />
-              <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+              {/* <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">
                 Vertically centered hero sign-up form
               </h1>
               <p className="text-dark col-lg-10 fs-4">
                 Below is an example form built entirely with Bootstraps form
                 controls.
-              </p>
+              </p> */}
             </div>
             <div className="col-md-10 mx-auto col-lg-5">
               <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
@@ -279,13 +281,7 @@ const LandingPage = () => {
         {/* <!-------End of User Login/Register---------> */}
 
         {/* <!-- Footer--> */}
-        <footer className="py-3 bg-dark fixed-bottom">
-          <div className="container px-4">
-            <p className="m-0 text-center text-white">
-              Copyright &copy; Inkless Reads 2023
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

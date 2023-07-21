@@ -2,8 +2,9 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
+import logo from "../assets/images/logo2.png";
+import Search from "./search";
 
 export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
@@ -16,12 +17,19 @@ export default function Header({ cart, setCart }) {
     navigate("/loginReg");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
-      <nav className="navbar bg-dark navbar-expand-lg">
+      <nav className="navbar bg-dark navbar-expand-lg sticky-top">
         <div className="container-fluid">
-          <Link to="/home">
-            <img src={inkless} alt="Company Logo" className="logo" />
+          <Link to="/home" onClick={scrollToTop}>
+            <img src={logo} alt="Company Logo" className="logo" />
           </Link>
           <button
             className="navbar-toggler bg-body-tertiary"
@@ -36,15 +44,6 @@ export default function Header({ cart, setCart }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link
-                  className="nav-link active text-white"
-                  aria-current="page"
-                  to="/home"
-                >
-                  Inkless Reads
-                </Link>
-              </li>
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle text-white"
@@ -118,16 +117,20 @@ export default function Header({ cart, setCart }) {
             <div className="nav-icons d-flex">
               <div>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item px-4 pt-1">
+                    <Search />
+                  </li>
                   <li className="nav-item">
                     <Link
                       className="nav-link text-white"
                       aria-current="page"
                       to="/userProfile"
                     >
-                      User Profile
+                      <i className="fa-regular fa-circle-user"></i>
                     </Link>
                   </li>
-                  <li className="nav-item">
+
+                  {/* <li className="nav-item">
                     <Link
                       className="nav-link text-white"
                       aria-current="page"
@@ -135,7 +138,7 @@ export default function Header({ cart, setCart }) {
                     >
                       Admin
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/* ----------------------------cart icon------------------------------------- */}
