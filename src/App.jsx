@@ -11,16 +11,16 @@ import History from "./components/History";
 import Book from "./components/BookDetails";
 import Checkout from "./components/Checkout";
 import ContactPage from "./components/contactPage";
-import Faq from "./components/Faq";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import Terms from "./components/Terms";
 import Politics from "./components/politics";
 import Romance from "./components/romance";
 import SearchResults from "./components/searchresult";
 import LandingPage from "./components/LandingPage";
 import UserProfile from "./UserProfile";
 import AdminDash from "./components/AdminDash";
-import Blogs from "./components/blogs";
+import CreateBlogs from "./components/CreateBlog";
+import BlogsNav from "./components/BlogsNav";
+import Blogs from "./components/Blogs";
+import BlogDetails from "./components/BlogDetails";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -28,8 +28,8 @@ const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route element={<Layout cart={cart} setCart={setCart} />}>
-          <Route path="/" element={<LandingPage />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
@@ -46,12 +46,13 @@ const App = () => {
             element={<Checkout cart={cart} setCart={setCart} />}
           />
           <Route path="/ContactPage" element={<ContactPage />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route element={<BlogsNav />}>
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/create-blog" element={<CreateBlogs />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
+          </Route>
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/AdminDash" element={<AdminDash />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
           <Route path="/searchresult/:query" element={<SearchResults />} />
         </Route>
         <Route path="*" element={<NoPage />} />
