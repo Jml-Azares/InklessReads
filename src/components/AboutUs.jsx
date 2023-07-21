@@ -20,8 +20,6 @@ import Footer from "./Footer";
 const AboutUs = () => {
   return (
     <>
-      <Header />
-
       {/* -----------------About Us Starts Here---------------------- */}
       <div className="aboutUs-head text-center py-3">
         <h1>About Us</h1>
@@ -403,8 +401,6 @@ const AboutUs = () => {
         </div>
       </section>
       {/* <!-- Team --> */}
-
-      <Footer />
     </>
   );
 };
