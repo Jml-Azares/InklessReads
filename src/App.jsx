@@ -25,8 +25,8 @@ const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route element={<Layout cart={cart} setCart={setCart} />}>
-          <Route path="/" element={<LandingPage />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
