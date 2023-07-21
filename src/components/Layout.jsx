@@ -8,7 +8,9 @@ import { Outlet } from "react-router-dom";
 const Layout = ({ cart, setCart }) => {
   return (
     <>
+      <Header />
       <Outlet />
+      <Footer />
     </>
   );
 };
