@@ -37,23 +37,28 @@ const BlogDetails = () => {
   /*Put requeset */
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.put(
-        `http://localhost:8000/api/blogs/${id}`,
-        formData
-      );
-      if (response) {
-        console.log(response.data);
-        setFormData({
-          title: "",
-          body: "",
-        });
-        fetchData();
-        setTitleInputShow(false);
-        setBodyInputShow(false);
+    if (formData.title || formData.body) {
+      try {
+        const response = await axios.put(
+          `http://localhost:8000/api/blogs/${id}`,
+          formData
+        );
+        if (response) {
+          console.log(response.data);
+          setFormData({
+            title: "",
+            body: "",
+          });
+          fetchData();
+          setTitleInputShow(false);
+          setBodyInputShow(false);
+        }
+      } catch (error) {
+        console.error(error); // Log any errors that occur during the request (optional)
       }
-    } catch (error) {
-      console.error(error); // Log any errors that occur during the request (optional)
+    } else {
+      setBodyInputShow(false);
+      setTitleInputShow(false);
     }
   };
 

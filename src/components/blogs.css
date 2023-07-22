@@ -62,7 +62,7 @@
 }
 .create-blog h2 {
   font-size: 20px;
-  color: whitesmoke;
+  color: black;
   margin-bottom: 30px;
 }
 .create-blog input,
@@ -71,7 +71,7 @@
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #414141;
   box-sizing: border-box;
   display: block;
   color: #212121;
@@ -85,10 +85,10 @@
   cursor: pointer;
 }
 
-/* blog details page */
+/* blog details */
 .blog-details h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #212121;
   margin-bottom: 10px;
 }
 .blog-details div {
@@ -98,7 +98,7 @@
   align-items: baseline;
 }
 .blog-details button {
-  background: #f1356d;
+  background: #212121;
   color: #fff;
   border: 0;
   padding: 8px;
