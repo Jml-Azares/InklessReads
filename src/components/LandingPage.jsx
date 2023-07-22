@@ -15,14 +15,14 @@ const LandingPage = () => {
   const register = (e) => {
     e.preventDefault();
     Axios.post("http://localhost:3001/register", {
-      Firstname: firstName,
-      Lastname: lastName,
+      firstName: firstName,
+      lastName: lastName,
       email: email,
       password: password,
-      number: number,
+      contact: number, // Use 'contact' instead of 'number'
     }).then((response) => {
-      // setRegisterStatus(response);
-      // console.log(response);
+      setRegisterStatus(response);
+      console.log(response);
       if (response.data.message) {
         setRegisterStatus(response.data.message);
       } else {
@@ -532,7 +532,7 @@ const LandingPage = () => {
         >
           <div className="row">
             <div className="col-lg-6">
-              <div className="mx-5">
+              <div className="mx-5 d-none d-md-none d-xl-block d-xxl-block ">
                 <img
                   src={logo}
                   alt="company logo"

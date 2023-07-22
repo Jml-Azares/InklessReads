@@ -16,13 +16,13 @@ export default function Footer() {
 
   return (
     <div className="container-fluid px-5 bg-dark IL-footer">
-      <footer className="pt-5">
+      <footer className="pt-3">
         <div className="row">
           <div className="col-sm-12 col-md-6 mb-2">
             <div className="row mx-auto">
               <div className="row mx-auto text-center">
                 {/* contact details */}
-                <div className="col-sm-4 col-md-4 mb-1">
+                {/* <div className="col-sm-4 col-md-4 mb-1">
                   <h4 className="eventHeader">Contact Details</h4>
                   <ul className="nav flex-column">
                     <li className="nav-item mb-2">
@@ -38,10 +38,10 @@ export default function Footer() {
                       <span> Philippines</span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
 
                 {/* catalogs */}
-                <div className="col-sm-4 col-md-4 mb-1">
+                {/* <div className="col-sm-4 col-md-4 mb-1">
                   <h4 className="eventHeader">Catalogs</h4>
                   <ul className="nav flex-column">
                     <li className="nav-item mb-2">
@@ -90,10 +90,10 @@ export default function Footer() {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
 
                 {/* page links */}
-                <div className="col-sm-4 col-md-4 mb-1">
+                {/* <div className="col-sm-4 col-md-4 mb-1">
                   <h4 className="eventHeader">Links</h4>
                   <ul className="nav flex-column">
                     <li className="nav-item mb-2">
@@ -142,12 +142,12 @@ export default function Footer() {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
 
-              <div className="row">
-                {/* google maps */}
-                <div
+              {/* <div className="row"> */}
+              {/* google maps */}
+              {/* <div
                   className="col-sm-12 col-md-12"
                   referrerPolicy="no-referrer-when-downgrade"
                 >
@@ -157,12 +157,12 @@ export default function Footer() {
                     loading="lazy"
                   ></iframe>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* news letter section and contact form */}
-          <div className="col-sm-12 col-md-6 my-5 mb-3">
+          {/* <div className="col-sm-12 col-md-6 my-5 mb-3">
             <form>
               <h5 className="eventHeader">Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
@@ -205,13 +205,13 @@ export default function Footer() {
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
 
-        <br />
+        {/* <br /> */}
 
         {/* footer copyrights and icons */}
-        <div className="d-flex flex-column flex-sm-row justify-content-between py-3 border-top">
+        <div className="d-flex flex-column flex-sm-row justify-content-between">
           <p>&copy; 2023 Inkless Reads, Inc. All rights reserved.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
