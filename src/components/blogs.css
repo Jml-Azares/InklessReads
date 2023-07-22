@@ -1,3 +1,7 @@
+.home h1 {
+  color: #212121;
+}
+
 /*blogs navbar*/
 .blogs-nav {
   padding: 20px;
@@ -5,11 +9,9 @@
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid black;
 }
-.blogs-nav h1 {
-  color: #f1356d;
-}
+
 .blogs-nav .links {
   margin-left: auto;
 }
@@ -17,9 +19,10 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  color: #212121;
 }
 .blogs-nav a:hover {
-  color: #f1356d;
+  color: #414141;
 }
 
 /* container of bloglist, blogdetails and create blog form */
@@ -33,14 +36,14 @@
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid black;
 }
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 9px 15px rgba(0, 0, 0, 0.1);
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #212121;
   margin-bottom: 8px;
 }
 .blog-preview a {
@@ -90,12 +93,22 @@
 }
 .blog-details div {
   margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .blog-details button {
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
+  margin: 10px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.blog-details input,
+.blog-details textarea {
+  flex: 1;
+  color: black;
 }
