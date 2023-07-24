@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import AddToCart from "./AddToCart";
 import logo from "../assets/images/logo2.png";
 import Search from "./search";
+import AuthDetails from "./AuthDetails";
 
 export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
@@ -129,7 +130,9 @@ export default function Header({ cart, setCart }) {
                     >
                       <i className="fa-regular fa-circle-user"></i>
                     </Link>
-                    <button>SignOut</button>
+                  </li>
+                  <li>
+                    <AuthDetails />
                   </li>
 
                   {/* <li className="nav-item">

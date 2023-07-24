@@ -5,11 +5,14 @@ import { useState } from "react";
 import { auth, fb } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router";
 // import "firebase/compat/auth";
+// import "firebase/database";
 import "firebase/database";
 import Footer from "./Footer";
+function LandingPage() {
+  let navigate = useNavigate();
 
-export default function LandingPage() {
   const [firstName, setFirstname] = useState("");
   const [lastName, setLastname] = useState("");
   const [number, setNumber] = useState("");
@@ -596,6 +599,9 @@ export default function LandingPage() {
                     className="btn btn-lg btn-outline-dark w-100"
                     type="submit"
                     value="Login"
+                    onClick={() => {
+                      navigate("/Home");
+                    }}
                   ></input>
                 </div>
 
@@ -977,3 +983,4 @@ export default function LandingPage() {
     </>
   );
 }
+export default LandingPage;

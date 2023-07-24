@@ -1,8 +1,10 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
+import { useNavigate, Navigate } from "react-router-dom";
 
-const AuthDetails = () => {
+const AuthDetails = ({ authorized }) => {
+  const navigate = useNavigate();
   const [authUser, setAuthUser] = useState(null);
 
   useEffect(() => {
@@ -25,19 +27,29 @@ const AuthDetails = () => {
         console.log("sign out successful");
       })
       .catch((error) => console.log(error));
+
+    navigate("/");
   };
 
+  // if (!authorized) {
+  //   // return <Navigate to="/" />;
+  //   // return navigate("/"); // Redirect to the login page if not authorized
+  //   return null; // Optional: You might also want to display a loading spinner or a message here.
+  // }
+
   return (
-    <div>
+    <>
       {authUser ? (
         <>
-          <p>{`Signed In as ${authUser.email}`}</p>
-          <button onClick={userSignOut}>Sign Out</button>
+          <p className="text-light fs-5">{`Signed In as ${authUser.email}`}</p>{" "}
+          <button className="btn btn-outline-light" onClick={userSignOut}>
+            Sign Out
+          </button>
         </>
       ) : (
-        <p>Signed Out</p>
+        <p className="text-light fs-5 py-2">You are Signed Out</p>
       )}
-    </div>
+    </>
   );
 };
 
