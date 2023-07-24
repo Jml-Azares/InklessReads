@@ -20,6 +20,7 @@ import AdminDash from "./components/AdminDash";
 import CreateBlogs from "./components/CreateBlog";
 import BlogsNav from "./components/BlogsNav";
 import Blogs from "./components/Blogs";
+import AuthDetails from "./components/AuthDetails";
 import BlogDetails from "./components/BlogDetails";
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<NoPage />} />
       </Routes>
+      <AuthDetails />
     </>
   );
 };

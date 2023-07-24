@@ -8,6 +8,7 @@ import Search from "./search";
 
 export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
+  const history = useNavigate();
 
   const goToCheckout = () => {
     navigate("/Checkout");
@@ -128,6 +129,7 @@ export default function Header({ cart, setCart }) {
                     >
                       <i className="fa-regular fa-circle-user"></i>
                     </Link>
+                    <button>SignOut</button>
                   </li>
 
                   {/* <li className="nav-item">
