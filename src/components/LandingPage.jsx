@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/IK.png";
+import logo2 from "../assets/images/logo2.png";
 import { useState } from "react";
 import { auth, fb } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -7,7 +8,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
 // import "firebase/compat/auth";
 // import "firebase/database";
-
+import "firebase/database";
+import Footer from "./Footer";
 function LandingPage() {
   let navigate = useNavigate();
 
@@ -56,7 +58,7 @@ function LandingPage() {
         >
           <div className="container px-4">
             <a className="navbar-brand" href="#page-top">
-              INKLESS READS
+              <img src={logo2} style={{ width: "250px", height: "40px" }}></img>
             </a>
             <button
               className="navbar-toggler"
@@ -969,13 +971,14 @@ function LandingPage() {
         </div>
 
         {/* <!-- Footer--> */}
-        <footer className="py-3 bg-dark fixed-bottom">
+        {/* <footer className="py-3 bg-dark fixed-bottom">
           <div className="container px-4">
             <p className="m-0 text-center text-white">
               Copyright &copy; Inkless Reads 2023
             </p>
           </div>
-        </footer>
+        </footer> */}
+        <Footer />
       </div>
     </>
   );

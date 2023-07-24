@@ -19,7 +19,7 @@ import UserProfile from "./UserProfile";
 import AdminDash from "./components/AdminDash";
 import CreateBlogs from "./components/CreateBlog";
 import BlogsNav from "./components/BlogsNav";
-import Blogs from "./components/Blogs";
+import Blogs from "./components/blogs";
 import AuthDetails from "./components/AuthDetails";
 import BlogDetails from "./components/BlogDetails";
 

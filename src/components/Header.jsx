@@ -93,7 +93,7 @@ export default function Header({ cart, setCart }) {
                   aria-current="page"
                   to="/about-us"
                 >
-                  About-Us
+                  About Us
                 </Link>
               </li>
               <li className="nav-item">

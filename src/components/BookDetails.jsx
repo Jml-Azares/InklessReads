@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../API/useFetch";
 import "./BookDetails.css";
-import Header from "./Header";
-import Footer from "./Footer";
 
 const Book = ({ cart, setCart }) => {
   const { id } = useParams();
@@ -30,7 +28,6 @@ const Book = ({ cart, setCart }) => {
 
   return (
     <>
-      <Header />
       <div className="container-fluid">
         <div
           className={`row book py-5 p-md-5 ${
@@ -73,7 +70,6 @@ const Book = ({ cart, setCart }) => {
             ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
