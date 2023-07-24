@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/IK.png";
 import Axios from "axios";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   const [firstName, setFirstname] = useState("");
@@ -974,13 +975,14 @@ const LandingPage = () => {
         </div>
 
         {/* <!-- Footer--> */}
-        <footer className="py-3 bg-dark fixed-bottom">
+        {/* <footer className="py-3 bg-dark fixed-bottom">
           <div className="container px-4">
             <p className="m-0 text-center text-white">
               Copyright &copy; Inkless Reads 2023
             </p>
           </div>
-        </footer>
+        </footer> */}
+        <Footer />
       </div>
     </>
   );
