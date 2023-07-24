@@ -1,3 +1,4 @@
+// index.js
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
@@ -8,8 +9,8 @@ app.use(express.json());
 app.use(cors());
 
 const con = mysql.createConnection({
-  user: "root",
   host: "localhost",
+  user: "root",
   password: "",
   database: "register",
 });
@@ -23,45 +24,45 @@ con.connect((err) => {
 });
 
 app.post("/register", (req, res) => {
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const password = req.body.password;
-  const contact = req.body.contact;
+  const { firstName, lastName, email, password, contact } = req.body;
 
   con.query(
     "INSERT INTO users (firstName, lastName, email, password, contact) VALUES (?, ?, ?, ?, ?)",
     [firstName, lastName, email, password, contact],
     (err, result) => {
-      if (result) {
-        res.send(result);
-      } else {
-        res.send({ message: "ENTER CORRECT ASKED DETAILS!" });
+      if (err) {
+        console.error("Error while registering user:", err);
+        res.status(500).json({ message: "Error while registering user." });
+        return;
       }
+      res.status(200).json({ message: "User registered successfully!" });
     }
   );
 });
 
 app.post("/login", (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
+  const { email, password } = req.body;
+
   con.query(
     "SELECT * FROM users WHERE email = ? AND password = ?",
     [email, password],
     (err, result) => {
       if (err) {
-        req.setEncoding({ err: err });
+        console.error("Error while logging in:", err);
+        res.status(500).json({ message: "Error while logging in." });
+        return;
+      }
+
+      if (result.length > 0) {
+        res.status(200).json({ message: "Login successful!", user: result[0] });
       } else {
-        if (result.length > 0) {
-          res.send(result);
-        } else {
-          res.send({ message: "WRONG EMAIL OR PASSWORD!" });
-        }
+        res.status(401).json({ message: "Invalid credentials!" });
       }
     }
   );
 });
 
-app.listen(3001, () => {
-  console.log("Running backend server on port 3001");
+const port = 3001; // You can use any available port
+app.listen(port, () => {
+  console.log(`Backend server is running on http://localhost:${port}`);
 });
