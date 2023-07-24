@@ -1,48 +1,47 @@
 import React from "react";
 import logo from "../assets/images/IK.png";
-import Axios from "axios";
 import { useState } from "react";
+import { auth, fb } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+// import "firebase/compat/auth";
+import "firebase/database";
 
-const LandingPage = () => {
+export default function LandingPage() {
   const [firstName, setFirstname] = useState("");
   const [lastName, setLastname] = useState("");
-  const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loginStatus, setLoginStatus] = useState("");
-  const [registerStatus, setRegisterStatus] = useState("");
 
-  const register = (e) => {
+  const signIn = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3001/register", {
-      Firstname: firstName,
-      Lastname: lastName,
-      email: email,
-      password: password,
-      number: number,
-    }).then((response) => {
-      // setRegisterStatus(response);
-      // console.log(response);
-      if (response.data.message) {
-        setRegisterStatus(response.data.message);
-      } else {
-        setRegisterStatus("ACCOUNT CREATED SUCCESSFULLY");
-      }
-    });
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const login = (e) => {
+  const signUp = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3001/login", {
-      email: email,
-      password: password,
-    }).then((response) => {
-      if (response.data.message) {
-        setLoginStatus(response.data.message);
-      } else {
-        setLoginStatus(response.data[0].email);
-      }
-    });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const userId = auth.currentUser.uid;
+        const userRef = fb.database().ref(`users/${userId}`);
+        userRef.set({
+          firstName,
+          lastName,
+          email,
+          number,
+        });
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -532,7 +531,7 @@ const LandingPage = () => {
         >
           <div className="row">
             <div className="col-lg-6">
-              <div className="mx-5">
+              <div className="mx-5 d-none d-md-none d-xl-block d-xxl-block ">
                 <img
                   src={logo}
                   alt="company logo"
@@ -556,17 +555,16 @@ const LandingPage = () => {
 
             {/* -------------------login--------------- */}
             <div className="col-md-10 mx-auto mb-5 pb-5 rounded-3 border bg-body-tertiary col-lg-6">
-              <form className="px-4 pt-5">
+              <form onSubmit={signIn} className="px-4 pt-5">
                 <div className="form-floating mb-3">
                   <input
                     type="email"
                     className="form-control"
                     id="floatingInput"
-                    placeholder="name@example.com"
+                    placeholder="Enter your email"
                     name="email"
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <label className="text-dark" htmlFor="floatingInput">
                     Email address
@@ -577,11 +575,10 @@ const LandingPage = () => {
                     type="password"
                     className="form-control"
                     id="floatingPassword"
-                    placeholder="Password"
+                    placeholder="Enter your password"
                     name="password"
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                    }}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <label className="text-dark" htmlFor="floatingPassword">
                     Password
@@ -597,8 +594,7 @@ const LandingPage = () => {
                     className="btn btn-lg btn-outline-dark w-100"
                     type="submit"
                     value="Login"
-                    onClick={login}
-                  />
+                  ></input>
                 </div>
 
                 <hr className="" />
@@ -609,9 +605,7 @@ const LandingPage = () => {
                     textAlign: "center",
                     marginTop: "20px",
                   }}
-                >
-                  {loginStatus}
-                </h1>
+                ></h1>
               </form>
 
               <div className="px-4">
@@ -812,7 +806,7 @@ const LandingPage = () => {
                     </div>
                     <div className="modal-body px-4">
                       <form
-                        method="post"
+                        onSubmit={signUp}
                         className="row g-3 needs-validation"
                         noValidate
                       >
@@ -823,9 +817,8 @@ const LandingPage = () => {
                             id="floatingfirstName"
                             placeholder="First Name"
                             name="firstName"
-                            onChange={(e) => {
-                              setFirstname(e.target.value);
-                            }}
+                            value={firstName}
+                            onChange={(e) => setFirstname(e.target.value)}
                             required
                           />
                           <label
@@ -843,9 +836,8 @@ const LandingPage = () => {
                             id="floatinglastName"
                             placeholder="last Name"
                             name="lastName"
-                            onChange={(e) => {
-                              setLastname(e.target.value);
-                            }}
+                            value={lastName}
+                            onChange={(e) => setLastname(e.target.value)}
                             required
                           />
                           <label
@@ -863,9 +855,8 @@ const LandingPage = () => {
                             id="floatingRemail"
                             placeholder="name@example.com"
                             name="email"
-                            onChange={(e) => {
-                              setEmail(e.target.value);
-                            }}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                           <label className="text-dark" htmlFor="floatingRemail">
@@ -880,9 +871,8 @@ const LandingPage = () => {
                             id="floatingNumber"
                             placeholder="Number"
                             name="number"
-                            onChange={(e) => {
-                              setNumber(e.target.value);
-                            }}
+                            value={number}
+                            onChange={(e) => setNumber(e.target.value)}
                             required
                           />
                           <label className="text-dark" htmlFor="floatingNumber">
@@ -897,9 +887,8 @@ const LandingPage = () => {
                             id="floatingRpassword"
                             placeholder="Password"
                             name="password"
-                            onChange={(e) => {
-                              setPassword(e.target.value);
-                            }}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             required
                           />
                           <label
@@ -945,17 +934,17 @@ const LandingPage = () => {
                             </div>
                           </div>
                         </div>
+                        <div className="modal-footer px-4">
+                          <div className="col-12">
+                            <input
+                              className="btn btn-lg btn-outline-dark w-100"
+                              type="submit"
+                            />
+                          </div>
+                        </div>
                       </form>
                     </div>
-                    <div className="modal-footer px-4">
-                      <div className="col-12">
-                        <input
-                          className="btn btn-lg btn-outline-dark w-100"
-                          type="submit"
-                          onClick={register}
-                        />
-                      </div>
-                    </div>
+
                     <h1
                       style={{
                         fontSize: "15px",
@@ -963,7 +952,7 @@ const LandingPage = () => {
                         marginTop: "20px",
                       }}
                     >
-                      {registerStatus}
+                      {/* {registerStatus} */}
                     </h1>
                   </div>
                 </div>
@@ -984,6 +973,4 @@ const LandingPage = () => {
       </div>
     </>
   );
-};
-
-export default LandingPage;
+}

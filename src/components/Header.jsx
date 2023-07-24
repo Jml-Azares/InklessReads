@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import inkless from "../assets/images/IK.png";
 import AddToCart from "./AddToCart";
+import { signOut } from "firebase/auth";
 
 export default function Header({ cart, setCart }) {
   const navigate = useNavigate();
+  const history = useNavigate();
 
   const goToCheckout = () => {
     navigate("/Checkout");
@@ -14,6 +16,13 @@ export default function Header({ cart, setCart }) {
 
   const goToLogInReg = () => {
     navigate("/loginReg");
+  };
+
+  const handleClick = () => {
+    signOut(database).then((val) => {
+      console.log(val, "val");
+      history("/");
+    });
   };
 
   return (
@@ -126,6 +135,7 @@ export default function Header({ cart, setCart }) {
                     >
                       User Profile
                     </Link>
+                    <button onClick={handleClick}>SignOut</button>
                   </li>
                   <li className="nav-item">
                     <Link
