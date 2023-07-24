@@ -36,16 +36,16 @@ const Home = () => {
 
       <div>
         <MainContent
-          picks="Featured Picks"
-          api="https://gutendex.com/books/?page=2&topic=mystery"
+          picks="Literature"
+          api="https://gutendex.com/books/?page=2&topic=literature"
         />
         <MainContent
-          picks="Adult"
+          picks="Romance"
           api="https://gutendex.com/books?search=romance"
         />
         <MainContent
-          picks="Kids"
-          api="https://gutendex.com/books/?page=2&topic=children"
+          picks="History"
+          api="https://gutendex.com/books/?page=2&topic=history"
         />
       </div>
 

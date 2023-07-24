@@ -3,10 +3,12 @@ import Catalog from "./Catalogs";
 function History() {
   return (
     <>
-      <Catalog
-        api="https://gutendex.com/books?search=history"
-        catalog="History"
-      />
+      <div style={{ marginBottom: "150px" }}>
+        <Catalog
+          api="https://gutendex.com/books?search=history"
+          catalog="History"
+        />
+      </div>
     </>
   );
 }

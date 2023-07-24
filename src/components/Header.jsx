@@ -48,7 +48,7 @@ export default function Header({ cart, setCart }) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle text-white"
+                  className="nav-link dropdown-toggle "
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -122,7 +122,7 @@ export default function Header({ cart, setCart }) {
                   <li className="nav-item px-4 pt-1">
                     <Search />
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       className="nav-link text-white"
                       aria-current="page"
@@ -130,7 +130,7 @@ export default function Header({ cart, setCart }) {
                     >
                       <i className="fa-regular fa-circle-user"></i>
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <AuthDetails />
                   </li>

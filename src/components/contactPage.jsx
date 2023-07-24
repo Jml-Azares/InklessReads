@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import "./contactPage.css";
 import emailjs from "@emailjs/browser";
+import "./contactPage.css";
 
 function contactPage() {
   const form = useRef();
@@ -28,7 +28,7 @@ function contactPage() {
 
   return (
     <>
-      <div className=" row my-5 py-5 align-items-center mx-5">
+      <div className=" row py-5 align-items-center mx-5">
         <h2 className="text-dark py-5 text-center">Contact Details</h2>
         <div className="col-sm-12 col-md-6">
           <div className="row">
@@ -70,6 +70,7 @@ function contactPage() {
           </div>
         </div>
         <div className="col-sm-12 col-md-6 text-center">
+          <h2 className="text-center text-dark"> We'd love to hear from you</h2>
           <form
             className="contactForm w-100  mx-auto"
             ref={form}

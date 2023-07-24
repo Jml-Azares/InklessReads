@@ -149,7 +149,7 @@ const AboutUs = () => {
       </div>
 
       {/* <!-- Team --> */}
-      <section id="team" className="pb-5">
+      <section id="team" className="mb-5">
         <div className="container">
           <h5 className="section-title h1">OUR TEAM</h5>
           <div className="row ">

@@ -15,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="container-fluid px-5 bg-dark IL-footer">
+    <div className="container-fluid mx-auto px-5 bg-dark IL-footer fixed-bottom">
       <footer className="pt-3">
         <div className="row">
           <div className="col-sm-12 col-md-6 mb-2">
@@ -212,7 +212,9 @@ export default function Footer() {
 
         {/* footer copyrights and icons */}
         <div className="d-flex flex-column flex-sm-row justify-content-between">
-          <p>&copy; 2023 Inkless Reads, Inc. All rights reserved.</p>
+          <p className="text-center">
+            &copy; 2023 Inkless Reads, Inc. All rights reserved.
+          </p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
               <a

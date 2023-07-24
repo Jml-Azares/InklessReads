@@ -41,10 +41,16 @@ const AuthDetails = () => {
     <>
       {authUser ? (
         <>
-          <p className="text-light fs-5">{`Signed In as ${authUser.email}`}</p>{" "}
-          <button className="btn btn-outline-light" onClick={userSignOut}>
-            Sign Out
-          </button>
+          <div className="row py-3">
+            <div className="col">
+              <p className="text-light py-1 fs-5">{` ${authUser.email}`}</p>{" "}
+            </div>
+            <div className="col">
+              <button className="btn btn-outline-light" onClick={userSignOut}>
+                Sign Out
+              </button>
+            </div>
+          </div>
         </>
       ) : (
         <p className="text-light fs-5 py-2">You are Signed Out</p>
