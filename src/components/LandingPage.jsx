@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/IK.png";
+import logo2 from "../assets/images/logo2.png";
 import { useState } from "react";
 import { auth, fb } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -54,7 +55,7 @@ export default function LandingPage() {
         >
           <div className="container px-4">
             <a className="navbar-brand" href="#page-top">
-              INKLESS READS
+              <img src={logo2} style={{ width: "250px", height: "40px" }}></img>
             </a>
             <button
               className="navbar-toggler"
