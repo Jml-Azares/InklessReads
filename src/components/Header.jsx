@@ -129,7 +129,7 @@ export default function Header({ cart, setCart }) {
                     >
                       <i className="fa-regular fa-circle-user"></i>
                     </Link>
-                    <button onClick={handleClick}>SignOut</button>
+                    <button>SignOut</button>
                   </li>
 
                   {/* <li className="nav-item">
