@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { useNavigate, Navigate } from "react-router-dom";
 
-const AuthDetails = ({ authorized }) => {
+const AuthDetails = () => {
   const navigate = useNavigate();
   const [authUser, setAuthUser] = useState(null);
 

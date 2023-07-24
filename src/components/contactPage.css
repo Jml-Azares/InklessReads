@@ -1,3 +1,11 @@
 ul {
   list-style-type: none;
 }
+
+.contactForm {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+}

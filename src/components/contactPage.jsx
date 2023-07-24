@@ -1,82 +1,97 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contactPage.css";
+import emailjs from "@emailjs/browser";
 
 function contactPage() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_wfwm9nj",
+        "template_7qw7ghh",
+        form.current,
+        "9-FrRj1YMcGW4Ccg1"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <>
-      <div className="p-5 d-flex justify-content-center align-items-center flex-column">
-        <h2 className="text-dark">Contact Details</h2>
-        <ul>
-          <li>
-            <i className="fa-solid fa-phone-volume"></i> +639000000000
-          </li>
-          <li>
-            <i className="fa-solid fa-envelope"></i> inkless.reads@gmail.com
-          </li>
-          <li>
-            <i className="fa-solid fa-globe"></i> Philippines
-          </li>
-        </ul>
-        <hr className="w-50" />
-        <form className="p-5 d-flex flex-column align-items-center">
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div className="d-flex flex-column gap-2">
-            <label htmlFor="newsletter1" className="visually-hidden">
-              Email address
-            </label>
+      <div className=" row my-5 py-5 align-items-center mx-5">
+        <h2 className="text-dark py-5 text-center">Contact Details</h2>
+        <div className="col-sm-12 col-md-6">
+          <div className="row">
+            <div className="col-12 d-flex flex-column align-items-center">
+              <ul>
+                <li>
+                  <i className="fa-solid fa-phone-volume"></i> +639000000000
+                </li>
+                <li>
+                  <i className="fa-solid fa-envelope"></i>{" "}
+                  inkless.reads@gmail.com
+                </li>
+                <li>
+                  <i className="fa-solid fa-globe"></i> Philippines
+                </li>
+              </ul>
+            </div>
+            <hr className="w-75 mx-auto mt-5" />
+            <div className="col-12">
+              <form className="my-5 d-flex flex-column align-items-center">
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div className="d-flex flex-column gap-2">
+                  <label htmlFor="newsletter1" className="visually-hidden">
+                    Email address
+                  </label>
+                  <input
+                    id="newsletter1"
+                    type="text"
+                    className="form-control w-100"
+                    placeholder="Email address"
+                  />
+                  <button className="btn btn-dark w-100" type="button">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-12 col-md-6 text-center">
+          <form
+            className="contactForm w-100  mx-auto"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <label>Name</label>
             <input
-              id="newsletter1"
+              className="inputContactform form-control"
               type="text"
-              className="form-control"
-              placeholder="Email address"
+              name="user_name"
             />
-            <button className="btn btn-primary" type="button">
-              Subscribe
-            </button>
-          </div>
-        </form>
-        <form className="p-5 d-flex flex-column align-items-center">
-          <h5>Contact Us</h5>
-          <div className="d-flex flex-row flex-wrap gap-2">
-            <label htmlFor="name" className="visually-hidden">
-              Name
-            </label>
+            <label className="">Email</label>
+            <input className="form-control" type="email" name="user_email" />
+            <label>Message</label>
+            <textarea className="contactTextarea form-control" name="message" />
             <input
-              id="name"
-              type="text"
-              className="form-control"
-              placeholder="Name"
-              required
+              className="btn btn-dark mt-2 w-100"
+              type="submit"
+              value="Send"
             />
-            <label htmlFor="email" className="visually-hidden">
-              Email address
-            </label>
-            <input
-              id="email"
-              type="email"
-              className="form-control"
-              placeholder="Email address"
-              required
-            />
-            <label htmlFor="message" className="visually-hidden">
-              Message
-            </label>
-            <textarea
-              id="message"
-              className="form-control" // Add 'form-control' class here
-              placeholder="Message"
-            ></textarea>
-          </div>
-          <div className="d-flex justify-content-center">
-            <button className="btn btn-primary mx-2" type="button">
-              Submit
-            </button>
-            <button className="btn btn-secondary mx-2" type="button">
-              Reset
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </>
   );
