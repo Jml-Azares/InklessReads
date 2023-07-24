@@ -1,53 +1,81 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../assets/images/IK.png";
 import logo2 from "../assets/images/logo2.png";
 import { useState } from "react";
 import { auth, fb } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 // import "firebase/compat/auth";
 // import "firebase/database";
 import "firebase/database";
 import Footer from "./Footer";
+import axios from "axios";
+import { StateContext } from "../contexts/ContextProvider";
+
 function LandingPage() {
-  let navigate = useNavigate();
+  const { setUser, setToken, token } = useContext(StateContext);
 
-  const [firstName, setFirstname] = useState("");
-  const [lastName, setLastname] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [signupData, setSignupData] = useState({
+    first_name: "",
+    last_name: "",
+    contact_number: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+  });
 
-  const signIn = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const signupChange = (e) => {
+    const { name, value, token } = e.target;
+    setSignupData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const signUp = (e) => {
-    e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const userId = auth.currentUser.uid;
-        const userRef = fb.database().ref(`users/${userId}`);
-        userRef.set({
-          firstName,
-          lastName,
-          email,
-          number,
-        });
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
+
+  const loginChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData((prevData) => ({ ...prevData, [name]: value }));
   };
+
+  const login = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/login",
+        loginData,
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+      setToken(response.data.token);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  const signUp = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/register",
+        signupData,
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+      setToken(response.data.token);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  if (token) {
+    return <Navigate to="/home" />;
+  }
 
   return (
     <>
@@ -560,7 +588,7 @@ function LandingPage() {
 
             {/* -------------------login--------------- */}
             <div className="col-md-10 mx-auto mb-5 pb-5 rounded-3 border bg-body-tertiary col-lg-6">
-              <form onSubmit={signIn} className="px-4 pt-5">
+              <form onSubmit={login} className="px-4 pt-5">
                 <div className="form-floating mb-3">
                   <input
                     type="email"
@@ -568,8 +596,8 @@ function LandingPage() {
                     id="floatingInput"
                     placeholder="Enter your email"
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={loginData.email}
+                    onChange={loginChange}
                   />
                   <label className="text-dark" htmlFor="floatingInput">
                     Email address
@@ -582,8 +610,8 @@ function LandingPage() {
                     id="floatingPassword"
                     placeholder="Enter your password"
                     name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={loginData.password}
+                    onChange={loginChange}
                   />
                   <label className="text-dark" htmlFor="floatingPassword">
                     Password
@@ -599,9 +627,6 @@ function LandingPage() {
                     className="btn btn-lg btn-outline-dark w-100"
                     type="submit"
                     value="Login"
-                    onClick={() => {
-                      navigate("/Home");
-                    }}
                   ></input>
                 </div>
 
@@ -824,9 +849,9 @@ function LandingPage() {
                             className="form-control"
                             id="floatingfirstName"
                             placeholder="First Name"
-                            name="firstName"
-                            value={firstName}
-                            onChange={(e) => setFirstname(e.target.value)}
+                            name="first_name"
+                            value={signupData.first_name}
+                            onChange={signupChange}
                             required
                           />
                           <label
@@ -843,9 +868,9 @@ function LandingPage() {
                             className="form-control"
                             id="floatinglastName"
                             placeholder="last Name"
-                            name="lastName"
-                            value={lastName}
-                            onChange={(e) => setLastname(e.target.value)}
+                            name="last_name"
+                            value={signupData.last_name}
+                            onChange={signupChange}
                             required
                           />
                           <label
@@ -863,8 +888,8 @@ function LandingPage() {
                             id="floatingRemail"
                             placeholder="name@example.com"
                             name="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            value={signupData.email}
+                            onChange={signupChange}
                             required
                           />
                           <label className="text-dark" htmlFor="floatingRemail">
@@ -878,9 +903,9 @@ function LandingPage() {
                             className="form-control"
                             id="floatingNumber"
                             placeholder="Number"
-                            name="number"
-                            value={number}
-                            onChange={(e) => setNumber(e.target.value)}
+                            name="contact_number"
+                            value={signupData.contact_number}
+                            onChange={signupChange}
                             required
                           />
                           <label className="text-dark" htmlFor="floatingNumber">
@@ -895,8 +920,8 @@ function LandingPage() {
                             id="floatingRpassword"
                             placeholder="Password"
                             name="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={signupData.password}
+                            onChange={signupChange}
                             required
                           />
                           <label
@@ -913,6 +938,9 @@ function LandingPage() {
                             className="form-control"
                             id="floatingCpassword"
                             placeholder="Cpassword"
+                            name="password_confirmation"
+                            value={signupData.password_confirmation}
+                            onChange={signupChange}
                             required
                           />
                           <label

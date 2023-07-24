@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -6,8 +6,11 @@ import AddToCart from "./AddToCart";
 import logo from "../assets/images/logo2.png";
 import Search from "./search";
 import AuthDetails from "./AuthDetails";
+import { StateContext } from "../contexts/ContextProvider";
+import axios from "axios";
 
 export default function Header({ cart, setCart }) {
+  const { token, setToken } = useContext(StateContext);
   const navigate = useNavigate();
   const history = useNavigate();
 
@@ -15,8 +18,23 @@ export default function Header({ cart, setCart }) {
     navigate("/Checkout");
   };
 
-  const goToLogInReg = () => {
-    navigate("/loginReg");
+  const logout = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/logout",
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: "application/json",
+          },
+        }
+      );
+      console.log(response);
+      setToken(response.data.token);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const scrollToTop = () => {
@@ -119,7 +137,7 @@ export default function Header({ cart, setCart }) {
             <div className="nav-icons d-flex">
               <div>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item px-4 pt-1">
+                  <li className="nav-item px-4">
                     <Search />
                   </li>
                   {/* <li className="nav-item">
@@ -131,9 +149,32 @@ export default function Header({ cart, setCart }) {
                       <i className="fa-regular fa-circle-user"></i>
                     </Link>
                   </li> */}
-                  <li>
-                    <AuthDetails />
+                  <li className="nav-item">
+                    <i className="fa-solid fa-cart-shopping nav-link text-white"></i>
                   </li>
+                  <li>
+                    <div className="dropdown-center">
+                      <button
+                        className="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i className="fa-solid fa-user"></i>
+                      </button>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <button className="dropdown-item" onClick={logout}>
+                            Logout
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  {/* user icon */}
+                  {/* <li>
+                    <AuthDetails />
+                  </li> */}
 
                   {/* <li className="nav-item">
                     <Link
