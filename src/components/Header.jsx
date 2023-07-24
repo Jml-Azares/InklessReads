@@ -119,21 +119,16 @@ export default function Header({ cart, setCart }) {
             <div className="nav-icons d-flex">
               <div>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item px-4 pt-1">
+                  <li className="nav-item px-4">
                     <Search />
                   </li>
                   <li className="nav-item">
-                    <Link
-                      className="nav-link text-white"
-                      aria-current="page"
-                      to="/userProfile"
-                    >
-                      <i className="fa-regular fa-circle-user"></i>
-                    </Link>
+                    <i className="fa-solid fa-cart-shopping nav-link text-white"></i>
                   </li>
-                  <li>
+                  {/* user icon */}
+                  {/* <li>
                     <AuthDetails />
-                  </li>
+                  </li> */}
 
                   {/* <li className="nav-item">
                     <Link
