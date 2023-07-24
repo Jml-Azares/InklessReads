@@ -66,7 +66,7 @@ export default function Header({ cart, setCart }) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle text-white"
+                  className="nav-link dropdown-toggle "
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -140,6 +140,15 @@ export default function Header({ cart, setCart }) {
                   <li className="nav-item px-4">
                     <Search />
                   </li>
+                  {/* <li className="nav-item">
+                    <Link
+                      className="nav-link text-white"
+                      aria-current="page"
+                      to="/userProfile"
+                    >
+                      <i className="fa-regular fa-circle-user"></i>
+                    </Link>
+                  </li> */}
                   <li className="nav-item">
                     <i className="fa-solid fa-cart-shopping nav-link text-white"></i>
                   </li>

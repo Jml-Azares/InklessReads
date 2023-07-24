@@ -8,7 +8,14 @@ const Testimonial = () => {
   return (
     <>
       {/* ---------------testimonials----------------- */}
-      <div className="container-fluid cardMainContainer p-5">
+      <div
+        className="container-fluid cardMainContainer p-5"
+        style={{
+          marginTop: "50px",
+          marginBottom: "100px",
+          borderRadius: "10px",
+        }}
+      >
         <div className="row">
           <div className="col-sm-12 col-md-6">
             {/* -----------------carousel -----------------------*/}
