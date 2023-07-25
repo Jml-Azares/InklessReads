@@ -50,6 +50,7 @@ function LandingPage() {
         }
       );
       setToken(response.data.token);
+      setUser(response.data.user);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -68,6 +69,7 @@ function LandingPage() {
         }
       );
       setToken(response.data.token);
+      setUser(response.data.user);
     } catch (error) {
       console.error("Error:", error);
     }
