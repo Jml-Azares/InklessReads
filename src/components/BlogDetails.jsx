@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import axios from "axios";
+import { StateContext } from "../contexts/ContextProvider";
 
 const BlogDetails = () => {
+  const { token } = useContext(StateContext);
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +43,13 @@ const BlogDetails = () => {
       try {
         const response = await axios.put(
           `http://localhost:8000/api/blogs/${id}`,
-          formData
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // Assuming your token is of the Bearer type.
+              Accept: "application/json",
+            },
+          }
         );
         if (response) {
           console.log(response.data);
@@ -66,7 +74,12 @@ const BlogDetails = () => {
   const handleDelete = async () => {
     try {
       const apiUrl = `http://localhost:8000/api/blogs/${id}`;
-      await axios.delete(apiUrl);
+      await axios.delete(apiUrl, {
+        headers: {
+          Authorization: `Bearer ${token}`, // Assuming your token is of the Bearer type.
+          Accept: "application/json",
+        },
+      });
       setBlogsNav(true);
     } catch (error) {
       console.error("Error deleting the blog:", error);

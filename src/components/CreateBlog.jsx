@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./blogs.css";
 import { Navigate } from "react-router-dom";
+import { StateContext } from "../contexts/ContextProvider";
 
 function CreateBlogs() {
+  const { token } = useContext(StateContext);
   const [formData, setFormData] = useState({ title: "", body: "" });
   const [blogsNav, setBlogsNav] = useState(false);
 
@@ -21,7 +23,13 @@ function CreateBlogs() {
     try {
       const response = await axios.post(
         "http://localhost:8000/api/blogs",
-        formData
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Assuming your token is of the Bearer type.
+            Accept: "application/json",
+          },
+        }
       );
       if (response) {
         console.log(response.data);
