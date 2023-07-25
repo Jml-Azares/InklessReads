@@ -6,7 +6,7 @@ const Search = () => {
   const [searchInput, setSearchInput] = useState("");
 
   return (
-    <div className="search-bar py-3">
+    <div className="search-bar">
       <form>
         <input
           type="text"

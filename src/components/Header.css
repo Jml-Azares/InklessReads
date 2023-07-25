@@ -64,3 +64,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-toggle {
+  padding-right: 1rem;
+}
+
+.userX {
+  font-size: 25px;
+}

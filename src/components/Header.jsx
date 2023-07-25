@@ -155,14 +155,25 @@ export default function Header({ cart, setCart }) {
                   <li>
                     <div className="dropdown-center">
                       <button
-                        className="btn btn-secondary dropdown-toggle"
+                        className="btn dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <i className="fa-solid fa-user"></i>
+                        <i className="fa-solid fa-user-tie text-light userX"></i>
                       </button>
                       <ul className="dropdown-menu">
+                        <li>
+                          <Link
+                            className="nav-link text-white"
+                            aria-current="page"
+                            to="/userProfile"
+                          >
+                            <button className="dropdown-item">
+                              User Profile
+                            </button>
+                          </Link>
+                        </li>
                         <li>
                           <button className="dropdown-item" onClick={logout}>
                             Logout
