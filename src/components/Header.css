@@ -51,10 +51,8 @@
   height: 50px;
 }
 
-.dropdown-menu {
-}
-
-.drop-item {
+.catalogs:hover {
+  color: #ffffff;
 }
 
 .offcanvas-body .btn-close-trash {

@@ -66,7 +66,7 @@ export default function Header({ cart, setCart }) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle "
+                  className="nav-link dropdown-toggle catalogs"
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
