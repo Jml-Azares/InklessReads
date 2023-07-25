@@ -39,7 +39,8 @@ function CreateBlogs() {
   return (
     <>
       <div className="create-blog" onSubmit={handleSubmit}>
-        <h2>Create Blog</h2>
+        <h3>Unleash Your Creative Voice:</h3>
+        <p>Embrace the Power of Blogging on Our Book Website</p>
         <form>
           <label>Title:</label>
           <input
