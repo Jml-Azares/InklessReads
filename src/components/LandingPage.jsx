@@ -50,6 +50,7 @@ function LandingPage() {
         }
       );
       setToken(response.data.token);
+      setUser(response.data.user);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -68,6 +69,7 @@ function LandingPage() {
         }
       );
       setToken(response.data.token);
+      setUser(response.data.user);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -975,6 +977,7 @@ function LandingPage() {
                             <input
                               className="btn btn-lg btn-outline-dark w-100"
                               type="submit"
+                              data-bs-dismiss="modal"
                             />
                           </div>
                         </div>
