@@ -5,7 +5,7 @@ const BlogsNav = () => {
     <>
       <div className="blogs-nav">
         <div className="links">
-          <Link to="/blogs">Timeline</Link>
+          <Link to="/blogs">Blog List</Link>
           <Link to="/create-blog">New Blog</Link>
         </div>
       </div>
