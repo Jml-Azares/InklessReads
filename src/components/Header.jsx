@@ -66,7 +66,7 @@ export default function Header({ cart, setCart }) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle "
+                  className="nav-link dropdown-toggle catalogs"
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -162,7 +162,7 @@ export default function Header({ cart, setCart }) {
                       >
                         <i className="fa-solid fa-user-tie text-light userX"></i>
                       </button>
-                      <ul className="dropdown-menu">
+                      <ul className="dropdown-menu dMenu">
                         <li>
                           <Link
                             className="nav-link text-white"
@@ -174,6 +174,7 @@ export default function Header({ cart, setCart }) {
                             </button>
                           </Link>
                         </li>
+                        <div className="dropdown-divider"></div>
                         <li>
                           <button className="dropdown-item" onClick={logout}>
                             Logout
