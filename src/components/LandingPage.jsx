@@ -8,7 +8,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Navigate, useNavigate } from "react-router";
 // import "firebase/compat/auth";
 // import "firebase/database";
-import "firebase/database";
+// import "firebase/database";
 import Footer from "./Footer";
 import axios from "axios";
 import { StateContext } from "../contexts/ContextProvider";
@@ -578,13 +578,13 @@ function LandingPage() {
                 />
               </div>
               <h1 className="fw-bold text-center text-body-emphasis mb-3">
-                GUSTO KO NG SINANGAG!
+                Inkless Reads: Unleash the Magic of Words
               </h1>
               <p
                 className="text-dark col-lg-10 fs-4"
                 style={{ textAlign: "center" }}
               >
-                Pinirotong tampal-puke
+                Your Online Bookstore for Endless Adventures!
               </p>
             </div>
 
