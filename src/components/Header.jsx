@@ -48,7 +48,7 @@ export default function Header({ cart, setCart }) {
     <>
       <nav className="navbar bg-dark navbar-expand-lg sticky-top">
         <div className="container-fluid">
-          <Link to="/home" onClick={scrollToTop}>
+          <Link to="/" onClick={scrollToTop}>
             <img src={logo} alt="Company Logo" className="logo" />
           </Link>
           <button

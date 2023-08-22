@@ -9,9 +9,9 @@ import { StateContext } from "../contexts/ContextProvider";
 const Layout = ({ cart, setCart }) => {
   const { token } = useContext(StateContext);
 
-  if (!token) {
-    return <Navigate to="/" />;
-  }
+  // if (!token) {
+  //   return <Navigate to="/Login" />;
+  // }
   return (
     <>
       <Header />

@@ -29,10 +29,10 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-
+        <Route path="/Login" element={<LandingPage />} />
         <Route element={<Layout cart={cart} setCart={setCart} />}>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/literature" element={<Literature />} />
           <Route path="/scienceFiction" element={<ScienceFiction />} />
@@ -43,11 +43,11 @@ const App = () => {
             path="/book/:id"
             element={<Book cart={cart} setCart={setCart} />}
           />
+          <Route path="/ContactPage" element={<ContactPage />} />
           <Route
             path="/checkout"
             element={<Checkout cart={cart} setCart={setCart} />}
           />
-          <Route path="/ContactPage" element={<ContactPage />} />
           <Route element={<BlogsNav />}>
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/create-blog" element={<CreateBlogs />} />
