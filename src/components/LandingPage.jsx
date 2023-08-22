@@ -87,7 +87,7 @@ function LandingPage() {
           id="mainNav"
         >
           <div className="container px-4">
-            <a className="navbar-brand" href="#page-top">
+            <a className="navbar-brand" href="/">
               <img src={logo2} style={{ width: "250px", height: "40px" }}></img>
             </a>
             <button

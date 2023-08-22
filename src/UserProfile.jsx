@@ -1,10 +1,15 @@
 import { useContext } from "react";
 import { StateContext } from "./contexts/ContextProvider";
+import { Navigate } from "react-router-dom";
 
 const UserProfile = () => {
-  const { user } = useContext(StateContext);
+  const { user, token } = useContext(StateContext);
 
   console.log(user);
+  console.log(token);
+  if (!token) {
+    return <Navigate to="/Login" />;
+  }
 
   return (
     <>
